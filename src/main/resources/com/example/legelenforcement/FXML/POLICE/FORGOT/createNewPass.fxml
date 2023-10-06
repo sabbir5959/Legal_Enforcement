@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1400.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #2942c3 10% , #1a132e 53%, #91293f 100%);" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.HelloController">
+   <children>
+      <ImageView fitHeight="271.0" fitWidth="305.0" opacity="0.65" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Image/logoblack.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="270.0" fitWidth="332.0" layoutX="1095.0" opacity="0.65" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Image/logowhite.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="270.0" fitWidth="332.0" layoutY="530.0" opacity="0.65" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Image/logowhite.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="271.0" fitWidth="305.0" layoutX="1095.0" layoutY="530.0" opacity="0.65" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Image/logoblack.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="250.0" layoutY="97.0" opacity="0.75" prefHeight="399.0" prefWidth="500.0" style="-fx-background-color: #000345;" styleClass="pan" stylesheets="@../../../Styles/basic/basic.css" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="400.0" AnchorPane.topAnchor="200.0">
+         <children>
+            <Text fill="WHITE" layoutX="169.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Password">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="169.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm Password">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="51.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please give your new password to login" wrappingWidth="499.80010986328125">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Text>
+            <PasswordField layoutX="168.0" layoutY="148.0" prefHeight="36.0" prefWidth="263.0" promptText="new password" />
+            <PasswordField layoutX="169.0" layoutY="232.0" prefHeight="36.0" prefWidth="263.0" promptText="confirm password" />
+            <FontAwesomeIconView glyphName="EYE_SLASH" layoutX="412.0" layoutY="170.0" />
+            <Button layoutX="405.0" layoutY="154.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="26.0" style="-fx-background-color: transparent;" textFill="WHITE" />
+            <Button layoutX="405.0" layoutY="238.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="26.0" style="-fx-background-color: transparent;" textFill="WHITE" />
+            <FontAwesomeIconView glyphName="EYE_SLASH" layoutX="411.0" layoutY="254.0" />
+            <Button layoutX="274.0" layoutY="308.0" mnemonicParsing="false" onAction="#police_user" prefHeight="36.0" prefWidth="85.0" style="-fx-background-color: #0066CCFF; -fx-background-radius: 90;" styleClass="dashboard_btn3" stylesheets="@../../../Styles/basic/shoyeb.css" text="CONFIRM" textFill="WHITE" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

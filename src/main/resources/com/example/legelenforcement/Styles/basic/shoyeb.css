@@ -1,0 +1,65 @@
+.dashboard_btn1:hover{
+    -fx-cursor: hand;
+    -fx-font-size: 25px;
+    -fx-font-family: "HP Simplified";
+    -fx-font-weight: bold;
+    -fx-background-color: #008000;
+    -fx-text-fill: white;
+}
+.dashboard_btn1:pressed{
+    -fx-cursor: hand;
+    -fx-font-size: 18px;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+}
+
+.dashboard_btn2:hover{
+    -fx-cursor: hand;
+    -fx-font-size: 18px;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+}
+.dashboard_btn2:pressed{
+    -fx-cursor: hand;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+}
+
+.dashboard_btn3:hover{
+    -fx-cursor: hand;
+    -fx-font-size: 13px;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+}
+.dashboard_btn3:pressed{
+    -fx-cursor: hand;
+    -fx-font-size: 12px;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+}
+
+.dashboard_btn4:hover{
+    -fx-cursor: hand;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+}
+.dashboard_btn4:pressed{
+    -fx-cursor: hand;
+    -fx-font-size: 12px;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+}
+.dashboard_ultra:hover{
+    -fx-cursor: hand;
+    -fx-font-size: 12px;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+}
+.dashboard_ultra:pressed{
+    -fx-cursor: hand;
+    -fx-font-size: 12px;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+}
