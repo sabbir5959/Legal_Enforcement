@@ -1,40 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #2942c3 10% , #1a132e 53%, #91293f 100%);" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.Controller.judges">
    <children>
-      <AnchorPane layoutX="400.0" layoutY="200.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #000345;">
-         <children>
-            <Text fill="WHITE" layoutX="119.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter the OTP code sent to your email">
-               <font>
-                  <Font name="Arial Bold" size="20.0" />
-               </font>
-            </Text>
-            <Button layoutX="175.0" layoutY="287.0" mnemonicParsing="false" onAction="#judge_create_pass" prefHeight="32.0" prefWidth="251.0" style="-fx-background-color: green;" styleClass="dashboard_btn3" stylesheets="@../../../Styles/basic/shoyeb.css" text="Verify OTP Code" textFill="WHITE" />
-            <PasswordField layoutX="175.0" layoutY="225.0" prefHeight="32.0" prefWidth="251.0" promptText="x x x x x" />
-            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="109.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OTP Code Verification">
-               <font>
-                  <Font name="System Bold" size="37.0" />
-               </font>
-            </Text>
-         </children>
-      </AnchorPane>
-      <ImageView fitHeight="235.0" fitWidth="272.0" layoutX="1133.0" layoutY="564.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../Image/logowhite.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="235.0" fitWidth="272.0" layoutX="2.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../Image/logoblack.png" />
-         </image>
-      </ImageView>
+      <Text fill="WHITE" layoutX="73.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter the OTP code sent to your email">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Text>
+      <Button layoutX="74.0" layoutY="392.0" mnemonicParsing="false" onAction="#judge_create_pass" prefHeight="32.0" prefWidth="251.0" style="-fx-background-color: green;" styleClass="dashboard_btn3" stylesheets="@../../../Styles/basic/shoyeb.css" text="Verify OTP Code" textFill="WHITE" />
+      <PasswordField layoutX="74.0" layoutY="330.0" prefHeight="32.0" prefWidth="251.0" promptText="x x x x x">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </PasswordField>
+      <FontAwesomeIconView fill="WHITE" glyphName="LOCK" layoutX="158.0" layoutY="140.0" size="150" AnchorPane.leftAnchor="151.5" AnchorPane.topAnchor="14.0" />
+      <Label layoutX="47.0" layoutY="170.0" text="OTP Code Verification" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="30.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

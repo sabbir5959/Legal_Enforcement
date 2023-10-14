@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.Controller.victim">
    <children>
       <ImageView fitHeight="740.0" fitWidth="1400.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <image>
@@ -87,20 +87,14 @@
                      </image>
                   </ImageView>
                   <TextField layoutX="74.0" layoutY="176.0" prefHeight="28.0" prefWidth="182.0" promptText="Username" style="-fx-background-color: yransparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" styleClass="text_field" stylesheets="@../../Styles/basic/victimUser.css" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="46.0" />
-                  <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="49.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../Image/user.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="49.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../Image/Key.png" />
-                     </image>
-                  </ImageView>
-                  <Button layoutX="97.0" layoutY="307.0" mnemonicParsing="false" onAction="#victim_profile" prefHeight="26.0" prefWidth="117.0" style="-fx-background-radius: 90; -fx-background-color: #257CD4FF;" styleClass="dashboard_btn4" stylesheets="@../../Styles/basic/shoyeb.css" text="Login" textFill="WHITE" AnchorPane.leftAnchor="97.0" AnchorPane.rightAnchor="103.0" />
-                  <Button layoutX="76.0" layoutY="353.0" mnemonicParsing="false" onAction="#victim_email" prefHeight="26.0" prefWidth="143.0" style="-fx-background-color: transparent;" styleClass="dashboard_btn3" stylesheets="@../../Styles/basic/shoyeb.css" text="Forgot Password" textFill="#51a2ff" AnchorPane.leftAnchor="76.0" AnchorPane.rightAnchor="83.0" />
-                  <PasswordField layoutX="74.0" layoutY="222.0" prefHeight="28.0" prefWidth="182.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" styleClass="text_field" stylesheets="@../../Styles/basic/victimUser.css" />
-                  <CheckBox layoutX="97.0" layoutY="270.0" mnemonicParsing="false" text="Remember me" textFill="WHITE" AnchorPane.leftAnchor="97.0" AnchorPane.rightAnchor="103.0" />
+                  <Button layoutX="97.0" layoutY="308.0" mnemonicParsing="false" onAction="#victim_profile" prefHeight="26.0" prefWidth="117.0" style="-fx-background-radius: 90; -fx-background-color: #257CD4FF;" styleClass="dashboard_btn4" stylesheets="@../../Styles/basic/shoyeb.css" text="Login" textFill="WHITE" AnchorPane.leftAnchor="97.0" AnchorPane.rightAnchor="103.0" />
+                  <Button layoutX="76.0" layoutY="352.0" mnemonicParsing="false" onAction="#victim_email" prefHeight="26.0" prefWidth="143.0" style="-fx-background-color: transparent;" styleClass="dashboard_btn3" stylesheets="@../../Styles/basic/shoyeb.css" text="Forgot Password" textFill="#51a2ff" AnchorPane.leftAnchor="76.0" AnchorPane.rightAnchor="83.0" />
+                  <TextField fx:id="passwordText" layoutX="74.0" layoutY="222.0" prefHeight="28.0" prefWidth="182.0" style="-fx-background-color: yransparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" styleClass="text_field" stylesheets="@../../Styles/basic/victimUser.css" />
+                  <PasswordField fx:id="passwordHidden" layoutX="74.0" layoutY="222.0" prefHeight="28.0" prefWidth="182.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" styleClass="text_field" stylesheets="@../../Styles/basic/victimUser.css" />
+                  <CheckBox layoutX="69.0" layoutY="271.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="90.0" text="Remember me" textFill="WHITE" AnchorPane.leftAnchor="69.0" AnchorPane.rightAnchor="143.0">
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font></CheckBox>
                   <Text fill="WHITE" layoutX="25.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Or">
                      <font>
                         <Font size="15.0" />
@@ -112,8 +106,13 @@
                         <Font size="15.0" />
                      </font>
                   </Text>
-                  <Button layoutX="227.0" layoutY="220.0" mnemonicParsing="false" opacity="0.23" prefHeight="28.0" prefWidth="30.0" style="-fx-background-color: #3373C4;" textFill="WHITE" />
-                  <FontAwesomeIconView glyphName="EYE_SLASH" layoutX="235.0" layoutY="239.0" selectionEnd="1" size="15" />
+                  <CheckBox fx:id="check_box" layoutX="167.0" layoutY="271.0" mnemonicParsing="false" onAction="#changeVisibility" text="Show password" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </CheckBox>
+                  <FontAwesomeIconView fill="WHITE" glyphName="KEY" layoutX="50.0" layoutY="240.0" size="20" wrappingWidth="16.5234375" />
+                  <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="52.0" layoutY="196.0" size="20" />
                </children>
             </AnchorPane>
             <ImageView fitHeight="400.0" fitWidth="200.0" layoutX="100.0" layoutY="-100.0" pickOnBounds="true" rotate="90.0">

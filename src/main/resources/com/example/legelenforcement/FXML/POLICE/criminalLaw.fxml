@@ -12,65 +12,56 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.web.WebView?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.HelloController">
-   <children>
-      <AnchorPane prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #b38498 0% , #d79fd2 23%, #a49dc4 56%, #7b9cc2 100%);" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-         <children>
-            <Hyperlink layoutX="100.0" layoutY="15.0" onAction="#open_web" prefHeight="50.0" prefWidth="134.0" style="-fx-border-color: transparent;" text="Click here" textFill="#0d31ff">
-               <font>
-                  <Font size="26.0" />
-               </font>
-            </Hyperlink>
-            <Text layoutX="226.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="for open Law of Bangladesh">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Text>
-            <ImageView fitHeight="74.0" fitWidth="66.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../Image/logoblack.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="66.0" layoutX="1334.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../Image/logoblack.png" />
-               </image>
-            </ImageView>
-            <Button layoutX="1230.0" layoutY="22.0" mnemonicParsing="false" onAction="#back_home" text="Home">
-               <font>
-                  <Font name="Bell MT" size="14.0" />
-               </font>
-               <graphic>
-                  <FontAwesomeIconView glyphName="HOME" size="15" />
-               </graphic>
-               <stylesheets>
-                  <URL value="@../../Styles/basic/victimMenu.css" />
-                  <URL value="@../../Styles/basic/shoyeb.css" />
-               </stylesheets>
-               <styleClass>
-                  <String fx:value="menu_container" />
-                  <String fx:value="dashboard_btn2" />
-               </styleClass>
-            </Button>
-            <Button layoutX="1121.0" layoutY="22.0" mnemonicParsing="false" onAction="#police_profile" text="Profile">
-               <font>
-                  <Font name="Bell MT" size="14.0" />
-               </font>
-               <graphic>
-                  <FontAwesomeIconView glyphName="USER" />
-               </graphic>
-               <stylesheets>
-                  <URL value="@../../Styles/basic/victimMenu.css" />
-                  <URL value="@../../Styles/basic/shoyeb.css" />
-               </stylesheets>
-               <styleClass>
-                  <String fx:value="menu_container" />
-                  <String fx:value="dashboard_btn2" />
-               </styleClass>
-            </Button>
-         </children>
-      </AnchorPane>
-      <WebView fx:id="web" layoutY="79.0" prefHeight="722.0" prefWidth="1400.0" />
-   </children>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.Controller.police">
+   <AnchorPane prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #b38498 0% , #d79fd2 23%, #a49dc4 56%, #7b9cc2 100%);" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <Hyperlink layoutX="100.0" layoutY="15.0" onAction="#open_web" prefHeight="50.0" prefWidth="134.0" style="-fx-border-color: transparent;" text="Click here" textFill="#0d31ff">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Hyperlink>
+      <Text layoutX="226.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="for open Law of Bangladesh">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="74.0" fitWidth="66.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../../Image/logoblack.png" />
+      </ImageView>
+      <ImageView fitHeight="58.0" fitWidth="66.0" layoutX="1334.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../../Image/logoblack.png" />
+      </ImageView>
+      <Button layoutX="1230.0" layoutY="22.0" mnemonicParsing="false" onAction="#back_home" text="Home">
+         <font>
+            <Font name="Bell MT" size="14.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView glyphName="HOME" size="15" />
+         </graphic>
+         <stylesheets>
+            <URL value="@../../Styles/basic/victimMenu.css" />
+            <URL value="@../../Styles/basic/shoyeb.css" />
+         </stylesheets>
+         <styleClass>
+            <String fx:value="menu_container" />
+            <String fx:value="dashboard_btn2" />
+         </styleClass>
+      </Button>
+      <Button layoutX="1121.0" layoutY="22.0" mnemonicParsing="false" onAction="#police_profile" text="Profile">
+         <font>
+            <Font name="Bell MT" size="14.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView glyphName="USER" />
+         </graphic>
+         <stylesheets>
+            <URL value="@../../Styles/basic/victimMenu.css" />
+            <URL value="@../../Styles/basic/shoyeb.css" />
+         </stylesheets>
+         <styleClass>
+            <String fx:value="menu_container" />
+            <String fx:value="dashboard_btn2" />
+         </styleClass>
+      </Button>
+   </AnchorPane>
+   <WebView fx:id="web" layoutX="2.0" layoutY="81.0" prefHeight="718.0" prefWidth="1398.0" />
 </AnchorPane>

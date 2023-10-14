@@ -12,11 +12,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.HelloController">
+<AnchorPane prefHeight="800.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.Controller.police">
    <ImageView fitHeight="800.0" fitWidth="1400.0" layoutX="285.0" layoutY="235.0" pickOnBounds="true" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
       <Image url="@../../Image/police.png" />
    </ImageView>
-   <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="801.0" prefWidth="194.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #2942c3 0% , #030104 36%, #91293f 100%);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+   <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="801.0" prefWidth="169.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #2942c3 0% , #030104 36%, #91293f 100%);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
       <Button layoutX="15.0" layoutY="538.0" mnemonicParsing="false" onAction="#official" text="Official Login" AnchorPane.leftAnchor="15.0">
          <font>
             <Font name="Bell MT" size="14.0" />

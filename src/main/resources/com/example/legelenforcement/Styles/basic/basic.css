@@ -76,3 +76,9 @@
     -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.3) , 10,0.5,0,1 );
     -fx-background-color: ECF39E;
 }
+
+.pan_2
+{
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.3) , 10,0.5,0,1 );
+    -fx-background-color: FFFFFF;
+}

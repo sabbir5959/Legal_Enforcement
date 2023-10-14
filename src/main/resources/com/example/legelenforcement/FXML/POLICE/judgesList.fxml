@@ -14,171 +14,180 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.HelloController">
-   <children>
-      <ImageView fitHeight="800.0" fitWidth="1400.0" layoutX="285.0" layoutY="235.0" pickOnBounds="true" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-         <image>
-            <Image url="@../../Image/police.png" />
-         </image>
-      </ImageView>
-      <AnchorPane layoutY="1.0" prefHeight="801.0" prefWidth="194.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #2942c3 0% , #030104 36%, #91293f 100%);" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="1.0">
-         <children>
-            <Button layoutX="15.0" layoutY="538.0" mnemonicParsing="false" onAction="#official" text="Official Login" AnchorPane.leftAnchor="15.0">
-               <font>
-                  <Font name="Bell MT" size="14.0" />
-               </font>
-               <graphic>
-                  <FontAwesomeIconView glyphName="USER" />
-               </graphic>
-               <stylesheets>
-                  <URL value="@../../Styles/basic/victimMenu.css" />
-                  <URL value="@../../Styles/basic/shoyeb.css" />
-               </stylesheets>
-               <styleClass>
-                  <String fx:value="menu_container" />
-                  <String fx:value="dashboard_btn2" />
-               </styleClass>
-            </Button>
-            <ImageView fitHeight="152.0" fitWidth="166.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <image>
-                  <Image url="@../../Image/logowhite.png" />
-               </image>
-            </ImageView>
-            <Button layoutX="15.0" layoutY="405.0" mnemonicParsing="false" onAction="#complaint_list" text="Complaints" AnchorPane.leftAnchor="15.0">
-               <font>
-                  <Font name="Bell MT" size="14.0" />
-               </font>
-               <graphic>
-                  <FontAwesomeIconView glyphName="FILE" />
-               </graphic>
-               <stylesheets>
-                  <URL value="@../../Styles/basic/victimMenu.css" />
-                  <URL value="@../../Styles/basic/shoyeb.css" />
-               </stylesheets>
-               <styleClass>
-                  <String fx:value="menu_container" />
-                  <String fx:value="dashboard_btn2" />
-               </styleClass>
-            </Button>
-            <Button layoutX="15.0" layoutY="270.0" mnemonicParsing="false" onAction="#police_list" text="Officers" AnchorPane.leftAnchor="15.0">
-               <font>
-                  <Font name="Bell MT" size="14.0" />
-               </font>
-               <graphic>
-                  <FontAwesomeIconView glyphName="USER" />
-               </graphic>
-               <stylesheets>
-                  <URL value="@../../Styles/basic/victimMenu.css" />
-                  <URL value="@../../Styles/basic/shoyeb.css" />
-               </stylesheets>
-               <styleClass>
-                  <String fx:value="menu_container" />
-                  <String fx:value="dashboard_btn2" />
-               </styleClass>
-            </Button>
-            <Button layoutX="15.0" layoutY="212.0" mnemonicParsing="false" onAction="#police_profile" text="Profile" AnchorPane.leftAnchor="15.0">
-               <font>
-                  <Font name="Bell MT" size="14.0" />
-               </font>
-               <graphic>
-                  <FontAwesomeIconView glyphName="USER" />
-               </graphic>
-               <stylesheets>
-                  <URL value="@../../Styles/basic/victimMenu.css" />
-                  <URL value="@../../Styles/basic/shoyeb.css" />
-               </stylesheets>
-               <styleClass>
-                  <String fx:value="menu_container" />
-                  <String fx:value="dashboard_btn2" />
-               </styleClass>
-            </Button>
-            <Button layoutX="15.0" layoutY="668.0" mnemonicParsing="false" onAction="#police_user" text="Log Out" AnchorPane.leftAnchor="15.0">
-               <font>
-                  <Font name="Bell MT" size="14.0" />
-               </font>
-               <graphic>
-                  <FontAwesomeIconView glyphName="EXTERNAL_LINK" size="15" />
-               </graphic>
-               <stylesheets>
-                  <URL value="@../../Styles/basic/victimMenu.css" />
-                  <URL value="@../../Styles/basic/shoyeb.css" />
-               </stylesheets>
-               <styleClass>
-                  <String fx:value="menu_container" />
-                  <String fx:value="dashboard_btn2" />
-               </styleClass>
-            </Button>
-            <Button layoutX="15.0" layoutY="596.0" mnemonicParsing="false" onAction="#back_home" text="Home" AnchorPane.leftAnchor="15.0">
-               <font>
-                  <Font name="Bell MT" size="14.0" />
-               </font>
-               <graphic>
-                  <FontAwesomeIconView glyphName="HOME" size="15" />
-               </graphic>
-               <stylesheets>
-                  <URL value="@../../Styles/basic/victimMenu.css" />
-                  <URL value="@../../Styles/basic/shoyeb.css" />
-               </stylesheets>
-               <styleClass>
-                  <String fx:value="menu_container" />
-                  <String fx:value="dashboard_btn2" />
-               </styleClass>
-            </Button>
-            <Line endX="100.0" layoutX="61.00002670288086" layoutY="652.0" startX="-45.00002670288086" stroke="WHITE" strokeWidth="2.0" AnchorPane.leftAnchor="15.0" />
-            <Button layoutX="15.0" layoutY="347.0" mnemonicParsing="false" onAction="#vic_profile" text="Victim">
-               <font>
-                  <Font name="Bell MT" size="14.0" />
-               </font>
-               <stylesheets>
-                  <URL value="@../../Styles/basic/victimMenu.css" />
-                  <URL value="@../../Styles/basic/shoyeb.css" />
-               </stylesheets>
-               <styleClass>
-                  <String fx:value="menu_container" />
-                  <String fx:value="dashboard_btn2" />
-               </styleClass>
-               <graphic>
-                  <FontAwesomeIconView glyphName="USER" />
-               </graphic>
-            </Button>
-            <Button layoutX="15.0" layoutY="463.0" mnemonicParsing="false" onAction="#newPDFpage" text="Law">
-               <font>
-                  <Font name="Bell MT" size="14.0" />
-               </font>
-               <stylesheets>
-                  <URL value="@../../Styles/basic/victimMenu.css" />
-                  <URL value="@../../Styles/basic/shoyeb.css" />
-               </stylesheets>
-               <styleClass>
-                  <String fx:value="menu_container" />
-                  <String fx:value="dashboard_btn2" />
-               </styleClass>
-               <graphic>
-                  <FontAwesomeIconView glyphName="BOOK" />
-               </graphic>
-            </Button>
-            <Line endX="100.0" layoutX="61.00002670288086" layoutY="328.0" startX="-45.00002670288086" stroke="WHITE" strokeWidth="2.0" AnchorPane.leftAnchor="15.0" />
-            <Line endX="100.0" layoutX="61.00002670288086" layoutY="520.0" startX="-45.00002670288086" stroke="WHITE" strokeWidth="2.0" AnchorPane.leftAnchor="15.0" />
-         </children>
-      </AnchorPane>
-      <TableView layoutX="338.0" layoutY="242.0" prefHeight="466.0" prefWidth="918.0">
-        <columns>
-          <TableColumn prefWidth="99.20001220703125" text="ID" />
-          <TableColumn prefWidth="304.0" text="Name" />
-            <TableColumn prefWidth="189.60003662109375" text="Category" />
-            <TableColumn prefWidth="329.5999755859375" text="Area" />
-        </columns>
-      </TableView>
-      <TextField layoutX="914.0" layoutY="194.0" prefHeight="31.0" prefWidth="234.0" promptText="ID" />
-      <Button layoutX="1157.0" layoutY="194.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="98.0" style="-fx-background-color: #0066CCFF;" styleClass="dashboard_btn4" stylesheets="@../../Styles/basic/shoyeb.css" text="Search" textFill="WHITE">
+<AnchorPane prefHeight="800.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/20.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.Controller.police">
+   <ImageView fitHeight="800.0" fitWidth="1400.0" layoutX="285.0" layoutY="235.0" pickOnBounds="true"
+              AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <Image url="@../../Image/police.png"/>
+   </ImageView>
+   <AnchorPane layoutY="1.0" prefHeight="801.0" prefWidth="194.0"
+               style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #2942c3 0% , #030104 36%, #91293f 100%);"
+               AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="1.0">
+      <Button layoutX="15.0" layoutY="538.0" mnemonicParsing="false" onAction="#official" text="Official Login"
+              AnchorPane.leftAnchor="15.0">
          <font>
-            <Font name="System Bold" size="15.0" />
+            <Font name="Bell MT" size="14.0"/>
          </font>
+         <graphic>
+            <FontAwesomeIconView glyphName="USER"/>
+         </graphic>
+         <stylesheets>
+            <URL value="@../../Styles/basic/victimMenu.css"/>
+            <URL value="@../../Styles/basic/shoyeb.css"/>
+         </stylesheets>
+         <styleClass>
+            <String fx:value="menu_container"/>
+            <String fx:value="dashboard_btn2"/>
+         </styleClass>
       </Button>
-      <Text fill="WHITE" layoutX="676.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Judges List" wrappingWidth="241.59990234375">
+      <ImageView fitHeight="152.0" fitWidth="166.0" pickOnBounds="true" preserveRatio="true"
+                 AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <Image url="@../../Image/logowhite.png"/>
+      </ImageView>
+      <Button layoutX="15.0" layoutY="405.0" mnemonicParsing="false" onAction="#complaint_list" text="Complaints"
+              AnchorPane.leftAnchor="15.0">
          <font>
-            <Font name="Arial Bold" size="42.0" />
+            <Font name="Bell MT" size="14.0"/>
          </font>
-      </Text>
-   </children>
+         <graphic>
+            <FontAwesomeIconView glyphName="FILE"/>
+         </graphic>
+         <stylesheets>
+            <URL value="@../../Styles/basic/victimMenu.css"/>
+            <URL value="@../../Styles/basic/shoyeb.css"/>
+         </stylesheets>
+         <styleClass>
+            <String fx:value="menu_container"/>
+            <String fx:value="dashboard_btn2"/>
+         </styleClass>
+      </Button>
+      <Button layoutX="15.0" layoutY="270.0" mnemonicParsing="false" onAction="#police_list" text="Officers"
+              AnchorPane.leftAnchor="15.0">
+         <font>
+            <Font name="Bell MT" size="14.0"/>
+         </font>
+         <graphic>
+            <FontAwesomeIconView glyphName="USER"/>
+         </graphic>
+         <stylesheets>
+            <URL value="@../../Styles/basic/victimMenu.css"/>
+            <URL value="@../../Styles/basic/shoyeb.css"/>
+         </stylesheets>
+         <styleClass>
+            <String fx:value="menu_container"/>
+            <String fx:value="dashboard_btn2"/>
+         </styleClass>
+      </Button>
+      <Button layoutX="15.0" layoutY="212.0" mnemonicParsing="false" onAction="#police_profile" text="Profile"
+              AnchorPane.leftAnchor="15.0">
+         <font>
+            <Font name="Bell MT" size="14.0"/>
+         </font>
+         <graphic>
+            <FontAwesomeIconView glyphName="USER"/>
+         </graphic>
+         <stylesheets>
+            <URL value="@../../Styles/basic/victimMenu.css"/>
+            <URL value="@../../Styles/basic/shoyeb.css"/>
+         </stylesheets>
+         <styleClass>
+            <String fx:value="menu_container"/>
+            <String fx:value="dashboard_btn2"/>
+         </styleClass>
+      </Button>
+      <Button layoutX="15.0" layoutY="668.0" mnemonicParsing="false" onAction="#police_user" text="Log Out"
+              AnchorPane.leftAnchor="15.0">
+         <font>
+            <Font name="Bell MT" size="14.0"/>
+         </font>
+         <graphic>
+            <FontAwesomeIconView glyphName="EXTERNAL_LINK" size="15"/>
+         </graphic>
+         <stylesheets>
+            <URL value="@../../Styles/basic/victimMenu.css"/>
+            <URL value="@../../Styles/basic/shoyeb.css"/>
+         </stylesheets>
+         <styleClass>
+            <String fx:value="menu_container"/>
+            <String fx:value="dashboard_btn2"/>
+         </styleClass>
+      </Button>
+      <Button layoutX="15.0" layoutY="596.0" mnemonicParsing="false" onAction="#back_home" text="Home"
+              AnchorPane.leftAnchor="15.0">
+         <font>
+            <Font name="Bell MT" size="14.0"/>
+         </font>
+         <graphic>
+            <FontAwesomeIconView glyphName="HOME" size="15"/>
+         </graphic>
+         <stylesheets>
+            <URL value="@../../Styles/basic/victimMenu.css"/>
+            <URL value="@../../Styles/basic/shoyeb.css"/>
+         </stylesheets>
+         <styleClass>
+            <String fx:value="menu_container"/>
+            <String fx:value="dashboard_btn2"/>
+         </styleClass>
+      </Button>
+      <Line endX="100.0" layoutX="61.00002670288086" layoutY="652.0" startX="-45.00002670288086" stroke="WHITE"
+            strokeWidth="2.0" AnchorPane.leftAnchor="15.0"/>
+      <Button layoutX="15.0" layoutY="347.0" mnemonicParsing="false" onAction="#vic_profile" text="Victim">
+         <font>
+            <Font name="Bell MT" size="14.0"/>
+         </font>
+         <stylesheets>
+            <URL value="@../../Styles/basic/victimMenu.css"/>
+            <URL value="@../../Styles/basic/shoyeb.css"/>
+         </stylesheets>
+         <styleClass>
+            <String fx:value="menu_container"/>
+            <String fx:value="dashboard_btn2"/>
+         </styleClass>
+         <graphic>
+            <FontAwesomeIconView glyphName="USER"/>
+         </graphic>
+      </Button>
+      <Button layoutX="15.0" layoutY="463.0" mnemonicParsing="false" onAction="#newPDFpage" text="Law">
+         <font>
+            <Font name="Bell MT" size="14.0"/>
+         </font>
+         <stylesheets>
+            <URL value="@../../Styles/basic/victimMenu.css"/>
+            <URL value="@../../Styles/basic/shoyeb.css"/>
+         </stylesheets>
+         <styleClass>
+            <String fx:value="menu_container"/>
+            <String fx:value="dashboard_btn2"/>
+         </styleClass>
+         <graphic>
+            <FontAwesomeIconView glyphName="BOOK"/>
+         </graphic>
+      </Button>
+      <Line endX="100.0" layoutX="61.00002670288086" layoutY="328.0" startX="-45.00002670288086" stroke="WHITE"
+            strokeWidth="2.0" AnchorPane.leftAnchor="15.0"/>
+      <Line endX="100.0" layoutX="61.00002670288086" layoutY="520.0" startX="-45.00002670288086" stroke="WHITE"
+            strokeWidth="2.0" AnchorPane.leftAnchor="15.0"/>
+   </AnchorPane>
+   <TableView layoutX="338.0" layoutY="242.0" prefHeight="466.0" prefWidth="918.0">
+      <columns>
+         <TableColumn prefWidth="99.20001220703125" text="ID"/>
+         <TableColumn prefWidth="304.0" text="Name"/>
+         <TableColumn prefWidth="189.60003662109375" text="Category"/>
+         <TableColumn prefWidth="329.5999755859375" text="Area"/>
+      </columns>
+   </TableView>
+   <TextField layoutX="914.0" layoutY="194.0" prefHeight="31.0" prefWidth="234.0" promptText="ID"/>
+   <Button layoutX="1157.0" layoutY="194.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="98.0"
+           style="-fx-background-color: #0066CCFF;" styleClass="dashboard_btn4"
+           stylesheets="@../../Styles/basic/shoyeb.css" text="Search" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="15.0"/>
+      </font>
+   </Button>
+   <Text fill="WHITE" layoutX="676.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Judges List"
+         wrappingWidth="241.59990234375">
+      <font>
+         <Font name="Arial Bold" size="42.0"/>
+      </font>
+   </Text>
 </AnchorPane>
