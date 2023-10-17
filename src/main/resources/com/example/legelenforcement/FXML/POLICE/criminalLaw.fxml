@@ -63,5 +63,10 @@
          </styleClass>
       </Button>
    </AnchorPane>
-   <WebView fx:id="web" layoutX="2.0" layoutY="81.0" prefHeight="718.0" prefWidth="1398.0" />
+   <ImageView fx:id="img2" fitHeight="725.0" fitWidth="1400.0" layoutY="75.0" pickOnBounds="true">
+      <image>
+         <Image url="@../../Image/LAW.png" />
+      </image>
+   </ImageView>
+   <WebView fx:id="web" layoutY="75.0" prefHeight="725.0" prefWidth="1400.0" style="-fx-page-fill: transparent;" />
 </AnchorPane>

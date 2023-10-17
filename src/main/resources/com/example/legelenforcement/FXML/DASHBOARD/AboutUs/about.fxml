@@ -122,7 +122,7 @@
    <FontAwesomeIconView fill="#eeeeee" glyphName="CIRCLE" layoutX="1075.0" layoutY="322.0" stroke="BLACK" styleClass="right-small-circles" text="" />
    <FontAwesomeIconView fill="#eeeeee" glyphName="CIRCLE" layoutX="1075.0" layoutY="342.0" stroke="BLACK" styleClass="right-small-circles" />
    <AnchorPane layoutX="302.0" layoutY="580.0" prefHeight="70.0" prefWidth="798.0" style="-fx-background-color: #000345;">
-      <Text fill="WHITE" layoutX="48.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Developed with JavaFX and JDK 19">
+      <Text fill="WHITE" layoutX="48.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Developed with JavaFX and JDK 20">
          <font>
             <Font name="Calibri Bold" size="12.0" />
          </font>
@@ -137,9 +137,9 @@
       <Circle fill="WHITE" layoutX="56.0" layoutY="35.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fill="WHITE" layoutX="149.0" layoutY="35.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fill="WHITE" layoutX="235.0" layoutY="35.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
-      <FontAwesomeIconView glyphName="FACEBOOK" layoutX="51.0" layoutY="41.0" size="18" stroke="BLACK" />
-      <FontAwesomeIconView glyphName="INSTAGRAM" layoutX="227.0" layoutY="41.0" size="18" stroke="BLACK" />
-      <FontAwesomeIconView glyphName="GITHUB" layoutX="140.0" layoutY="43.0" size="21" />
+      <FontAwesomeIconView glyphName="FACEBOOK" layoutX="51.0" layoutY="41.0" onMouseClicked="#facebook" size="18" stroke="BLACK" />
+      <FontAwesomeIconView glyphName="INSTAGRAM" layoutX="227.0" layoutY="41.0" onMouseClicked="#instagram" size="18" stroke="BLACK" />
+      <FontAwesomeIconView glyphName="GITHUB" layoutX="140.0" layoutY="43.0" onMouseClicked="#github" size="21" />
    </AnchorPane>
    <Text fx:id="CLOSE" layoutX="471.0" layoutY="42.0" onMouseClicked="#close" strokeType="OUTSIDE" strokeWidth="0.0" text="Close" AnchorPane.leftAnchor="470.0" AnchorPane.topAnchor="30.0">
       <font>

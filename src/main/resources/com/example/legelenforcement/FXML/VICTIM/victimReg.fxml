@@ -4,6 +4,7 @@
 <?import java.lang.String?>
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
@@ -39,94 +40,97 @@
          <Image url="@../../Image/logoblack.png" />
       </ImageView>
    </AnchorPane>
-   <ImageView fitHeight="739.0" fitWidth="1400.0" layoutY="62.0" pickOnBounds="true">
+   <ImageView fitHeight="739.0" fitWidth="1400.0" layoutX="14.0" layoutY="62.0" pickOnBounds="true">
       <Image url="@../../Image/reg.png" />
    </ImageView>
-   <AnchorPane layoutX="389.0" layoutY="99.0" opacity="0.8" prefHeight="667.0" prefWidth="607.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="34.0" AnchorPane.leftAnchor="389.0" AnchorPane.rightAnchor="404.0" AnchorPane.topAnchor="99.0">
-      <TextField fx:id="full_name" layoutX="69.0" layoutY="69.0" prefHeight="26.0" prefWidth="220.0" promptText="name" style="-fx-background-color: #454545;" styleClass="text_field" stylesheets="@../../Styles/basic/victimUser.css" />
-      <Text fontSmoothingType="LCD" layoutX="69.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Full Name">
+   <AnchorPane layoutX="432.0" layoutY="124.0" opacity="0.8" prefHeight="615.0" prefWidth="536.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="61.0" AnchorPane.leftAnchor="432.0" AnchorPane.rightAnchor="432.0" AnchorPane.topAnchor="124.0">
+      <TextField fx:id="full_name" layoutX="40.0" layoutY="122.0" prefHeight="26.0" prefWidth="206.0" promptText="name" style="-fx-background-color: #454545;" styleClass="text_field" stylesheets="@../../Styles/basic/victimUser.css" />
+      <Text fontSmoothingType="LCD" layoutX="40.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Full Name">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Text>
-      <TextField fx:id="email" layoutX="321.0" layoutY="269.0" prefHeight="26.0" prefWidth="220.0" promptText="sample@gmail.com" style="-fx-background-color: #454545;" styleClass="text_field" stylesheets="@../../Styles/basic/victimUser.css" />
-      <Text fontSmoothingType="LCD" layoutX="321.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="E-mail">
+      <TextField fx:id="email" layoutX="289.0" layoutY="254.0" prefHeight="26.0" prefWidth="206.0" promptText="sample@gmail.com" style="-fx-background-color: #454545;" styleClass="text_field" stylesheets="@../../Styles/basic/victimUser.css" />
+      <Text fontSmoothingType="LCD" layoutX="289.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="E-mail">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Text>
-      <PasswordField fx:id="pass" layoutX="321.0" layoutY="337.0" prefHeight="26.0" prefWidth="220.0" promptText="password" style="-fx-background-color: #454545;" styleClass="text_field" stylesheets="@../../Styles/basic/victimUser.css" />
-      <Text fontSmoothingType="LCD" layoutX="321.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Password">
+      <PasswordField fx:id="pass" layoutX="289.0" layoutY="387.0" prefHeight="26.0" prefWidth="206.0" promptText="password" style="-fx-background-color: #454545;" styleClass="text_field" stylesheets="@../../Styles/basic/victimUser.css" />
+      <Text fontSmoothingType="LCD" layoutX="289.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Password">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Text>
-      <PasswordField fx:id="confirmPass" layoutX="321.0" layoutY="405.0" prefHeight="26.0" prefWidth="220.0" promptText="confirm password" style="-fx-background-color: #454545;" styleClass="text_field" stylesheets="@../../Styles/basic/victimUser.css" />
-      <Text fontSmoothingType="LCD" layoutX="321.0" layoutY="394.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Confirm Password">
+      <PasswordField fx:id="confirmPass" layoutX="289.0" layoutY="455.0" prefHeight="26.0" prefWidth="206.0" promptText="confirm password" style="-fx-background-color: #454545;" styleClass="text_field" stylesheets="@../../Styles/basic/victimUser.css" />
+      <Text fontSmoothingType="LCD" layoutX="289.0" layoutY="444.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Confirm Password">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Text>
-      <TextField fx:id="mobile" layoutX="69.0" layoutY="201.0" prefHeight="26.0" prefWidth="220.0" promptText="01XXXXXXXXX" style="-fx-background-color: #454545;" styleClass="text_field" stylesheets="@../../Styles/basic/victimUser.css" />
-      <Text fontSmoothingType="LCD" layoutX="69.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Mobile">
+      <TextField fx:id="mobile" layoutX="40.0" layoutY="254.0" prefHeight="26.0" prefWidth="206.0" promptText="01XXXXXXXXX" style="-fx-background-color: #454545;" styleClass="text_field" stylesheets="@../../Styles/basic/victimUser.css" />
+      <Text fontSmoothingType="LCD" layoutX="40.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Mobile">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Text>
-      <Text fontSmoothingType="LCD" layoutX="324.0" layoutY="459.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Gender">
+      <Text fontSmoothingType="LCD" layoutX="41.0" layoutY="442.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Gender">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Text>
-      <RadioButton fx:id="male" layoutX="322.0" layoutY="476.0" mnemonicParsing="false" text="Male" textFill="#fff9f9">
+      <RadioButton fx:id="male" layoutX="39.0" layoutY="459.0" mnemonicParsing="false" text="Male" textFill="#fff9f9">
          <toggleGroup>
             <ToggleGroup fx:id="gender" />
          </toggleGroup></RadioButton>
-      <RadioButton fx:id="female" layoutX="397.0" layoutY="476.0" mnemonicParsing="false" text="Female" textFill="WHITE" toggleGroup="$gender" />
-      <RadioButton fx:id="other" layoutX="486.0" layoutY="476.0" mnemonicParsing="false" text="Other" textFill="WHITE" toggleGroup="$gender" />
-      <Button layoutX="198.0" layoutY="582.0" mnemonicParsing="false" onAction="#victim_user" prefHeight="26.0" prefWidth="220.0" style="-fx-background-color: #0066CCFF;" styleClass="dashboard_btn4" stylesheets="@../../Styles/basic/shoyeb.css" text="Submit" textFill="WHITE" />
-      <TextField fx:id="user_name" layoutX="69.0" layoutY="134.0" prefHeight="26.0" prefWidth="220.0" promptText="username" style="-fx-background-color: #454545;" styleClass="text_field" stylesheets="@../../Styles/basic/victimUser.css" />
-      <Text fontSmoothingType="LCD" layoutX="69.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Username">
+      <RadioButton fx:id="female" layoutX="108.0" layoutY="459.0" mnemonicParsing="false" text="Female" textFill="WHITE" toggleGroup="$gender" />
+      <RadioButton fx:id="other" layoutX="191.0" layoutY="459.0" mnemonicParsing="false" text="Other" textFill="WHITE" toggleGroup="$gender" />
+      <Button layoutX="158.0" layoutY="542.0" mnemonicParsing="false" onAction="#victim_user" prefHeight="26.0" prefWidth="220.0" style="-fx-background-color: #0066CCFF;" styleClass="dashboard_btn4" stylesheets="@../../Styles/basic/shoyeb.css" text="Submit" textFill="WHITE" />
+      <TextField fx:id="user_name" layoutX="40.0" layoutY="187.0" prefHeight="26.0" prefWidth="206.0" promptText="username" style="-fx-background-color: #454545;" styleClass="text_field" stylesheets="@../../Styles/basic/victimUser.css" />
+      <Text fontSmoothingType="LCD" layoutX="40.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Username">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Text>
-      <TextField fx:id="address" layoutX="70.0" layoutY="402.0" prefHeight="26.0" prefWidth="220.0" promptText="address" style="-fx-background-color: #454545;" styleClass="text_field" stylesheets="@../../Styles/basic/victimUser.css" />
-      <Text fontSmoothingType="LCD" layoutX="70.0" layoutY="390.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Address">
+      <TextField fx:id="address" layoutX="40.0" layoutY="321.0" prefHeight="26.0" prefWidth="206.0" promptText="address" style="-fx-background-color: #454545;" styleClass="text_field" stylesheets="@../../Styles/basic/victimUser.css" />
+      <Text fontSmoothingType="LCD" layoutX="40.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Address">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Text>
-      <TextField fx:id="father_name" layoutX="70.0" layoutY="269.0" prefHeight="26.0" prefWidth="220.0" promptText="father's name" style="-fx-background-color: #454545;" styleClass="text_field" stylesheets="@../../Styles/basic/victimUser.css" />
-      <Text fontSmoothingType="LCD" layoutX="70.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Father's Name">
+      <TextField fx:id="father_name" layoutX="289.0" layoutY="122.0" prefHeight="26.0" prefWidth="206.0" promptText="father's name" style="-fx-background-color: #454545;" styleClass="text_field" stylesheets="@../../Styles/basic/victimUser.css" />
+      <Text fontSmoothingType="LCD" layoutX="289.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Father's Name">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Text>
-      <TextField fx:id="mother_name" layoutX="70.0" layoutY="335.0" prefHeight="26.0" prefWidth="220.0" promptText="mother's name" style="-fx-background-color: #454545;" styleClass="text_field" stylesheets="@../../Styles/basic/victimUser.css" />
-      <Text fontSmoothingType="LCD" layoutX="68.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Mother's Name">
+      <TextField fx:id="mother_name" layoutX="289.0" layoutY="188.0" prefHeight="26.0" prefWidth="206.0" promptText="mother's name" style="-fx-background-color: #454545;" styleClass="text_field" stylesheets="@../../Styles/basic/victimUser.css" />
+      <Text fontSmoothingType="LCD" layoutX="287.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Mother's Name">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Text>
-      <RadioButton fx:id="married" layoutX="72.0" layoutY="517.0" mnemonicParsing="false" text="Married" textFill="#fff9f9">
+      <RadioButton fx:id="married" layoutX="41.0" layoutY="393.0" mnemonicParsing="false" text="Married" textFill="#fff9f9">
          <toggleGroup>
             <ToggleGroup fx:id="marry" />
          </toggleGroup></RadioButton>
-      <RadioButton fx:id="unmarried" layoutX="158.0" layoutY="517.0" mnemonicParsing="false" text="Unmarried" textFill="#fff9f9" toggleGroup="$marry" />
-      <Text fontSmoothingType="LCD" layoutX="70.0" layoutY="454.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Date of Birth">
+      <RadioButton fx:id="unmarried" layoutX="127.0" layoutY="393.0" mnemonicParsing="false" text="Unmarried" textFill="#fff9f9" toggleGroup="$marry" />
+      <Text fontSmoothingType="LCD" layoutX="289.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Date of Birth">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Text>
-      <AnchorPane layoutX="372.0" layoutY="70.0" prefHeight="150.0" prefWidth="150.0" style="-fx-border-color: white;">
-         <ImageView fx:id="img1" fitHeight="150.0" fitWidth="150.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true" />
-      </AnchorPane>
-      <Button layoutX="406.0" layoutY="230.0" mnemonicParsing="false" onAction="#insert_photo" style="-fx-background-color: transparent;" styleClass="dashboard_btn3" stylesheets="@../../Styles/basic/shoyeb.css" text="Insert Photo" textFill="#009dff">
+      <TextField fx:id="dateOfbirth" layoutX="289.0" layoutY="320.0" prefHeight="26.0" prefWidth="206.0" promptText="MM/DD/YYYY" style="-fx-background-color: #454545;" styleClass="text_field" stylesheets="@../../Styles/basic/victimUser.css" />
+      <Text fill="WHITE" layoutX="40.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Marital Status">
          <font>
-            <Font size="13.0" />
+            <Font name="System Bold" size="12.0" />
          </font>
-      </Button>
-      <TextField fx:id="dateOfbirth" layoutX="69.0" layoutY="466.0" prefHeight="26.0" prefWidth="220.0" promptText="MM/DD/YYYY" style="-fx-background-color: #454545;" styleClass="text_field" stylesheets="@../../Styles/basic/victimUser.css" />
+      </Text>
+      <Label layoutX="172.0" layoutY="18.0" text="Registration" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="35.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelShow" layoutX="184.0" layoutY="497.0" prefHeight="26.0" prefWidth="168.0" textAlignment="CENTER" textFill="#a81e14" />
    </AnchorPane>
 </AnchorPane>

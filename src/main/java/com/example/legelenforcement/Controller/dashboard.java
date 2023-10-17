@@ -142,6 +142,15 @@ public class dashboard implements Initializable {
     catch (IOException | URISyntaxException ex){throw new RuntimeException(ex);}};
 
 
+    public void facebook(MouseEvent mouseEvent) {try{
+        Desktop.getDesktop().browse(new URI("https://www.facebook.com/"));}
+    catch (IOException | URISyntaxException ex){throw new RuntimeException(ex);}};
+    public void github(MouseEvent mouseEvent) {try{
+        Desktop.getDesktop().browse(new URI("https://github.com/"));}
+    catch (IOException | URISyntaxException ex){throw new RuntimeException(ex);}};
+    public void instagram(MouseEvent mouseEvent) {try{
+        Desktop.getDesktop().browse(new URI("https://www.instagram.com/"));}
+    catch (IOException | URISyntaxException ex){throw new RuntimeException(ex);}};
 
 }
 

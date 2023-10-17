@@ -19,6 +19,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 public class victim implements Initializable {
     public Button CLOSE ;
@@ -27,6 +28,7 @@ public class victim implements Initializable {
     public ToggleGroup gender, marry;
     public RadioButton male, female, other, married, unmarried;
     public Text success_message;
+    public Label labelShow;
 
     @FXML
     private ImageView img1;
@@ -71,14 +73,22 @@ public class victim implements Initializable {
 
     public void victim_user(ActionEvent event) throws IOException {
 
-        boolean isUserCreated = create_user();
-        if (!isUserCreated) return;
+        if (full_name.getText().isBlank() || user_name.getText().isBlank() || father_name.getText().isBlank() || mother_name.getText().isBlank()
+        || email.getText().isBlank() || address.getText().isBlank() || pass.getText().isBlank() || confirmPass.getText().isBlank() || dateOfbirth.getText().isBlank()
+        || mobile.getText().isBlank() || (male.isSelected() || female.isSelected() || other.isSelected())) {
+            labelShow.setText("Fill out all the fields to proceed.");}
 
-        Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/Victim/victimUser.fxml"));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+//        else if (!Objects.equals(pass.getText(), confirmPass.getText())) {
+//            labelShow.setText("Password and confirm password must be same");}
+
+            boolean isUserCreated = create_user();
+            if (!isUserCreated) return;
+
+            Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/Victim/victimUser.fxml"));
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
     }
 
     public void back_victim(ActionEvent event) throws IOException {
@@ -112,16 +122,16 @@ public class victim implements Initializable {
 
         assert files != null;
         for (File file : files) {
-            if (file.getName().equals(email)) {
+            if (file.getName().equals(full_name)) {
                 System.out.println("Account already exists");
                 return false;
             }
         }
 
-        File userFile = new File("E:/Java Code/Java Files/Sign Up/Victim Sign Up/" + temail);
+        File userFile = new File("E:/Java Code/Java Files/Sign Up/Victim Sign Up/" + tname);
         boolean is_user_file_created = userFile.mkdir();
 
-        File infoFile = new File("E:/Java Code/Java Files/Sign Up/Victim Sign Up/" + temail + "/info.txt");
+        File infoFile = new File("E:/Java Code/Java Files/Sign Up/Victim Sign Up/" + tname + "/info.txt");
         infoFile.createNewFile();
 
         FileWriter writer = new FileWriter(infoFile);

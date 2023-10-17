@@ -13,8 +13,11 @@ import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
+
+import java.awt.*;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
@@ -114,16 +117,20 @@ public class judges implements Initializable {
     }
 
     @FXML
-    private WebView web;
+    public WebView web= new WebView();
+    public ImageView img11 = new ImageView();
 
     @FXML
     public void open_web(ActionEvent event) throws URISyntaxException, IOException{
+        web.setVisible(true);
         web.getEngine().load("http://bdlaws.minlaw.gov.bd/laws-of-bangladesh.html");
+
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        web.setVisible(false);
+        img11.setVisible(true);
     }
 }
 

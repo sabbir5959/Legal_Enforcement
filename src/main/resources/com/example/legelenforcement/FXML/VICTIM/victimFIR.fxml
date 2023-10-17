@@ -4,6 +4,7 @@
 <?import java.lang.String?>
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
@@ -131,18 +132,6 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Text>
-            <TextField layoutX="50.0" layoutY="268.0" prefHeight="48.0" prefWidth="400.0" promptText="Location" stylesheets="@../../Styles/basic/basic.css" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
-               <styleClass>
-                  <String fx:value="account_selector" />
-                  <String fx:value="input_field" />
-               </styleClass>
-            </TextField>
-            <TextField layoutX="50.0" layoutY="349.0" prefHeight="48.0" prefWidth="400.0" promptText="Type" stylesheets="@../../Styles/basic/basic.css" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
-               <styleClass>
-                  <String fx:value="account_selector" />
-                  <String fx:value="input_field" />
-               </styleClass>
-            </TextField>
             <Text fill="WHITE" layoutX="50.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type of Crime" AnchorPane.leftAnchor="50.0">
                <font>
                   <Font name="System Bold" size="18.0" />
@@ -181,6 +170,18 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Text>
+            <ComboBox layoutX="51.0" layoutY="267.0" prefWidth="400.0" promptText="Location" stylesheets="@../../Styles/basic/basic.css">
+               <styleClass>
+                  <String fx:value="account_selector" />
+                  <String fx:value="input_field" />
+               </styleClass>
+            </ComboBox>
+            <ComboBox layoutX="51.0" layoutY="350.0" prefWidth="400.0" promptText="Type" stylesheets="@../../Styles/basic/basic.css">
+               <styleClass>
+                  <String fx:value="account_selector" />
+                  <String fx:value="input_field" />
+               </styleClass>
+            </ComboBox>
          </children>
       </AnchorPane>
    </children>
