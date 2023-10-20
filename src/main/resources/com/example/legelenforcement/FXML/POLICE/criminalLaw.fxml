@@ -8,65 +8,160 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 <?import javafx.scene.web.WebView?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.Controller.police">
-   <AnchorPane prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #b38498 0% , #d79fd2 23%, #a49dc4 56%, #7b9cc2 100%);" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-      <Hyperlink layoutX="100.0" layoutY="15.0" onAction="#open_web" prefHeight="50.0" prefWidth="134.0" style="-fx-border-color: transparent;" text="Click here" textFill="#0d31ff">
-         <font>
-            <Font size="26.0" />
-         </font>
-      </Hyperlink>
-      <Text layoutX="226.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="for open Law of Bangladesh">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Text>
-      <ImageView fitHeight="74.0" fitWidth="66.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
-         <Image url="@../../Image/logoblack.png" />
-      </ImageView>
-      <ImageView fitHeight="58.0" fitWidth="66.0" layoutX="1334.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
-         <Image url="@../../Image/logoblack.png" />
-      </ImageView>
-      <Button layoutX="1230.0" layoutY="22.0" mnemonicParsing="false" onAction="#back_home" text="Home">
-         <font>
-            <Font name="Bell MT" size="14.0" />
-         </font>
-         <graphic>
-            <FontAwesomeIconView glyphName="HOME" size="15" />
-         </graphic>
-         <stylesheets>
-            <URL value="@../../Styles/basic/victimMenu.css" />
-            <URL value="@../../Styles/basic/shoyeb.css" />
-         </stylesheets>
-         <styleClass>
-            <String fx:value="menu_container" />
-            <String fx:value="dashboard_btn2" />
-         </styleClass>
-      </Button>
-      <Button layoutX="1121.0" layoutY="22.0" mnemonicParsing="false" onAction="#police_profile" text="Profile">
-         <font>
-            <Font name="Bell MT" size="14.0" />
-         </font>
-         <graphic>
-            <FontAwesomeIconView glyphName="USER" />
-         </graphic>
-         <stylesheets>
-            <URL value="@../../Styles/basic/victimMenu.css" />
-            <URL value="@../../Styles/basic/shoyeb.css" />
-         </stylesheets>
-         <styleClass>
-            <String fx:value="menu_container" />
-            <String fx:value="dashboard_btn2" />
-         </styleClass>
-      </Button>
-   </AnchorPane>
-   <ImageView fx:id="img2" fitHeight="725.0" fitWidth="1400.0" layoutY="75.0" pickOnBounds="true">
+   <ImageView fx:id="img2" fitHeight="807.0" fitWidth="1206.0" layoutX="195.0" layoutY="-4.0" pickOnBounds="true">
       <image>
          <Image url="@../../Image/LAW.png" />
       </image>
    </ImageView>
-   <WebView fx:id="web" layoutY="75.0" prefHeight="725.0" prefWidth="1400.0" style="-fx-page-fill: transparent;" />
+   <Hyperlink layoutX="608.0" layoutY="305.0" onAction="#open_web" prefHeight="150.0" prefWidth="400.0" style="-fx-border-color: transparent;" text="Click here" textFill="#0d31ff">
+      <font>
+         <Font size="80.0" />
+      </font>
+   </Hyperlink>
+   <AnchorPane prefHeight="801.0" prefWidth="194.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #2942c3 0% , #030104 36%, #91293f 100%);">
+      <children>
+         <Button layoutX="15.0" layoutY="538.0" mnemonicParsing="false" onAction="#official" text="Official Login" AnchorPane.leftAnchor="15.0">
+            <font>
+               <Font name="Bell MT" size="14.0" />
+            </font>
+            <graphic>
+               <FontAwesomeIconView glyphName="USER" />
+            </graphic>
+            <stylesheets>
+               <URL value="@../../Styles/basic/victimMenu.css" />
+               <URL value="@../../Styles/basic/shoyeb.css" />
+            </stylesheets>
+            <styleClass>
+               <String fx:value="menu_container" />
+               <String fx:value="dashboard_btn2" />
+            </styleClass>
+         </Button>
+         <ImageView fitHeight="152.0" fitWidth="166.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <image>
+               <Image url="@../../Image/logowhite.png" />
+            </image>
+         </ImageView>
+         <Button layoutX="15.0" layoutY="405.0" mnemonicParsing="false" onAction="#complaint_list" text="Criminal List" AnchorPane.leftAnchor="15.0">
+            <font>
+               <Font name="Bell MT" size="14.0" />
+            </font>
+            <graphic>
+               <FontAwesomeIconView glyphName="FILE" />
+            </graphic>
+            <stylesheets>
+               <URL value="@../../Styles/basic/victimMenu.css" />
+               <URL value="@../../Styles/basic/shoyeb.css" />
+            </stylesheets>
+            <styleClass>
+               <String fx:value="menu_container" />
+               <String fx:value="dashboard_btn2" />
+            </styleClass>
+         </Button>
+         <Button layoutX="15.0" layoutY="270.0" mnemonicParsing="false" text="Officers" AnchorPane.leftAnchor="15.0">
+            <font>
+               <Font name="Bell MT" size="14.0" />
+            </font>
+            <graphic>
+               <FontAwesomeIconView glyphName="USER" />
+            </graphic>
+            <stylesheets>
+               <URL value="@../../Styles/basic/victimMenu.css" />
+               <URL value="@../../Styles/basic/shoyeb.css" />
+            </stylesheets>
+            <styleClass>
+               <String fx:value="menu_container" />
+               <String fx:value="dashboard_btn2" />
+            </styleClass>
+         </Button>
+         <Button layoutX="15.0" layoutY="212.0" mnemonicParsing="false" onAction="#police_profile" text="Profile" AnchorPane.leftAnchor="15.0">
+            <font>
+               <Font name="Bell MT" size="14.0" />
+            </font>
+            <graphic>
+               <FontAwesomeIconView glyphName="USER" />
+            </graphic>
+            <stylesheets>
+               <URL value="@../../Styles/basic/victimMenu.css" />
+               <URL value="@../../Styles/basic/shoyeb.css" />
+            </stylesheets>
+            <styleClass>
+               <String fx:value="menu_container" />
+               <String fx:value="dashboard_btn2" />
+            </styleClass>
+         </Button>
+         <Button layoutX="15.0" layoutY="668.0" mnemonicParsing="false" onAction="#police_user" text="Log Out" AnchorPane.leftAnchor="15.0">
+            <font>
+               <Font name="Bell MT" size="14.0" />
+            </font>
+            <graphic>
+               <FontAwesomeIconView glyphName="EXTERNAL_LINK" size="15" />
+            </graphic>
+            <stylesheets>
+               <URL value="@../../Styles/basic/victimMenu.css" />
+               <URL value="@../../Styles/basic/shoyeb.css" />
+            </stylesheets>
+            <styleClass>
+               <String fx:value="menu_container" />
+               <String fx:value="dashboard_btn2" />
+            </styleClass>
+         </Button>
+         <Button layoutX="15.0" layoutY="596.0" mnemonicParsing="false" onAction="#back_home" text="Home" AnchorPane.leftAnchor="15.0">
+            <font>
+               <Font name="Bell MT" size="14.0" />
+            </font>
+            <graphic>
+               <FontAwesomeIconView glyphName="HOME" size="15" />
+            </graphic>
+            <stylesheets>
+               <URL value="@../../Styles/basic/victimMenu.css" />
+               <URL value="@../../Styles/basic/shoyeb.css" />
+            </stylesheets>
+            <styleClass>
+               <String fx:value="menu_container" />
+               <String fx:value="dashboard_btn2" />
+            </styleClass>
+         </Button>
+         <Line endX="100.0" layoutX="61.00002670288086" layoutY="652.0" startX="-45.00002670288086" stroke="WHITE" strokeWidth="2.0" AnchorPane.leftAnchor="15.0" />
+         <Button layoutX="15.0" layoutY="347.0" mnemonicParsing="false" onAction="#vic_profile" text="Victim">
+            <font>
+               <Font name="Bell MT" size="14.0" />
+            </font>
+            <stylesheets>
+               <URL value="@../../Styles/basic/victimMenu.css" />
+               <URL value="@../../Styles/basic/shoyeb.css" />
+            </stylesheets>
+            <styleClass>
+               <String fx:value="menu_container" />
+               <String fx:value="dashboard_btn2" />
+            </styleClass>
+            <graphic>
+               <FontAwesomeIconView glyphName="USER" />
+            </graphic>
+         </Button>
+         <Button layoutX="15.0" layoutY="463.0" mnemonicParsing="false" text="Law">
+            <font>
+               <Font name="Bell MT" size="14.0" />
+            </font>
+            <stylesheets>
+               <URL value="@../../Styles/basic/victimMenu.css" />
+               <URL value="@../../Styles/basic/shoyeb.css" />
+            </stylesheets>
+            <styleClass>
+               <String fx:value="menu_container" />
+               <String fx:value="dashboard_btn2" />
+            </styleClass>
+            <graphic>
+               <FontAwesomeIconView glyphName="BOOK" />
+            </graphic>
+         </Button>
+         <Line endX="100.0" layoutX="61.00002670288086" layoutY="328.0" startX="-45.00002670288086" stroke="WHITE" strokeWidth="2.0" AnchorPane.leftAnchor="15.0" />
+         <Line endX="100.0" layoutX="61.00002670288086" layoutY="520.0" startX="-45.00002670288086" stroke="WHITE" strokeWidth="2.0" AnchorPane.leftAnchor="15.0" />
+      </children>
+   </AnchorPane>
+   <WebView fx:id="web" layoutX="194.0" layoutY="-1.0" prefHeight="804.0" prefWidth="1207.0" style="-fx-page-fill: transparent;" />
 </AnchorPane>

@@ -2,6 +2,8 @@ package com.example.legelenforcement.Controller;
 
 import com.example.legelenforcement.Global;
 import com.example.legelenforcement.HelloApplication;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,6 +17,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import javafx.util.Duration;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -30,6 +34,7 @@ public class victim implements Initializable {
     public Text success_message;
     public Label labelShow;
 
+
     @FXML
     private ImageView img1;
     @FXML
@@ -38,6 +43,12 @@ public class victim implements Initializable {
     private CheckBox check_box;
     @FXML
     private TextField passwordText;
+    @FXML
+    private ComboBox<String> location = new ComboBox<>();
+    private String[]  location_value= {"Mirpur-1", "Mirpur-2","Mirpur-10", "Mirpur-11", "Mirpur-12", "Mirpur-13", "Mirpur-14" };
+    @FXML
+    private ComboBox<String> crime = new ComboBox<>();
+    private String[]  crime_value= {"Murder", "Robbery","Snatching", "kidnapping"};
 
     @FXML
     void changeVisibility(ActionEvent event) {
@@ -76,7 +87,9 @@ public class victim implements Initializable {
         if (full_name.getText().isBlank() || user_name.getText().isBlank() || father_name.getText().isBlank() || mother_name.getText().isBlank()
         || email.getText().isBlank() || address.getText().isBlank() || pass.getText().isBlank() || confirmPass.getText().isBlank() || dateOfbirth.getText().isBlank()
         || mobile.getText().isBlank() || (male.isSelected() || female.isSelected() || other.isSelected())) {
-            labelShow.setText("Fill out all the fields to proceed.");}
+            labelShow.setText("Fill out all the fields to proceed.");
+            Timeline timeline = new Timeline(new KeyFrame(Duration.millis(1000), actionEvent-> labelShow.setText("")));
+            timeline.play();}
 
 //        else if (!Objects.equals(pass.getText(), confirmPass.getText())) {
 //            labelShow.setText("Password and confirm password must be same");}
@@ -208,6 +221,8 @@ public class victim implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        location.getItems().addAll(location_value);
+        crime.getItems().addAll(crime_value);
 
     }
 

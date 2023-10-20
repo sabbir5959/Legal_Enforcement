@@ -35,6 +35,9 @@ public class police implements Initializable {
     private CheckBox checkBox;
     @FXML
     private TextField passText;
+    @FXML
+    public WebView web= new WebView();
+    public ImageView img2 = new ImageView();
 
     @FXML
     void change(ActionEvent event){
@@ -119,6 +122,13 @@ public class police implements Initializable {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+
+
+    }
+    @FXML
+    public void open_web(ActionEvent event) throws URISyntaxException, IOException{
+        web.setVisible(true);
+        web.getEngine().load("http://bdlaws.minlaw.gov.bd/laws-of-bangladesh.html");
     }
 
     public void official(ActionEvent event) throws IOException {
@@ -145,14 +155,8 @@ public class police implements Initializable {
         stage.show();
     }
 
-    @FXML
-    public WebView web= new WebView();
-    public ImageView img2 = new ImageView();
-    @FXML
-    public void open_web(ActionEvent event) throws URISyntaxException, IOException{
-        web.setVisible(true);
-        web.getEngine().load("http://bdlaws.minlaw.gov.bd/laws-of-bangladesh.html");
-    }
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         web.setVisible(false);

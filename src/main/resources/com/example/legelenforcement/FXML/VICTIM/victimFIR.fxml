@@ -170,13 +170,13 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Text>
-            <ComboBox layoutX="51.0" layoutY="267.0" prefWidth="400.0" promptText="Location" stylesheets="@../../Styles/basic/basic.css">
+            <ComboBox fx:id="location" layoutX="51.0" layoutY="267.0" prefWidth="400.0" promptText="Location" stylesheets="@../../Styles/basic/basic.css">
                <styleClass>
                   <String fx:value="account_selector" />
                   <String fx:value="input_field" />
                </styleClass>
             </ComboBox>
-            <ComboBox layoutX="51.0" layoutY="350.0" prefWidth="400.0" promptText="Type" stylesheets="@../../Styles/basic/basic.css">
+            <ComboBox fx:id="crime" layoutX="51.0" layoutY="350.0" prefWidth="400.0" promptText="Type" stylesheets="@../../Styles/basic/basic.css">
                <styleClass>
                   <String fx:value="account_selector" />
                   <String fx:value="input_field" />
