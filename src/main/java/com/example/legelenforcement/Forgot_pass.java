@@ -1,5 +1,7 @@
 //package com.example.legelenforcement;
 //
+//import com.example.legelenforcement.Controller.VictimUserCreate;
+//import com.example.legelenforcement.View.log_in;
 //import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 //import javafx.animation.KeyFrame;
 //import javafx.animation.Timeline;
@@ -16,7 +18,7 @@
 //import java.io.IOException;
 //import java.net.URL;
 //import java.util.ResourceBundle;
-//import java.util.Scanner;
+////import java.util.Scanner;
 //
 //public class Forgot_pass implements Initializable
 //{
@@ -48,10 +50,35 @@
 //    public Label auth_mail_message;
 //    public Label code_message;
 //    public static int code;
+//    static com.example.legelenforcement.View.log_in log = new log_in();
+//    public void set_login(log_in lern)
+//    {
+//        log = lern;
+//    }
 //
 //    @Override
-//    public void initialize(URL url, ResourceBundle resourceBundle) {
+//    public void initialize(URL url, ResourceBundle resourceBundle)
+//    {
+//        first_pane.setVisible(true);
+//        second_pane.setVisible(false);
+//        third_pane.setVisible(false);
+//        fourth_pane.setVisible(false);
+//        add_listeners();
 //    }
+//
+//    private void add_listeners()
+//    {
+////        close_icon.setOnMouseClicked(MouseEvent -> Model.get_model().get_view_manager().close_stage(close_icon));
+//        back_button_second_pane.setOnMouseClicked(MouseEvent -> second_pane.setVisible(false));
+//        back_button_third_pane.setOnMouseClicked(MouseEvent -> third_pane.setVisible(false));
+//        back_button_fourth_pane.setOnMouseClicked(MouseEvent -> fourth_pane.setVisible(false));
+////        log_in.setOnMouseClicked(MouseEvent -> Model.get_model().get_view_manager().close_stage(log_in));
+//
+//        first_next.setOnMouseClicked(MouseEvent -> existence_of_account());
+//        second_next.setOnMouseClicked(MouseEvent -> send_email());
+//        third_pane_next.setOnMouseClicked(MouseEvent -> check_security_code());
+//    }
+//
 //    private void existence_of_account()
 //    {
 //        if(provide_mail.getText().isBlank())
@@ -60,10 +87,9 @@
 //            Timeline timeline = new Timeline(new KeyFrame(Duration.millis(500), event-> message.setText("")));
 //            timeline.play();
 //        }
-//        elsea
+//        else
 //        {
-//            Object Fpath = new Object();
-//            File file = new File(Fpath.data_path+"Data/Client/"+provide_mail.getText());
+//            File file = new File("E:/Java Code/Java Files/Sign Up/Victim Sign Up/" + log.getUser() + "/info.txt"+provide_mail.getText());
 //            if(file.exists()) second_pane.setVisible(true);
 //            else
 //            {
@@ -87,8 +113,8 @@
 //        {
 //            try
 //            {
-//                JavaMail javaMail = new JavaMail(auth_mail.getText());
-//                Thread thread = new Thread(javaMail);
+//                Mail_background mail_background_task = new Mail_background(auth_mail.getText());
+//                Thread thread = new Thread(mail_background_task);
 //                thread.setDaemon(true);
 //                thread.start();
 //
@@ -180,7 +206,7 @@
 //
 //            try
 //            {
-//                File file = new File(Fpath.data_path+"Data/Client/"+provide_mail.getText()+"/name-pass.txt");
+//                File file = new File("E:/Java Code/Java Files/Sign Up/Victim Sign Up/" + log.getUser() + "/info.txt/name-pass.txt");
 //                Scanner sc = new Scanner(file);
 //
 //                mail = sc.next();
@@ -195,6 +221,30 @@
 //
 //                sc.close();
 //
+//                VictimUserCreate client = new VictimUserCreate(mail, new_pass.getText(), name, gender, bdate, facebook, home);
+//
+//                try
+//                {
+//                    FileWriter cout = new FileWriter(file);
+//
+//                    cout.write(client.getMail()+"\n");
+//                    cout.write(client.getPassword()+"\n");
+//                    cout.write(client.getName()+"\n");
+//                    cout.write(client.getGender()+"\n");
+//                    cout.write(client.getBirthdate()+"\n");
+//                    cout.write(client.getFacebook()+"\n");
+//                    cout.write(client.getHome_address()+"\n");
+//                    cout.close();
+//
+//                    last_pane.setVisible(true);
+//                }
+//                catch (IOException e)
+//                {
+//                    e.printStackTrace();
+//                    new_pass_message.setText("Could not be updated");
+//                    Timeline timeline = new Timeline(new KeyFrame(Duration.millis(500), event-> new_pass_message.setText("")));
+//                    timeline.play();
+//                }
 //            }
 //            catch (IOException e)
 //            {
@@ -203,4 +253,3 @@
 //        }
 //    }
 //}
-//

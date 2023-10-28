@@ -18,12 +18,12 @@
    <ImageView fitHeight="802.0" fitWidth="1400.0" layoutX="285.0" layoutY="235.0" pickOnBounds="true" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
       <Image url="@../../Image/police.png" />
    </ImageView>
-   <TableView editable="true" layoutX="313.0" layoutY="162.0" prefHeight="522.0" prefWidth="950.0" tableMenuButtonVisible="true">
+   <TableView editable="true" layoutX="313.0" layoutY="162.0" prefHeight="522.0" prefWidth="950.0">
       <columns>
          <TableColumn prefWidth="225.0" text="No." />
          <TableColumn prefWidth="225.0" text="Criminal Name" />
-         <TableColumn prefWidth="225.0" text="Crime" />
-         <TableColumn prefWidth="225.0" text="Code" />
+         <TableColumn prefWidth="322.4000244140625" text="Crime" />
+         <TableColumn prefWidth="176.7999267578125" text="Code" />
       </columns>
    </TableView>
    <Button layoutX="1179.0" layoutY="124.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="83.0" style="-fx-background-color: #0066CCFF;" styleClass="dashboard_btn4" stylesheets="@../../Styles/basic/shoyeb.css" text="Search" textFill="WHITE">

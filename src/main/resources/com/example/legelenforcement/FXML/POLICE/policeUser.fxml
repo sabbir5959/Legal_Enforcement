@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.Controller.police">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.Controller.Police_Login">
    <ImageView fitHeight="738.0" fitWidth="1400.0" layoutY="62.0" pickOnBounds="true">
       <Image url="@../../Image/police.png" />
    </ImageView>
@@ -39,26 +39,26 @@
                   <Font name="Bell MT Bold" size="34.0" />
                </font>
             </Label>
-            <Button layoutX="264.0" layoutY="320.0" mnemonicParsing="false" onAction="#police_profile" style="-fx-background-radius: 90; -fx-background-color: #8CD78CFF;" styleClass="dashboard_btn4" stylesheets="@../../Styles/basic/shoyeb.css" text="Login" textFill="#030303" AnchorPane.leftAnchor="264.0" AnchorPane.rightAnchor="236.0">
+            <Button layoutX="260.0" layoutY="322.0" mnemonicParsing="false" onAction="#police_login" style="-fx-background-radius: 90; -fx-background-color: #8CD78CFF;" styleClass="dashboard_btn4" stylesheets="@../../Styles/basic/shoyeb.css" text="Login" textFill="#030303" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="240.0">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <TextField layoutX="264.0" layoutY="191.0" promptText="BP ID/User Name" AnchorPane.leftAnchor="264.0" AnchorPane.rightAnchor="236.0" />
+            <TextField fx:id="user" layoutX="264.0" layoutY="191.0" promptText="BP ID/User Name" AnchorPane.leftAnchor="264.0" AnchorPane.rightAnchor="236.0" />
             <TextField fx:id="passText" layoutX="262.0" layoutY="235.0" prefHeight="26.0" prefWidth="200.0" />
             <PasswordField fx:id="passHidden" layoutX="262.0" layoutY="235.0" promptText="Password" AnchorPane.leftAnchor="262.0" AnchorPane.rightAnchor="238.0" />
-            <CheckBox fx:id="checkBox" layoutX="371.0" layoutY="278.0" mnemonicParsing="false" onAction="#change" prefHeight="18.0" prefWidth="91.0" text="Show password" textFill="WHITE" AnchorPane.leftAnchor="371.0" AnchorPane.rightAnchor="238.0">
+            <CheckBox fx:id="checkBox" layoutX="315.0" layoutY="275.0" mnemonicParsing="false" onAction="#change" prefHeight="18.0" prefWidth="91.0" text="Show password" textFill="WHITE" AnchorPane.leftAnchor="315.0" AnchorPane.rightAnchor="294.0">
                <font>
                   <Font name="Arial" size="10.0" />
                </font></CheckBox>
             <Button layoutX="291.0" layoutY="356.0" mnemonicParsing="false" onAction="#police_email" prefHeight="26.0" prefWidth="143.0" style="-fx-background-color: transparent;" styleClass="dashboard_btn3" stylesheets="@../../Styles/basic/shoyeb.css" text="Forgot Password" textFill="#51a2ff" />
             <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="233.0" layoutY="212.0" size="25" />
             <FontAwesomeIconView fill="WHITE" glyphName="KEY" layoutX="231.0" layoutY="256.0" size="22" />
-            <CheckBox layoutX="261.0" layoutY="278.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="90.0" text="Remember me" textFill="WHITE">
+            <Label fx:id="error_msg" layoutX="275.0" layoutY="295.0" prefHeight="18.0" prefWidth="166.0" textFill="RED">
                <font>
-                  <Font name="Arial" size="10.0" />
+                  <Font size="11.0" />
                </font>
-            </CheckBox>
+            </Label>
          </AnchorPane>
       </center>
    </BorderPane>

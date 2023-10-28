@@ -47,10 +47,7 @@ public class judges implements Initializable {
     }
     public void comp(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/JUDGES/complaintList.fxml"));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        Global.switch_scene(root,event);
     }
 
     public void judge_email(ActionEvent event) throws IOException {
@@ -63,57 +60,36 @@ public class judges implements Initializable {
 
     public void judge_otp_verify(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/JUDGES/FORGOT/OTP.fxml"));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        Global.switch_scene(root,event);
     }
 
     public void judge_create_pass(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/JUDGES/FORGOT/createNewPass.fxml"));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        Global.switch_scene(root,event);
     }
     public void judge_user(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/JUDGES/judgesUser.fxml"));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        Global.switch_scene(root,event);
     }
 
     public void judge_profile(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/JUDGES/judgeProfile.fxml"));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        Global.switch_scene(root,event);
     }
 
     public void newPDF(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/JUDGES/criminalLaw.fxml"));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        Global.switch_scene(root,event);
     }
 
     public void back_home(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/DASHBOARD/fullSystem.fxml"));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        Global.switch_scene(root,event);
     }
 
     public void officials(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/DASHBOARD/official.fxml"));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        Global.switch_scene(root,event);
     }
 
     @FXML
@@ -133,38 +109,3 @@ public class judges implements Initializable {
         img11.setVisible(true);
     }
 }
-
-
-//    instagram.setOnMouseClicked(MouseEvent -> {
-//        try {
-//            Desktop.getDesktop().browse(new URI("https://www.instagram.com"));}
-//        catch (IOException | URISyntaxException e)
-//        {
-//            throw new RuntimeException(e);
-//        }
-//    });
-
-
-//web.getEngine().load("https://www.google.com/maps/search/hospital/@23.8461791,90.3345295,13z/data=!3m1!4b1?entry=ttu");
-
-//        public void victim_user() throws IOException {
-//        currentUserType="victim";
-//        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FXML/VICTIM/victimUser.fxml"));
-//        Global.createStage(fxmlLoader);
-//        Global.closeStage(victim_login_button);
-//    }
-
-//        public void judge_user() throws IOException {
-//        currentUserType="judge";
-//        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FXML/JUDGES/judgesUser.fxml"));
-//        Global.createStage(fxmlLoader);
-//        Global.closeStage(judge_login_button);
-//    }
-
-//    public void police_user() throws IOException {
-//        currentUserType="police";
-//        System.out.println(currentUserType);
-//        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FXML/POLICE/policeUser.fxml"));
-//        Global.createStage(fxmlLoader);
-//        Global.closeStage(police_login_button);
-//    }

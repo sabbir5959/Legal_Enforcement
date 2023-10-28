@@ -7,11 +7,11 @@
 //import javax.mail.internet.MimeMessage;
 //import java.util.Properties;
 //
-//public class JavaMail extends Task<Void>
+//public class Mail_background extends Task<Void>
 //{
 //    private final String receiver;
 //
-//    public JavaMail(String receiver)
+//    public Mail_background(String receiver)
 //    {
 //        this.receiver = receiver;
 //    }
@@ -19,11 +19,11 @@
 //    @Override
 //    protected Void call() throws MessagingException
 //    {
-//        String sender = "sabbir1808769@gmail.com";
+//        String sender = "mistdecoders@gmail.com";
 //        String receiver = this.receiver;
-//        Forgot_pass.code = (int)((Math.random()*100000000)%100000);
-//        String message = String.valueOf(Forgot_pass.code);
-//        String subject = "Authentication code for Legal Enforcement";
+//        Forget_pass.code = (int)((Math.random()*100000000)%100000);
+//        String message = String.valueOf(Forget_pass.code);
+//        String subject = "Authentication code for MAT Bank";
 //        String host = "smtp.gmail.com";
 //
 //        Properties properties = System.getProperties();
@@ -38,7 +38,7 @@
 //            @Override
 //            protected PasswordAuthentication getPasswordAuthentication()
 //            {
-//                return new PasswordAuthentication(sender,"ppaa gdve haep dbvv");
+//                return new PasswordAuthentication(sender,"floxwxqikxyuxoei");
 //            }
 //        });
 //

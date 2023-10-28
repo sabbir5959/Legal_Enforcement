@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.Controller.victim">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.Controller.Victim_Login">
    <children>
       <ImageView fitHeight="740.0" fitWidth="1400.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <image>
@@ -86,15 +86,15 @@
                         <Image url="@../../Image/crimeS.png" />
                      </image>
                   </ImageView>
-                  <TextField layoutX="74.0" layoutY="176.0" prefHeight="28.0" prefWidth="182.0" promptText="Username" style="-fx-background-color: yransparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" styleClass="text_field" stylesheets="@../../Styles/basic/victimUser.css" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="46.0" />
-                  <Button layoutX="97.0" layoutY="308.0" mnemonicParsing="false" onAction="#victim_profile" prefHeight="26.0" prefWidth="117.0" style="-fx-background-radius: 90; -fx-background-color: #257CD4FF;" styleClass="dashboard_btn4" stylesheets="@../../Styles/basic/shoyeb.css" text="Login" textFill="WHITE" AnchorPane.leftAnchor="97.0" AnchorPane.rightAnchor="103.0" />
+                  <TextField fx:id="vic_user" layoutX="74.0" layoutY="176.0" prefHeight="28.0" prefWidth="182.0" promptText="Username" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" styleClass="text_field" stylesheets="@../../Styles/basic/victimUser.css" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="46.0" />
+                  <Button layoutX="97.0" layoutY="314.0" mnemonicParsing="false" onAction="#victim_login" prefHeight="26.0" prefWidth="117.0" style="-fx-background-radius: 90; -fx-background-color: #257CD4FF;" styleClass="dashboard_btn4" stylesheets="@../../Styles/basic/shoyeb.css" text="Login" textFill="WHITE" AnchorPane.leftAnchor="97.0" AnchorPane.rightAnchor="103.0" />
                   <Button layoutX="76.0" layoutY="352.0" mnemonicParsing="false" onAction="#victim_email" prefHeight="26.0" prefWidth="143.0" style="-fx-background-color: transparent;" styleClass="dashboard_btn3" stylesheets="@../../Styles/basic/shoyeb.css" text="Forgot Password" textFill="#51a2ff" AnchorPane.leftAnchor="76.0" AnchorPane.rightAnchor="83.0" />
-                  <TextField fx:id="passwordText" layoutX="74.0" layoutY="222.0" prefHeight="28.0" prefWidth="182.0" style="-fx-background-color: yransparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" styleClass="text_field" stylesheets="@../../Styles/basic/victimUser.css" />
+                  <TextField fx:id="passwordText" layoutX="74.0" layoutY="222.0" prefHeight="28.0" prefWidth="182.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" stylesheets="@../../Styles/basic/victimUser.css">
+                     <styleClass>
+                        <String fx:value="text_field" />
+                        <String fx:value="text_field2" />
+                     </styleClass></TextField>
                   <PasswordField fx:id="passwordHidden" layoutX="74.0" layoutY="222.0" prefHeight="28.0" prefWidth="182.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" styleClass="text_field" stylesheets="@../../Styles/basic/victimUser.css" />
-                  <CheckBox layoutX="69.0" layoutY="271.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="90.0" text="Remember me" textFill="WHITE" AnchorPane.leftAnchor="69.0" AnchorPane.rightAnchor="143.0">
-                     <font>
-                        <Font name="Arial" size="10.0" />
-                     </font></CheckBox>
                   <Text fill="WHITE" layoutX="25.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Or">
                      <font>
                         <Font size="15.0" />
@@ -106,29 +106,28 @@
                         <Font size="15.0" />
                      </font>
                   </Text>
-                  <CheckBox fx:id="check_box" layoutX="167.0" layoutY="271.0" mnemonicParsing="false" onAction="#changeVisibility" text="Show password" textFill="WHITE">
+                  <CheckBox fx:id="check_box" layoutX="102.0" layoutY="264.0" mnemonicParsing="false" onAction="#changeVisibility" text="Show password" textFill="WHITE">
                      <font>
                         <Font name="Arial" size="10.0" />
                      </font>
                   </CheckBox>
                   <FontAwesomeIconView fill="WHITE" glyphName="KEY" layoutX="50.0" layoutY="240.0" size="20" wrappingWidth="16.5234375" />
                   <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="52.0" layoutY="196.0" size="20" />
+                  <Label fx:id="error_text1" layoutX="64.0" layoutY="287.0" prefHeight="18.0" prefWidth="166.0" textFill="RED">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Label>
                </children>
             </AnchorPane>
             <ImageView fitHeight="400.0" fitWidth="200.0" layoutX="100.0" layoutY="-100.0" pickOnBounds="true" rotate="90.0">
-               <image>
-                  <Image url="@../../Image/pxfuel.jpg" />
-               </image>
+               <Image url="@../../Image/pxfuel.jpg" />
             </ImageView>
             <ImageView fitHeight="400.0" fitWidth="200.0" layoutX="100.0" layoutY="94.0" pickOnBounds="true" rotate="270.0">
-               <image>
-                  <Image url="@../../Image/pxfuel.jpg" />
-               </image>
+               <Image url="@../../Image/pxfuel.jpg" />
             </ImageView>
             <ImageView fitHeight="395.0" fitWidth="400.0" layoutY="-1.0" opacity="0.27" pickOnBounds="true">
-               <image>
-                  <Image url="@../../Image/Crime.jpeg" />
-               </image>
+               <Image url="@../../Image/Crime.jpeg" />
             </ImageView>
          </children>
       </AnchorPane>
