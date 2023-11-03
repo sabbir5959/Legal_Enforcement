@@ -1,255 +1,195 @@
-//package com.example.legelenforcement;
-//
-//import com.example.legelenforcement.Controller.VictimUserCreate;
-//import com.example.legelenforcement.View.log_in;
-//import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
-//import javafx.animation.KeyFrame;
-//import javafx.animation.Timeline;
-//import javafx.fxml.Initializable;
-//import javafx.scene.control.Button;
-//import javafx.scene.control.Label;
-//import javafx.scene.control.PasswordField;
-//import javafx.scene.control.TextField;
-//import javafx.scene.layout.AnchorPane;
-//import javafx.util.Duration;
-//
-//import java.io.File;
-//import java.io.FileWriter;
-//import java.io.IOException;
-//import java.net.URL;
-//import java.util.ResourceBundle;
-////import java.util.Scanner;
-//
-//public class Forgot_pass implements Initializable
-//{
-//    public AnchorPane first_pane;
-//    public FontAwesomeIconView close_icon;
-//    public TextField provide_mail;
-//    public Button first_next;
-//    public AnchorPane second_pane;
-//    public FontAwesomeIconView back_button_second_pane;
-//    public TextField auth_mail;
-//    public Button second_next;
-//    public AnchorPane third_pane;
-//    public FontAwesomeIconView back_button_third_pane;
-//    public TextField auth_code;
-//    public Button third_pane_next;
-//    public AnchorPane fourth_pane;
-//    public FontAwesomeIconView back_button_fourth_pane;
-//    public PasswordField new_pass;
-//    public PasswordField confirm_pass;
-//    public FontAwesomeIconView unmask_pass;
-//    public FontAwesomeIconView unslashed_unmask_pass;
-//    public TextField unmasked_new_pass;
-//    public TextField unmasked_confirm_pass;
-//    public Button set_password;
-//    public AnchorPane last_pane;
-//    public Button log_in;
-//    public Label message;
-//    public Label new_pass_message;
-//    public Label auth_mail_message;
-//    public Label code_message;
-//    public static int code;
-//    static com.example.legelenforcement.View.log_in log = new log_in();
-//    public void set_login(log_in lern)
-//    {
-//        log = lern;
-//    }
-//
-//    @Override
-//    public void initialize(URL url, ResourceBundle resourceBundle)
-//    {
-//        first_pane.setVisible(true);
-//        second_pane.setVisible(false);
-//        third_pane.setVisible(false);
-//        fourth_pane.setVisible(false);
-//        add_listeners();
-//    }
-//
-//    private void add_listeners()
-//    {
-////        close_icon.setOnMouseClicked(MouseEvent -> Model.get_model().get_view_manager().close_stage(close_icon));
-//        back_button_second_pane.setOnMouseClicked(MouseEvent -> second_pane.setVisible(false));
-//        back_button_third_pane.setOnMouseClicked(MouseEvent -> third_pane.setVisible(false));
-//        back_button_fourth_pane.setOnMouseClicked(MouseEvent -> fourth_pane.setVisible(false));
-////        log_in.setOnMouseClicked(MouseEvent -> Model.get_model().get_view_manager().close_stage(log_in));
-//
-//        first_next.setOnMouseClicked(MouseEvent -> existence_of_account());
-//        second_next.setOnMouseClicked(MouseEvent -> send_email());
-//        third_pane_next.setOnMouseClicked(MouseEvent -> check_security_code());
-//    }
-//
-//    private void existence_of_account()
-//    {
-//        if(provide_mail.getText().isBlank())
-//        {
-//            message.setText("Provide an email address");
-//            Timeline timeline = new Timeline(new KeyFrame(Duration.millis(500), event-> message.setText("")));
-//            timeline.play();
-//        }
-//        else
-//        {
-//            File file = new File("E:/Java Code/Java Files/Sign Up/Victim Sign Up/" + log.getUser() + "/info.txt"+provide_mail.getText());
-//            if(file.exists()) second_pane.setVisible(true);
-//            else
-//            {
-//                message.setText("Account not found");
-//                Timeline timeline = new Timeline(new KeyFrame(Duration.millis(500), event-> {message.setText(""); provide_mail.clear();}));
-//                timeline.play();
-//            }
-//
-//        }
-//    }
-//
-//    private void send_email()
-//    {
-//        if(auth_mail.getText().isBlank())
-//        {
-//            auth_mail_message.setText("Provide an authentication mail");
-//            Timeline timeline = new Timeline(new KeyFrame(Duration.millis(500), event-> auth_mail_message.setText("")));
-//            timeline.play();
-//        }
-//        else
-//        {
-//            try
-//            {
-//                Mail_background mail_background_task = new Mail_background(auth_mail.getText());
-//                Thread thread = new Thread(mail_background_task);
-//                thread.setDaemon(true);
-//                thread.start();
-//
-//                third_pane.setVisible(true);
-//            }
-//            catch (Exception e)
-//            {
-//                auth_mail_message.setText("Email not sent");
-//                Timeline timeline = new Timeline(new KeyFrame(Duration.millis(500), event-> auth_mail_message.setText("")));
-//                timeline.play();
-//            }
-//        }
-//    }
-//
-//    private void check_security_code()
-//    {
-//        if(auth_code.getText().isBlank())
-//        {
-//            code_message.setText("Code cannot be blank");
-//            Timeline timeline = new Timeline(new KeyFrame(Duration.millis(500), event-> code_message.setText("")));
-//            timeline.play();
-//        }
-//        else
-//        {
-//            if(auth_code.getText().equals(String.valueOf(code))) set_fourth_pane();
-//            else
-//            {
-//                code_message.setText("Code do not match");
-//                Timeline timeline = new Timeline(new KeyFrame(Duration.millis(500), event-> code_message.setText("")));
-//                timeline.play();
-//            }
-//        }
-//    }
-//
-//    private void set_fourth_pane()
-//    {
-//        fourth_pane.setVisible(true);
-//        new_pass.setVisible(true);
-//        confirm_pass.setVisible(true);
-//        unmasked_new_pass.setVisible(false);
-//        unmasked_confirm_pass.setVisible(false);
-//        unslashed_unmask_pass.setVisible(false);
-//
-//        new_pass.textProperty().bindBidirectional(unmasked_new_pass.textProperty());
-//        confirm_pass.textProperty().bindBidirectional(unmasked_confirm_pass.textProperty());
-//
-//        unmask_pass.setOnMouseClicked(MouseEvent ->
-//        {
-//            new_pass.setVisible(false);
-//            confirm_pass.setVisible(false);
-//            unmasked_new_pass.setVisible(true);
-//            unmasked_confirm_pass.setVisible(true);
-//            unslashed_unmask_pass.setVisible(true);
-//            unmask_pass.setVisible(false);
-//        });
-//
-//        unslashed_unmask_pass.setOnMouseClicked(MouseEvent ->
-//        {
-//            new_pass.setVisible(true);
-//            confirm_pass.setVisible(true);
-//            unmasked_new_pass.setVisible(false);
-//            unmasked_confirm_pass.setVisible(false);
-//            unslashed_unmask_pass.setVisible(false);
-//            unmask_pass.setVisible(true);
-//        });
-//
-//
-//        set_password.setOnMouseClicked(MouseEvent -> update_password());
-//    }
-//
-//    private void update_password()
-//    {
-//        if(new_pass.getText().isBlank() || confirm_pass.getText().isBlank())
-//        {
-//            new_pass_message.setText("New password cannot be empty");
-//            Timeline timeline = new Timeline(new KeyFrame(Duration.millis(500), event-> new_pass_message.setText("")));
-//            timeline.play();
-//        }
-//
-//        if(!new_pass.getText().equals(confirm_pass.getText()))
-//        {
-//            new_pass_message.setText("Passwords do not match");
-//            Timeline timeline = new Timeline(new KeyFrame(Duration.millis(500), event-> new_pass_message.setText("")));
-//            timeline.play();
-//        }
-//        else
-//        {
-//            String mail, name, gender, bdate, facebook, home;
-//
-//            try
-//            {
-//                File file = new File("E:/Java Code/Java Files/Sign Up/Victim Sign Up/" + log.getUser() + "/info.txt/name-pass.txt");
-//                Scanner sc = new Scanner(file);
-//
-//                mail = sc.next();
-//                sc.next();
-//                sc.nextLine();
-//                name = sc.nextLine();
-//                gender =  sc.next();
-//                bdate = sc.next();
-//                facebook = sc.next();
-//                sc.nextLine();
-//                home = sc.nextLine();
-//
-//                sc.close();
-//
-//                VictimUserCreate client = new VictimUserCreate(mail, new_pass.getText(), name, gender, bdate, facebook, home);
-//
-//                try
-//                {
-//                    FileWriter cout = new FileWriter(file);
-//
-//                    cout.write(client.getMail()+"\n");
-//                    cout.write(client.getPassword()+"\n");
-//                    cout.write(client.getName()+"\n");
-//                    cout.write(client.getGender()+"\n");
-//                    cout.write(client.getBirthdate()+"\n");
-//                    cout.write(client.getFacebook()+"\n");
-//                    cout.write(client.getHome_address()+"\n");
-//                    cout.close();
-//
-//                    last_pane.setVisible(true);
-//                }
-//                catch (IOException e)
-//                {
-//                    e.printStackTrace();
-//                    new_pass_message.setText("Could not be updated");
-//                    Timeline timeline = new Timeline(new KeyFrame(Duration.millis(500), event-> new_pass_message.setText("")));
-//                    timeline.play();
-//                }
-//            }
-//            catch (IOException e)
-//            {
-//                e.printStackTrace();
-//            }
-//        }
-//    }
-//}
+package com.example.legelenforcement;
+
+import com.example.legelenforcement.Controller.victim;
+import com.example.legelenforcement.View.check_email;
+import com.example.legelenforcement.View.log_in;
+import com.example.legelenforcement.View.person;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.control.*;
+import javafx.util.Duration;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Scanner;
+public class Forgot_pass extends victim
+{
+    public TextField provide_mail, auth_mail, auth_code, user_N;
+    public PasswordField new_pass, confirm_pass;
+    public Button log_in;
+    public Label message, new_pass_message, auth_mail_message, code_message;
+    public static int code;
+    static String fp ;
+    static check_email checkEmail = new check_email();
+
+    public boolean check_email(String u,String e) throws FileNotFoundException {
+        File infoFile2 = new File("E:/Java Code/Java Files/Sign Up/Victim Sign Up/" + u + "/info.txt");
+
+        Scanner sc = new Scanner(infoFile2);
+
+        sc.useDelimiter("\n");
+
+        String p = sc.next();
+        p = sc.next();
+        p = sc.next();
+        p = sc.next();
+        p = sc.next();
+        p = sc.next();
+
+        if(p.equals(e))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public void victim_otp_verify(ActionEvent event) throws IOException {
+
+        boolean check = checkEmail.isEmailValid(auth_mail.getText());
+
+        if (auth_mail.getText().isBlank() && user_N.getText().isBlank()) {
+            message.setText("Fill out all the fields to proceed.");
+            Timeline timeline = new Timeline(new KeyFrame(Duration.millis(1000), ev -> message.setText("")));
+            timeline.play();
+        } else if (auth_mail.getText().isBlank() || !check) {
+            message.setText(" Provide an authentication mail");
+            Timeline timeline = new Timeline(new KeyFrame(Duration.millis(1000), ev -> message.setText("")));
+            timeline.play();
+        } else if (user_N.getText().isBlank()) {
+            message.setText("Provide your Username");
+            Timeline timeline = new Timeline(new KeyFrame(Duration.millis(1000), ev -> message.setText("")));
+            timeline.play();
+        } else {
+            boolean p = check_email(user_N.getText(), auth_mail.getText());
+
+            if (p) {
+                try {
+                    fp = user_N.getText();
+                    Mail_background mail_background_task = new Mail_background(auth_mail.getText());
+                    Thread thread = new Thread(mail_background_task);
+                    thread.setDaemon(true);
+                    thread.start();
+
+                    Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/VICTIM/FORGOT/OTP.fxml"));
+                    Global.switch_scene(root, event);
+                } catch (Exception e) {
+                    auth_mail_message.setText("Email not sent");
+                    Timeline timeline = new Timeline(new KeyFrame(Duration.millis(500), ev -> auth_mail_message.setText("")));
+                    timeline.play();
+                }
+            } else {
+                message.setText("Email not found");
+                Timeline timeline = new Timeline(new KeyFrame(Duration.millis(500), ev -> message.setText("")));
+                timeline.play();
+            }
+        }
+    }
+
+    public void victim_create_pass(ActionEvent event) throws IOException {
+
+        if(auth_code.getText().isBlank())
+        {
+            code_message.setText("Code cannot be blank");
+            Timeline timeline = new Timeline(new KeyFrame(Duration.millis(500), ev-> code_message.setText("")));
+            timeline.play();
+        }
+        else
+        {
+            if(auth_code.getText().equals(String.valueOf(code)))
+            {
+                Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/VICTIM/FORGOT/createNewPass.fxml"));
+                Global.switch_scene(root,event);
+            }
+            else
+            {
+                code_message.setText("Code doesn't match");
+                Timeline timeline = new Timeline(new KeyFrame(Duration.millis(500), ev-> code_message.setText("")));
+                timeline.play();
+            }
+        }
+    }
+
+    public void close(ActionEvent event) throws IOException {
+
+        String tnew = new_pass.getText();
+        String tconfirm = confirm_pass.getText();
+
+        if(new_pass.getText().isBlank() || confirm_pass.getText().isBlank())
+        {
+            new_pass_message.setText("New password cannot be empty");
+            Timeline timeline = new Timeline(new KeyFrame(Duration.millis(500), ev-> new_pass_message.setText("")));
+            timeline.play();
+        }
+
+        else if(!new_pass.getText().equals(confirm_pass.getText()))
+        {
+            new_pass_message.setText("Passwords do not match");
+            Timeline timeline = new Timeline(new KeyFrame(Duration.millis(500), ev-> new_pass_message.setText("")));
+            timeline.play();
+        }
+        else
+        {
+            try
+            {
+                File path = new File("E:/Java Code/Java Files/Sign Up/Victim Sign Up/" + fp + "/info.txt");
+                Scanner sc = new Scanner(path);
+                ArrayList<String> lines = new ArrayList<>();
+
+                sc.useDelimiter("\n");
+
+                String p = sc.next();
+                String l1 = p;
+                p = sc.next();
+                String l2 = p;
+                p = sc.next();
+                String l3 = p;
+                p = sc.next();
+                String l4 = p;
+                p = sc.next();
+                String l5 = p;
+                p = sc.next();
+                String l6 = p;
+                p = sc.next();
+                String l7 = p;
+                p = sc.next();
+                String l8 = p;
+                p = sc.next();
+                String l9 = p;
+                p = sc.next();
+                String l10 = p;
+                p = sc.next();
+                String l11 = p;
+                p = sc.next();
+                String l12 = p;
+
+                BufferedWriter writer = new BufferedWriter(new FileWriter(path));
+
+                writer.write(l1 + "\n");
+                writer.write(l2 + "\n");
+                writer.write(l3 + "\n");
+                writer.write(l4 + "\n");
+                writer.write(l5 + "\n");
+                writer.write(l6 + "\n");
+                writer.write(l7 + "\n");
+                writer.write(l8 + "\n");
+                writer.write(tnew + "\n");
+                writer.write(l10 + "\n");
+                writer.write(l11 + "\n");
+                writer.write(l12 + "\n");
+                writer.close();
+
+                Global.closeStage(CLOSE);
+            }
+            catch (IOException e)
+            {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+

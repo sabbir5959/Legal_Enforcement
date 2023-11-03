@@ -19,8 +19,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 public class Victim_Login extends VictimUserCreate {
-     public Label VFname , Vname , Vfather ,
-            Vmother , Vemail, Vaddress ;
+     public Label VFname , Vname , Vfather , Vmother , Vemail, Vaddress ;
     public TextField vic_user, full_name, email, mobile, user_name, address, father_name, mother_name, dateOfbirth, complainNo;
     @FXML
     private Label error_text1;
@@ -35,7 +34,6 @@ public class Victim_Login extends VictimUserCreate {
     @FXML
     private CheckBox check_box;
      static log_in log = new log_in();
-    fileReadWrite frw = new fileReadWrite();
      static person person = new person();
 
     public void victim_login(ActionEvent event) throws IOException {
@@ -55,11 +53,11 @@ public class Victim_Login extends VictimUserCreate {
 
             if (infoFile2.exists()) {
                 Scanner sc = new Scanner(infoFile2);
-                sc.useDelimiter("\n");
-                String p = sc.next();
 
+                sc.useDelimiter("\n");
+
+                String p = sc.next();
                 person.setTname(p);
-                System.out.println(person.getTname());
                 p = sc.next();
                 person.setTuser_name(p);
                 p = sc.next();
@@ -83,8 +81,8 @@ public class Victim_Login extends VictimUserCreate {
                 p=sc.next();
                 person.setTimage(p);
 
-                System.out.println(p);
-
+                System.out.println(person.getTpass().length());
+                System.out.println(log.getPassword().length());
 
                 if (person.getTpass().equals(log.getPassword())) {
                     VictimFirCreate fir = new VictimFirCreate();

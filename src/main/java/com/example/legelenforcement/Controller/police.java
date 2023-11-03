@@ -63,7 +63,7 @@ public class police implements Initializable {
     }
 
     public void vic_profile(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/POLICE/vict_Profile.fxml"));
+        Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/POLICE/Case_list.fxml"));
         Global.switch_scene(root,event);
     }
 

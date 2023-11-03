@@ -51,10 +51,9 @@
                <font>
                   <Font name="Arial" size="10.0" />
                </font></CheckBox>
-            <Button layoutX="291.0" layoutY="356.0" mnemonicParsing="false" onAction="#police_email" prefHeight="26.0" prefWidth="143.0" style="-fx-background-color: transparent;" styleClass="dashboard_btn3" stylesheets="@../../Styles/basic/shoyeb.css" text="Forgot Password" textFill="#51a2ff" />
             <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="233.0" layoutY="212.0" size="25" />
             <FontAwesomeIconView fill="WHITE" glyphName="KEY" layoutX="231.0" layoutY="256.0" size="22" />
-            <Label fx:id="error_msg" layoutX="275.0" layoutY="295.0" prefHeight="18.0" prefWidth="166.0" textFill="RED">
+            <Label fx:id="error_msg" alignment="CENTER" layoutX="275.0" layoutY="295.0" prefHeight="18.0" prefWidth="166.0" textFill="RED">
                <font>
                   <Font size="11.0" />
                </font>

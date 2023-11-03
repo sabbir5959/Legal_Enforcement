@@ -2,11 +2,13 @@ package com.example.legelenforcement.Controller;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.util.Duration;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.time.LocalDate;
 
 public class VictimUserCreate extends victim{
     public TextField vic_user, full_name, email, mobile, user_name, address, father_name, mother_name, dateOfbirth, complainNo;
@@ -15,6 +17,10 @@ public class VictimUserCreate extends victim{
     public ToggleGroup gender, marry;
     public Label labelShow, msg_show, wrong_msg;
     static String img ;
+    @FXML
+    private DatePicker DATE;
+
+
     public void IMG(String i){
         img = i;
     }
@@ -27,12 +33,13 @@ public class VictimUserCreate extends victim{
         String taddress = address.getText();
         String tpass = pass.getText();
         String tconfirmPass = confirmPass.getText();
-        String tbirthDate = dateOfbirth.getText();
+        LocalDate tdate = DATE.getValue();
         String tmobile = mobile.getText();
         RadioButton genderButton = (RadioButton) gender.getSelectedToggle();
         String tgender = genderButton.getText();
         RadioButton marryButton = (RadioButton) marry.getSelectedToggle();
         String tmarry = marryButton.getText();
+
 
         File user_folder = new File("E:/Java Code/Java Files/Sign Up/Victim Sign Up/");
         boolean is_user_folder_created = user_folder.mkdir();
@@ -63,7 +70,7 @@ public class VictimUserCreate extends victim{
         writer.write(tmobile + "\n");
         writer.write(temail + "\n");
         writer.write(taddress + "\n");
-        writer.write(tbirthDate + "\n");
+        writer.write(tdate + "\n");
         writer.write(tpass + "\n");
         writer.write(tgender + "\n");
         writer.write(tmarry + "\n");

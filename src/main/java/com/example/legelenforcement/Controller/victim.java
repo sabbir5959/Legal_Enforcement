@@ -71,6 +71,7 @@ public class victim implements Initializable {
         Global.switch_scene(root,event);
     }
     public void back_victim(ActionEvent event) throws IOException {
+
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/Victim/victimUser.fxml"));
         Global.switch_scene(root,event);
     }
@@ -78,6 +79,7 @@ public class victim implements Initializable {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/Victim/victimReg.fxml"));
         Global.switch_scene(root,event);
     }
+
     public void victim_fir(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/Victim/victimFIR.fxml"));
         Global.switch_scene(root,event);

@@ -16,7 +16,7 @@
    <ImageView fitHeight="800.0" fitWidth="1400.0" layoutX="285.0" layoutY="235.0" pickOnBounds="true" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
       <Image url="@../../Image/police.png" />
    </ImageView>
-   <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="801.0" prefWidth="169.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #2942c3 0% , #030104 36%, #91293f 100%);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+   <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="801.0" prefWidth="169.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #2942c3 0% , #030104 36%, #91293f 100%);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1224.0" AnchorPane.topAnchor="0.0">
       <Button layoutX="15.0" layoutY="538.0" mnemonicParsing="false" onAction="#official" text="Official Login" AnchorPane.leftAnchor="15.0">
          <font>
             <Font name="Bell MT" size="14.0" />
@@ -52,7 +52,7 @@
             <String fx:value="dashboard_btn2" />
          </styleClass>
       </Button>
-      <Button layoutX="15.0" layoutY="270.0" mnemonicParsing="false" onAction="#police_list" text="Officers" AnchorPane.leftAnchor="15.0">
+      <Button layoutX="15.0" layoutY="270.0" mnemonicParsing="false" onAction="#police_list" prefHeight="38.0" prefWidth="123.0" text="Officers" AnchorPane.leftAnchor="15.0">
          <font>
             <Font name="Bell MT" size="14.0" />
          </font>
@@ -68,7 +68,7 @@
             <String fx:value="dashboard_btn2" />
          </styleClass>
       </Button>
-      <Button layoutX="15.0" layoutY="212.0" mnemonicParsing="false" text="Profile" AnchorPane.leftAnchor="15.0">
+      <Button layoutX="15.0" layoutY="212.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="123.0" text="Profile" AnchorPane.leftAnchor="15.0">
          <font>
             <Font name="Bell MT" size="14.0" />
          </font>
@@ -84,7 +84,7 @@
             <String fx:value="dashboard_btn2" />
          </styleClass>
       </Button>
-      <Button layoutX="15.0" layoutY="668.0" mnemonicParsing="false" onAction="#police_user" text="Log Out" AnchorPane.leftAnchor="15.0">
+      <Button layoutX="15.0" layoutY="668.0" mnemonicParsing="false" onAction="#police_user" prefHeight="38.0" prefWidth="123.0" text="Log Out" AnchorPane.leftAnchor="15.0">
          <font>
             <Font name="Bell MT" size="14.0" />
          </font>
@@ -100,7 +100,7 @@
             <String fx:value="dashboard_btn2" />
          </styleClass>
       </Button>
-      <Button layoutX="15.0" layoutY="596.0" mnemonicParsing="false" onAction="#back_home" text="Home" AnchorPane.leftAnchor="15.0">
+      <Button layoutX="15.0" layoutY="596.0" mnemonicParsing="false" onAction="#back_home" prefHeight="38.0" prefWidth="123.0" text="Home" AnchorPane.leftAnchor="15.0">
          <font>
             <Font name="Bell MT" size="14.0" />
          </font>
@@ -117,7 +117,7 @@
          </styleClass>
       </Button>
       <Line endX="100.0" layoutX="61.00002670288086" layoutY="652.0" startX="-45.00002670288086" stroke="WHITE" strokeWidth="2.0" AnchorPane.leftAnchor="15.0" />
-      <Button layoutX="15.0" layoutY="347.0" mnemonicParsing="false" onAction="#vic_profile" text="Victim">
+      <Button layoutX="15.0" layoutY="347.0" mnemonicParsing="false" onAction="#vic_profile" prefHeight="38.0" prefWidth="123.0" text="Case">
          <font>
             <Font name="Bell MT" size="14.0" />
          </font>
@@ -130,10 +130,10 @@
             <String fx:value="dashboard_btn2" />
          </styleClass>
          <graphic>
-            <FontAwesomeIconView glyphName="USER" />
+            <FontAwesomeIconView glyphName="USER_SECRET" />
          </graphic>
       </Button>
-      <Button layoutX="15.0" layoutY="463.0" mnemonicParsing="false" onAction="#newPDFpage" text="Law">
+      <Button layoutX="15.0" layoutY="463.0" mnemonicParsing="false" onAction="#newPDFpage" prefHeight="38.0" prefWidth="123.0" text="Law">
          <font>
             <Font name="Bell MT" size="14.0" />
          </font>

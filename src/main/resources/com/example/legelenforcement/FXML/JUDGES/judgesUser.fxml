@@ -77,7 +77,6 @@
             <TextField fx:id="USER" layoutX="250.0" layoutY="183.0" promptText="User ID" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="250.0" />
             <TextField fx:id="pass_text" layoutX="250.0" layoutY="227.0" prefHeight="25.0" prefWidth="199.0" />
             <PasswordField fx:id="pass_hidden" layoutX="250.0" layoutY="227.0" promptText="Password" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="250.0" />
-            <Button layoutX="285.0" layoutY="353.0" mnemonicParsing="false" onAction="#judge_email" prefHeight="26.0" prefWidth="143.0" style="-fx-background-color: transparent;" styleClass="dashboard_btn3" stylesheets="@../../Styles/basic/shoyeb.css" text="Forgot Password" textFill="#51a2ff" />
             <CheckBox fx:id="Check" layoutX="304.0" layoutY="267.0" mnemonicParsing="false" onAction="#Visibility" prefHeight="18.0" prefWidth="90.0" text="Show password" textFill="WHITE">
                <font>
                   <Font name="Arial" size="10.0" />
@@ -85,10 +84,10 @@
             </CheckBox>
             <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="222.0" layoutY="204.0" size="25" />
             <FontAwesomeIconView fill="WHITE" glyphName="KEY" layoutX="219.0" layoutY="248.0" size="22" />
-            <ImageView fitHeight="222.0" fitWidth="170.0" layoutX="259.0" layoutY="-46.0" pickOnBounds="true" preserveRatio="true">
-               <Image url="@../../Image/logowhite.png" />
+            <ImageView fitHeight="145.0" fitWidth="188.0" layoutX="252.0" layoutY="-46.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@../../Image/white_logo.png" />
             </ImageView>
-            <Label fx:id="error" layoutX="269.0" layoutY="290.0" prefHeight="18.0" prefWidth="166.0" textFill="RED">
+            <Label fx:id="error" alignment="CENTER" layoutX="269.0" layoutY="290.0" prefHeight="18.0" prefWidth="166.0" textFill="RED">
                <font>
                   <Font size="11.0" />
                </font>

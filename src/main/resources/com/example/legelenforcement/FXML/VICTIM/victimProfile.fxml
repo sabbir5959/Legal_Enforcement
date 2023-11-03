@@ -79,7 +79,7 @@
             <Font name="System Bold" size="50.0" />
          </font>
       </Label>
-      <Label fx:id="fullN" layoutX="1151.0" layoutY="34.0" prefHeight="26.0" prefWidth="170.0" textFill="WHITE">
+      <Label fx:id="fullN" alignment="CENTER_RIGHT" layoutX="1144.0" layoutY="35.0" prefHeight="26.0" prefWidth="170.0" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -265,7 +265,7 @@
          </styleClass>
       </Button>
       <Circle fill="#1cff4d" layoutX="216.0" layoutY="-18.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-      <Label fx:id="VFname" layoutX="165.0" layoutY="159.0" prefHeight="40.0" prefWidth="255.0">
+      <Label fx:id="VFname" alignment="CENTER" layoutX="165.0" layoutY="159.0" prefHeight="40.0" prefWidth="255.0">
          <font>
             <Font name="Bell MT Bold" size="30.0" />
          </font>

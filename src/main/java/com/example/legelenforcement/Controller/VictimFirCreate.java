@@ -28,9 +28,9 @@ public class VictimFirCreate extends Victim_Login {
     public void set_login(log_in lern)
    {
        log = lern;
-       i=1;
+//       i=1;
    }
-   static int i =1;
+//   static int i =1;
     public boolean fir_user() throws IOException {
         String tcomplainNo = complainNo.getText();
         String tlocation = location.getValue();
@@ -50,7 +50,7 @@ public class VictimFirCreate extends Victim_Login {
         writer.write(crimeDate + "\n");
         writer.write(tdescription + "\n");
         writer.close();
-        i++;
+
         return true;
     }
     public void submit_fir(ActionEvent event) throws IOException {
