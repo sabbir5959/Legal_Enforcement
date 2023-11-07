@@ -38,6 +38,12 @@ public class VictimFirCreate extends Victim_Login {
         String tdescription = description.getText();
         LocalDate crimeDate = dateOfCrime.getValue();
 
+        complainNo.setText("");
+        location.setValue("");
+        crime.setValue("");
+        description.setText("");
+        dateOfCrime.setValue(null);
+
         File userFile = new File("E:/Java Code/Java Files/Sign Up/Victim Sign Up/" + log.getUser() +"/"+crimeDate);
         boolean is_user_file_created = userFile.mkdir();
 
@@ -58,17 +64,19 @@ public class VictimFirCreate extends Victim_Login {
         if(complainNo.getText().isBlank() || location.getValue().isBlank() || crime.getValue().isBlank() || description.getText().isBlank())
         {
             wrong_msg.setText("Fill out all the fields to proceed.");
-            Timeline timeline = new Timeline(new KeyFrame(Duration.millis(1000), actionEvent-> labelShow.setText("")));
+            Timeline timeline = new Timeline(new KeyFrame(Duration.millis(1000), actionEvent-> wrong_msg.setText("")));
             timeline.play();
         }
-        boolean isUserCreated = fir_user();
-        if (isUserCreated) {
-            label_anchor.setVisible(true);
-            msg_show.setVisible(true);
-            msg_show.setText("Submit Successfully");
-            Timeline timeline = new Timeline(new KeyFrame(Duration.millis(2000), actionEvent-> label_anchor.setVisible(false)));
-            timeline.play();
+        else
+        {
+            boolean isUserCreated = fir_user();
+            if (isUserCreated) {
+                label_anchor.setVisible(true);
+                msg_show.setVisible(true);
+                msg_show.setText("Submit Successfully");
+                Timeline timeline = new Timeline(new KeyFrame(Duration.millis(2000), actionEvent-> label_anchor.setVisible(false)));
+                timeline.play();
+            }
         }
-        else return;
     }
 }

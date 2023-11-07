@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" style="-fx-background-color: #C2C6D9FF;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.Controller.dashboard">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" style="-fx-background-color: #C2C6D9FF;" stylesheets="@../../../Styles/basic/shoyeb.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.Controller.dashboard">
    <children>
       <Text layoutX="364.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Developed by" />
       <Text layoutX="364.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Anika Tasnim">
@@ -74,34 +74,6 @@
          </image>
       </ImageView>
       <FontAwesomeIconView glyphName="POWER_OFF" layoutX="49.0" layoutY="609.0" onMouseClicked="#back_about" size="25" />
-      <AnchorPane layoutX="87.0" layoutY="410.0" prefHeight="110.0" prefWidth="165.0" styleClass="pan_2" stylesheets="@../../../Styles/basic/basic.css">
-         <children>
-            <ImageView fitHeight="120.0" fitWidth="167.0" pickOnBounds="true">
-               <image>
-                  <Image url="@../../../Image/mai_sha.jpg" />
-               </image>
-            </ImageView>
-            <Button layoutX="1.0" layoutY="-1.0" mnemonicParsing="false" onAction="#maisha" prefHeight="120.0" prefWidth="165.0" style="-fx-background-color: transparent;" />
-         </children>
-      </AnchorPane>
-      <AnchorPane layoutX="80.0" layoutY="271.0" prefHeight="127.0" prefWidth="182.0" styleClass="pan_2" stylesheets="@../../../Styles/basic/basic.css">
-         <children>
-            <ImageView fitHeight="127.0" fitWidth="184.0" layoutX="-1.0" pickOnBounds="true">
-               <image>
-                  <Image url="@../../../Image/ani_ka.jpg" />
-               </image>
-            </ImageView>
-         </children></AnchorPane>
-      <AnchorPane layoutX="87.0" layoutY="143.0" prefHeight="111.0" prefWidth="165.0" styleClass="pan_2" stylesheets="@../../../Styles/basic/basic.css">
-         <children>
-            <ImageView fitHeight="119.0" fitWidth="167.0" layoutY="-1.0" pickOnBounds="true">
-               <image>
-                  <Image url="@../../../Image/sab_bir.jpg" />
-               </image>
-            </ImageView>
-            <Button layoutX="1.0" layoutY="1.0" mnemonicParsing="false" onAction="#sabbir" prefHeight="111.0" prefWidth="165.0" style="-fx-background-color: transparent;" />
-         </children>
-      </AnchorPane>
       <FontAwesomeIconView fill="#eeeeee" glyphName="CIRCLE" layoutX="1075.0" layoutY="312.0" stroke="BLACK" styleClass="right-small-circles" />
       <FontAwesomeIconView glyphName="CIRCLE" layoutX="1075.0" layoutY="331.0" stroke="BLACK" styleClass="right-small-circles" text="" />
       <FontAwesomeIconView fill="#eeeeee" glyphName="CIRCLE" layoutX="1075.0" layoutY="351.0" stroke="BLACK" styleClass="right-small-circles" />
@@ -113,5 +85,32 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </Text>
+      <AnchorPane layoutX="86.0" layoutY="398.0" prefHeight="110.0" prefWidth="165.0" styleClass="pan_2" stylesheets="@../../../Styles/basic/basic.css">
+         <children>
+            <ImageView fitHeight="119.0" fitWidth="166.0" layoutX="1.0" onMouseClicked="#maisha" pickOnBounds="true" styleClass="img_">
+               <image>
+                  <Image url="@../../../Image/mai_sha.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="87.0" layoutY="272.0" prefHeight="111.0" prefWidth="165.0" styleClass="pan_2" stylesheets="@../../../Styles/basic/basic.css">
+         <children>
+            <ImageView fitHeight="111.0" fitWidth="166.0" layoutX="1.0" onMouseClicked="#anika" pickOnBounds="true" styleClass="img_">
+               <image>
+                  <Image url="@../../../Image/ani_ka.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="88.0" layoutY="146.0" prefHeight="111.0" prefWidth="165.0" styleClass="pan_2" stylesheets="@../../../Styles/basic/basic.css">
+         <children>
+            <ImageView fitHeight="111.0" fitWidth="166.0" layoutX="1.0" layoutY="1.0" onMouseClicked="#sabbir" pickOnBounds="true" styleClass="img_">
+               <image>
+                  <Image url="@../../../Image/sab_bir.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

@@ -11,8 +11,8 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #000345;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.Controller.Victim_case">
-   <AnchorPane layoutX="9.0" layoutY="2.5" prefHeight="495.0" prefWidth="350.0" style="-fx-background-color: white; -fx-background-radius: 5;" AnchorPane.leftAnchor="9.0" AnchorPane.topAnchor="2.5">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #000345; -fx-background-radius: 10;" stylesheets="@../../Styles/basic/shoyeb.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.Controller.Victim_case">
+   <AnchorPane layoutX="9.0" layoutY="52.0" prefHeight="495.0" prefWidth="350.0" style="-fx-background-color: white; -fx-background-radius: 5;" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="52.0">
       <Circle fx:id="dp" fill="WHITE" layoutX="167.0" layoutY="96.0" radius="82.0" stroke="BLACK" strokeType="INSIDE" />
       <Line endX="85.39999389648438" endY="3.0517578125E-5" layoutX="192.0" layoutY="191.0" startX="-137.5999755859375" startY="1.52587890625E-5" strokeWidth="2.0" />
       <Label layoutX="16.0" layoutY="230.0" text="Name" AnchorPane.leftAnchor="16.0">
@@ -70,9 +70,8 @@
             <Image url="@../../Image/black_logo.png" />
          </image>
       </ImageView>
-      <FontAwesomeIconView fx:id="close" glyphName="POWER_OFF" layoutX="16.0" layoutY="29.0" onMouseClicked="#CLOSE" size="17" />
    </AnchorPane>
-   <AnchorPane layoutX="356.6" layoutY="2.5" prefHeight="495.0" prefWidth="350.0" style="-fx-background-color: white; -fx-background-radius: 5;" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="2.5">
+   <AnchorPane layoutX="540.0" layoutY="52.0" prefHeight="495.0" prefWidth="350.0" style="-fx-background-color: white; -fx-background-radius: 5;" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="52.0">
       <children>
          <Text layoutX="28.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Case Information">
             <font>
@@ -137,5 +136,6 @@
          </ImageView>
       </children>
    </AnchorPane>
-   <Line endX="-100.0" endY="453.0999755859375" layoutX="500.0" layoutY="32.09999656677246" startX="-100.0" startY="-17.59999656677246" stroke="WHITE" strokeWidth="4.0" AnchorPane.bottomAnchor="12.300018310546875" AnchorPane.topAnchor="12.0" />
+   <Line endX="-100.0" endY="453.0999755859375" layoutX="551.0" layoutY="82.0" startX="-100.0" startY="-17.59999656677246" stroke="WHITE" strokeWidth="4.0" AnchorPane.bottomAnchor="62.900014877319336" AnchorPane.topAnchor="62.40000343322754" />
+   <FontAwesomeIconView fx:id="close" fill="WHITE" glyphName="POWER_OFF" layoutX="864.0" layoutY="36.0" onMouseClicked="#CLOSE" size="25" styleClass="img_" />
 </AnchorPane>

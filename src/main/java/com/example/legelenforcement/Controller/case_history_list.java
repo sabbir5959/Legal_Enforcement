@@ -18,7 +18,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 
-public class victim_list  implements Initializable {
+public class case_history_list  implements Initializable {
 
     USER user1 = new USER();
 
@@ -30,7 +30,7 @@ public class victim_list  implements Initializable {
         observableList = FXCollections.observableArrayList();
         sett_items();
         victim_view.setItems(observableList);
-        victim_view.setCellFactory(victim_view -> new victim_list_cell_factory());
+        victim_view.setCellFactory(victim_view -> new case_history_cell_factory());
     }
 
     public void sett_items() throws FileNotFoundException {
@@ -54,9 +54,8 @@ public class victim_list  implements Initializable {
 //                            System.out.println( "nooo1: "+ person.getName());
 //                        }
 
-
-                        //if(!newUser.getDate().equals("No FIR"))observableList.add(newUser);
-                        observableList.add(newUser);
+                        if(!newUser.getDate().equals("No FIR"))observableList.add(newUser);
+                        //observableList.add(newUser);
 
 //                        for (USER person : observableList) {
 //                            System.out.println( "nooo2: "+ person.getName());
@@ -164,6 +163,21 @@ public class victim_list  implements Initializable {
     }
     public void police_list(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/POLICE/officers.fxml"));
+        Global.switch_scene(root,event);
+    }
+
+    public void victim_fir(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/Victim/victimFIR.fxml"));
+        Global.switch_scene(root,event);
+    }
+
+    public void back_victim(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/Victim/victimUser.fxml"));
+        Global.switch_scene(root, event);
+    }
+
+    public void victim_profile(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/Victim/victimProfile.fxml"));
         Global.switch_scene(root,event);
     }
     public void police_profile(ActionEvent event) throws IOException {

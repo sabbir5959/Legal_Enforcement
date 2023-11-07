@@ -4,10 +4,12 @@
 <?import java.lang.String?>
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -27,7 +29,7 @@
             <Font name="Arial Bold" size="18.0" />
          </font>
       </Text>
-      <Text layoutX="136.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="JUDGE">
+      <Text layoutX="135.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="JUDGE">
          <font>
             <Font name="Arial Bold" size="15.0" />
          </font>
@@ -58,7 +60,7 @@
                <Font name="Arial Bold" size="18.0" />
             </font>
          </Text>
-         <Text layoutX="167.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="JUDGE">
+         <Text layoutX="167.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="JUDGE">
             <font>
                <Font name="Arial Bold" size="15.0" />
             </font>
@@ -119,55 +121,205 @@
          </Button>
       </AnchorPane>
       <Circle fill="#a0faff" layoutX="207.0" layoutY="104.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
-      <ImageView fitHeight="143.0" fitWidth="166.0" layoutX="126.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
-         <Image url="@../../Image/logoblack.png" />
+      <ImageView fitHeight="144.0" fitWidth="170.0" layoutX="122.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../../Image/black_logo.png" />
       </ImageView>
    </AnchorPane>
    <AnchorPane layoutX="30.0" layoutY="225.0" prefHeight="490.0" prefWidth="804.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #4f878b 0% , #95b340 52%, #77999c 78%, #5da25f 100%)linear-gradient(from 0% 0% to 100% 100%, #4f878b 0% , #95b340 52%, #77999c 78%, #5da25f 100%); -fx-background-radius: 15;" styleClass="pan" stylesheets="@../../Styles/basic/basic.css">
-      <Text fill="WHITE" layoutX="31.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Information">
+      <Text fill="#7b0b0b" layoutX="31.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Information">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Text>
-      <TextField layoutX="31.0" layoutY="117.0" prefHeight="38.0" prefWidth="255.0" promptText="name" style="-fx-background-color: #454545;" styleClass="text_field" stylesheets="@../../Styles/basic/victimUser.css" />
-      <TextField layoutX="445.0" layoutY="110.0" prefHeight="38.0" prefWidth="255.0" promptText="sample@gmail.com" style="-fx-background-color: #454545;" styleClass="text_field" stylesheets="@../../Styles/basic/victimUser.css" />
-      <TextField layoutX="31.0" layoutY="374.0" prefHeight="38.0" prefWidth="255.0" style="-fx-background-color: #454545;" styleClass="text_field" stylesheets="@../../Styles/basic/victimUser.css" />
-      <Text fill="WHITE" layoutX="446.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail">
+      <Text layoutX="446.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.5365853658536586">
+                     <color>
+                        <Color red="0.09497076272964478" green="0.3052631616592407" blue="0.21413645148277283" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
       </Text>
-      <Text fill="WHITE" layoutX="32.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address">
+      <Text layoutX="32.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.5073170731707317">
+                     <color>
+                        <Color red="0.09300000220537186" green="0.30000001192092896" blue="0.2102999985218048" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
       </Text>
-      <Text fill="WHITE" layoutX="32.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
+      <Text layoutX="32.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.5195121951219511">
+                     <color>
+                        <Color red="0.1372319757938385" green="0.42105263471603394" blue="0.26495125889778137" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
       </Text>
-      <TextField layoutX="31.0" layoutY="206.0" prefHeight="38.0" prefWidth="255.0" promptText="name" style="-fx-background-color: #454545;" styleClass="text_field" stylesheets="@../../Styles/basic/victimUser.css" />
-      <Text fill="WHITE" layoutX="32.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name">
+      <Text layoutX="32.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.5073170731707317">
+                     <color>
+                        <Color red="0.09300000220537186" green="0.30000001192092896" blue="0.2102999985218048" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
       </Text>
-      <TextField layoutX="445.0" layoutY="206.0" prefHeight="38.0" prefWidth="255.0" promptText="name" style="-fx-background-color: #454545;" styleClass="text_field" stylesheets="@../../Styles/basic/victimUser.css" />
-      <Text fill="WHITE" layoutX="446.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name">
+      <Text layoutX="446.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.5365853658536586">
+                     <color>
+                        <Color red="0.0941176488995552" green="0.30588236451148987" blue="0.21568627655506134" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
       </Text>
-      <Text fill="WHITE" layoutX="31.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Information">
+      <Text fill="#7b0b0b" layoutX="31.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Information">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Text>
-      <TextField layoutX="446.0" layoutY="374.0" prefHeight="38.0" prefWidth="255.0" promptText="01XXXXXXXXX" style="-fx-background-color: #454545;" styleClass="text_field" stylesheets="@../../Styles/basic/victimUser.css" />
-      <Text fill="WHITE" layoutX="447.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile">
+      <Text layoutX="447.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile">
          <font>
             <Font name="System Bold" size="13.0" />
+         </font>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.5073170731707317">
+                     <color>
+                        <Color red="0.09300000220537186" green="0.30000001192092896" blue="0.2102999985218048" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Text>
+      <Text layoutX="32.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kamrul Hasan">
+         <font>
+            <Font name="Baskerville Old Face" size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="32.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kamrul">
+         <font>
+            <Font name="Baskerville Old Face" size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="447.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hasan">
+         <font>
+            <Font name="Baskerville Old Face" size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="32.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dhaka Cantonment, Dhaka 1206">
+         <font>
+            <Font name="Baskerville Old Face" size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="445.0" layoutY="401.0" strokeType="OUTSIDE" strokeWidth="0.0" text="01798155814">
+         <font>
+            <Font name="Baskerville Old Face" size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="446.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="sabbir1808769@gmail.com">
+         <font>
+            <Font name="Baskerville Old Face" size="20.0" />
          </font>
       </Text>
    </AnchorPane>

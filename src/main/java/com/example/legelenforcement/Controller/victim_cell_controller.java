@@ -15,11 +15,11 @@ import javafx.scene.shape.Circle;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 public class victim_cell_controller implements Initializable
 {
 
-    public static USER user;
+    public USER user;
     public victim_cell_controller(USER user) {
         this.user = user;
     }
@@ -30,7 +30,10 @@ public class victim_cell_controller implements Initializable
     @FXML
     private Label name;
 
-
+    @FXML
+    private FontAwesomeIconView r;
+    @FXML
+    private FontAwesomeIconView w;
     @FXML
     private Label show;
     @Override
@@ -45,19 +48,34 @@ public class victim_cell_controller implements Initializable
         Image image = new Image(p);
         dp.setFill(new ImagePattern(image));
 
+        if(!user.getDate().equals("No FIR"))
+        {
+            w.setVisible(true);
+            r.setVisible(false);
+        }
+
+        else
+        {
+            w.setVisible(false);
+            r.setVisible(true);
+        }
+
         name.setOnMouseClicked(MouseEvent -> go_inbox());
     }
 
     public void go_inbox ()  {
 
-        Victim_case vc = new Victim_case();
-        vc.set_user(user);
+        if(!user.getDate().equals("No FIR")) {
+            Victim_case vc = new Victim_case();
+            vc.set_user(user);
 
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("FXML/POLICE/victim_&_case.fxml"));
-        try {
-            Global.createStage(fxmlLoader);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("FXML/POLICE/victim_&_case.fxml"));
+            try {
+                Global.createStage(fxmlLoader);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         }
 
     }

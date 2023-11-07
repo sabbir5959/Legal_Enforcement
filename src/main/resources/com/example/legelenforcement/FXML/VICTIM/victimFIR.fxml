@@ -24,7 +24,7 @@
       </ImageView>
       <AnchorPane prefHeight="62.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #3f5efb 0% , #fc466b 100%);" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <ImageView fitHeight="52.0" fitWidth="68.0" layoutX="1.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="52.0" fitWidth="68.0" layoutX="6.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../Image/logowhite.png" />
                </image>
@@ -42,7 +42,7 @@
                </stylesheets>
                <styleClass>
                   <String fx:value="menu_container" />
-                  <String fx:value="dashboard_btn2" />
+                  <String fx:value="dashboard_btn4" />
                </styleClass>
             </Button>
             <Button layoutX="1193.0" layoutY="12.0" mnemonicParsing="false" onAction="#back_victim" prefHeight="38.0" prefWidth="136.0" text="Log Out">
@@ -58,7 +58,7 @@
                </stylesheets>
                <styleClass>
                   <String fx:value="menu_container" />
-                  <String fx:value="dashboard_btn2" />
+                  <String fx:value="dashboard_btn4" />
                </styleClass>
             </Button>
             <Button layoutX="974.0" layoutY="12.0" mnemonicParsing="false" onAction="#complain_list" prefHeight="38.0" prefWidth="204.0" text="Complaint History">
@@ -74,26 +74,10 @@
                </stylesheets>
                <styleClass>
                   <String fx:value="menu_container" />
-                  <String fx:value="dashboard_btn2" />
+                  <String fx:value="dashboard_btn4" />
                </styleClass>
             </Button>
-            <Button layoutX="764.0" layoutY="12.0" mnemonicParsing="false" onAction="#victim_fir" prefHeight="38.0" prefWidth="197.0" text="New Complaint">
-               <font>
-                  <Font name="Bell MT" size="14.0" />
-               </font>
-               <graphic>
-                  <FontAwesomeIconView glyphName="PLUS" size="15" />
-               </graphic>
-               <stylesheets>
-                  <URL value="@../../Styles/basic/victimMenu.css" />
-                  <URL value="@../../Styles/basic/shoyeb.css" />
-               </stylesheets>
-               <styleClass>
-                  <String fx:value="menu_container" />
-                  <String fx:value="dashboard_btn2" />
-               </styleClass>
-            </Button>
-            <ImageView fitHeight="52.0" fitWidth="68.0" layoutX="1341.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="52.0" fitWidth="68.0" layoutX="1339.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../Image/logoblack.png" />
                </image>
@@ -108,7 +92,7 @@
                </stylesheets>
                <styleClass>
                   <String fx:value="menu_container" />
-                  <String fx:value="dashboard_btn2" />
+                  <String fx:value="dashboard_btn4" />
                </styleClass>
                <graphic>
                   <FontAwesomeIconView glyphName="USER" />

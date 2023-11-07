@@ -2,8 +2,6 @@ package com.example.legelenforcement;
 
 import com.example.legelenforcement.Controller.victim;
 import com.example.legelenforcement.View.check_email;
-import com.example.legelenforcement.View.log_in;
-import com.example.legelenforcement.View.person;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;

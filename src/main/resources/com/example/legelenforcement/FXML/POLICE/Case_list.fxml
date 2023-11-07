@@ -30,7 +30,7 @@
          </stylesheets>
          <styleClass>
             <String fx:value="menu_container" />
-            <String fx:value="dashboard_btn2" />
+            <String fx:value="dashboard_btn4" />
          </styleClass>
       </Button>
       <ImageView fitHeight="152.0" fitWidth="166.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -49,7 +49,7 @@
          </stylesheets>
          <styleClass>
             <String fx:value="menu_container" />
-            <String fx:value="dashboard_btn2" />
+            <String fx:value="dashboard_btn4" />
          </styleClass>
       </Button>
       <Button layoutX="15.0" layoutY="270.0" mnemonicParsing="false" onAction="#police_list" prefHeight="38.0" prefWidth="123.0" text="Officers" AnchorPane.leftAnchor="15.0">
@@ -65,7 +65,7 @@
          </stylesheets>
          <styleClass>
             <String fx:value="menu_container" />
-            <String fx:value="dashboard_btn2" />
+            <String fx:value="dashboard_btn4" />
          </styleClass>
       </Button>
       <Button layoutX="15.0" layoutY="212.0" mnemonicParsing="false" onAction="#police_profile" prefHeight="38.0" prefWidth="123.0" text="Profile" AnchorPane.leftAnchor="15.0">
@@ -81,7 +81,7 @@
          </stylesheets>
          <styleClass>
             <String fx:value="menu_container" />
-            <String fx:value="dashboard_btn2" />
+            <String fx:value="dashboard_btn4" />
          </styleClass>
       </Button>
       <Button layoutX="15.0" layoutY="668.0" mnemonicParsing="false" onAction="#police_user" prefHeight="38.0" prefWidth="124.0" text="Log Out" AnchorPane.leftAnchor="15.0">
@@ -97,7 +97,7 @@
          </stylesheets>
          <styleClass>
             <String fx:value="menu_container" />
-            <String fx:value="dashboard_btn2" />
+            <String fx:value="dashboard_btn4" />
          </styleClass>
       </Button>
       <Button layoutX="15.0" layoutY="596.0" mnemonicParsing="false" onAction="#back_home" prefHeight="38.0" prefWidth="124.0" text="Home" AnchorPane.leftAnchor="15.0">
@@ -113,7 +113,7 @@
          </stylesheets>
          <styleClass>
             <String fx:value="menu_container" />
-            <String fx:value="dashboard_btn2" />
+            <String fx:value="dashboard_btn4" />
          </styleClass>
       </Button>
       <Line endX="100.0" layoutX="61.00002670288086" layoutY="652.0" startX="-45.00002670288086" stroke="WHITE" strokeWidth="2.0" AnchorPane.leftAnchor="15.0" />
@@ -127,7 +127,7 @@
          </stylesheets>
          <styleClass>
             <String fx:value="menu_container" />
-            <String fx:value="dashboard_btn2" />
+            <String fx:value="dashboard_btn4" />
          </styleClass>
          <graphic>
             <FontAwesomeIconView glyphName="USER_SECRET" />
@@ -143,7 +143,7 @@
          </stylesheets>
          <styleClass>
             <String fx:value="menu_container" />
-            <String fx:value="dashboard_btn2" />
+            <String fx:value="dashboard_btn4" />
          </styleClass>
          <graphic>
             <FontAwesomeIconView glyphName="BOOK" />
@@ -152,7 +152,7 @@
       <Line endX="100.0" layoutX="61.00002670288086" layoutY="328.0" startX="-45.00002670288086" stroke="WHITE" strokeWidth="2.0" AnchorPane.leftAnchor="15.0" />
       <Line endX="100.0" layoutX="61.00002670288086" layoutY="520.0" startX="-45.00002670288086" stroke="WHITE" strokeWidth="2.0" AnchorPane.leftAnchor="15.0" />
    </AnchorPane>
-   <ListView fx:id="victim_view" layoutX="277.0" layoutY="166.0" prefHeight="545.0" prefWidth="1018.0" style="-fx-background-radius: 5; -fx-background-color: linear-gradient(from 13.4% 0.0% to 100.0% 0.0%, #505747ff 0.0%, #65a180ff 44.75%, #475406ff 100.0%);" />
+   <ListView fx:id="victim_view" layoutX="277.0" layoutY="166.0" prefHeight="545.0" prefWidth="1018.0" style="-fx-background-radius: 5; -fx-background-color: black;" />
    <Text fill="WHITE" layoutX="690.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Case List">
       <font>
          <Font name="Baskerville Old Face" size="65.0" />

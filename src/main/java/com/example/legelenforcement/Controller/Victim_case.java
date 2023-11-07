@@ -15,7 +15,6 @@ import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -32,7 +31,6 @@ public class Victim_case implements Initializable {
     @FXML
     public Circle dp = new Circle();
 
-
     public static USER user = new USER();
 
     public void set_user(USER user)
@@ -48,7 +46,6 @@ public class Victim_case implements Initializable {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/DASHBOARD/official.fxml"));
         Global.switch_scene(root,event);
     }
-
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

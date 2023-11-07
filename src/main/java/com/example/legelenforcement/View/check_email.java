@@ -20,5 +20,4 @@ public class check_email {
 
         return matcher.matches();
     }
-
 }

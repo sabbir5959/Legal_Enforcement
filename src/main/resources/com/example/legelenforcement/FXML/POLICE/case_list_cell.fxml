@@ -1,20 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="danchore" prefHeight="45.0" prefWidth="1018.0" style="-fx-background-radius: 5; -fx-background-color: linear-gradient(from 13.4% 0.0% to 100.0% 0.0%, #505747ff 0.0%, #65a180ff 44.75%, #475406ff 100.0%);" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
-   <Circle fx:id="dp" fill="DODGERBLUE" layoutX="32.0" layoutY="23.0" radius="16.0" stroke="BLACK" strokeType="INSIDE" />
-   <Label fx:id="name" layoutX="60.0" prefHeight="46.0" prefWidth="950.0" text="Label" textFill="WHITE">
+<AnchorPane fx:id="danchore" prefHeight="45.0" prefWidth="990.0" style="-fx-background-radius: 5; -fx-background-color: linear-gradient(from 13.4% 0.0% to 100.0% 0.0%, #505747ff 0.0%, #65a180ff 44.75%, #475406ff 100.0%);" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <Circle fx:id="dp" fill="#1f93ff00" layoutX="32.0" layoutY="23.0" radius="16.0" stroke="#ffffff00" strokeType="INSIDE" />
+   <Label fx:id="name" layoutX="60.0" prefHeight="46.0" prefWidth="927.0" textFill="WHITE">
       <font>
-         <Font name="System Bold" size="13.0" />
+         <Font name="Baskerville Old Face" size="15.0" />
       </font>
    </Label>
-   <Label fx:id="show" alignment="CENTER_RIGHT" layoutX="857.0" layoutY="13.0" prefHeight="19.0" prefWidth="140.0" text="Label" textFill="WHITE">
+   <Label fx:id="show" alignment="CENTER_RIGHT" layoutX="788.0" layoutY="13.0" prefHeight="19.0" prefWidth="140.0" textFill="WHITE">
       <font>
-         <Font name="System Bold" size="13.0" />
+         <Font name="Baskerville Old Face" size="15.0" />
+      </font>
+   </Label>
+   <FontAwesomeIconView fx:id="r" fill="#00ff1e" glyphName="CHECK" layoutX="951.0" layoutY="33.0" size="30" />
+   <FontAwesomeIconView fx:id="w" fill="RED" glyphName="PLUS" layoutX="953.0" layoutY="35.0" rotate="45.0" size="30" text="" />
+   <Label fx:id="complainNO" alignment="CENTER" layoutX="14.0" layoutY="15.0" prefHeight="18.0" prefWidth="85.0" textFill="WHITE">
+      <font>
+         <Font name="Baskerville Old Face" size="15.0" />
+      </font>
+   </Label>
+   <Label fx:id="location" layoutX="336.0" layoutY="15.0" prefHeight="18.0" prefWidth="149.0" textFill="WHITE">
+      <font>
+         <Font name="Baskerville Old Face" size="15.0" />
+      </font>
+   </Label>
+   <Label fx:id="crime" layoutX="624.0" layoutY="13.0" prefHeight="18.0" prefWidth="149.0" textFill="WHITE">
+      <font>
+         <Font name="Baskerville Old Face" size="15.0" />
       </font>
    </Label>
 </AnchorPane>

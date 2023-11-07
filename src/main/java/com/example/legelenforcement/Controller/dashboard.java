@@ -37,17 +37,17 @@ public class dashboard implements Initializable {
         Global.closeStage(CLOSE);
     }
 
-    public void sabbir(ActionEvent event) throws IOException {
+    public void sabbir(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/DASHBOARD/AboutUs/Sabbir.fxml"));
         Global.switch_scene(root,event);
     }
 
-    public void anika(ActionEvent event) throws IOException {
+    public void anika(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/DASHBOARD/AboutUs/Anika.fxml"));
         Global.switch_scene(root,event);
     }
 
-    public void maisha(ActionEvent event) throws IOException {
+    public void maisha(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/DASHBOARD/AboutUs/Maisha.fxml"));
         Global.switch_scene(root,event);
     }

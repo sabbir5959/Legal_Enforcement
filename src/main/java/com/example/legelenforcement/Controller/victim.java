@@ -41,7 +41,7 @@ public class victim implements Initializable {
     private String[]  location_value= {"Mirpur-1", "Mirpur-2","Mirpur-10", "Mirpur-11", "Mirpur-12", "Mirpur-13", "Mirpur-14" };
     @FXML
     private ComboBox<String> crime = new ComboBox<>();
-    private String[]  crime_value= {"Murder", "Robbery","Snatching", "kidnapping"};
+    private String[]  crime_value= {"Murder", "Robbery","Snatching", "kidnapping", "Drug abuse", "Trafficking", "Theft", "Bulgary", "Assault"};
     @FXML
     private DatePicker dateOfCrime;
     @FXML

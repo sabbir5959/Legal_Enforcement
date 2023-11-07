@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="645.0" prefWidth="907.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.Controller.CaseController">
+    <TableView fx:id="caseList" layoutX="-1.0" layoutY="73.0" prefHeight="573.0" prefWidth="907.0">
+      <columns>
+          <TableColumn fx:id="NoCol" prefWidth="125.60000002384186" text="complainid" />
+          <TableColumn fx:id="crimeCol" prefWidth="160.0" text="typeofcrime" />
+          <TableColumn fx:id="dateCol" prefWidth="254.40005493164062" text="dateofcrime" />
+         <TableColumn fx:id="locationCol" prefWidth="231.2000732421875" text="locationofcrime" />
+         <TableColumn fx:id="statusCol" prefWidth="137.5999755859375" text="status" />
+      </columns>
+    </TableView>
+   <TextField fx:id="filter" layoutX="114.0" layoutY="18.0" prefHeight="34.0" prefWidth="756.0" promptText="Search Query">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </TextField>
+   <Label fx:id="searchLabel" alignment="CENTER" layoutX="27.0" layoutY="17.0" prefHeight="34.0" prefWidth="76.0" text="Search Bar">
+      <font>
+         <Font name="Book Antiqua Bold" size="14.0" />
+      </font>
+   </Label>
+</AnchorPane>

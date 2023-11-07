@@ -23,7 +23,7 @@
       </ImageView>
       <AnchorPane prefHeight="62.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #3f5efb 0% , #fc466b 100%);" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <ImageView fitHeight="52.0" fitWidth="68.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="52.0" fitWidth="68.0" layoutX="2.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../Image/logowhite.png" />
                </image>
@@ -41,7 +41,7 @@
                </stylesheets>
                <styleClass>
                   <String fx:value="menu_container" />
-                  <String fx:value="dashboard_btn2" />
+                  <String fx:value="dashboard_btn4" />
                </styleClass>
             </Button>
             <Button layoutX="1147.0" layoutY="12.0" mnemonicParsing="false" onAction="#victim_reg" prefHeight="38.0" prefWidth="166.0" text="Registration">
@@ -57,10 +57,10 @@
                </stylesheets>
                <styleClass>
                   <String fx:value="menu_container" />
-                  <String fx:value="dashboard_btn2" />
+                  <String fx:value="dashboard_btn4" />
                </styleClass>
             </Button>
-            <ImageView fitHeight="52.0" fitWidth="68.0" layoutX="1340.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="52.0" fitWidth="68.0" layoutX="1338.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../Image/logoblack.png" />
                </image>

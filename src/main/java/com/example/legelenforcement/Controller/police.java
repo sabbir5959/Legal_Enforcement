@@ -76,7 +76,7 @@ public class police implements Initializable {
     }
 
     public void complaint_list(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/POLICE/complain.fxml"));
+        Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/POLICE/Criminal_List.fxml"));
         Global.switch_scene(root,event);
     }
 

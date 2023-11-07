@@ -24,10 +24,10 @@
             <Font size="24.0" />
          </font>
       </Text>
-      <ImageView fitHeight="74.0" fitWidth="66.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="74.0" fitWidth="66.0" layoutX="3.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
          <Image url="@../../Image/logoblack.png" />
       </ImageView>
-      <ImageView fitHeight="58.0" fitWidth="66.0" layoutX="1334.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="58.0" fitWidth="66.0" layoutX="1333.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
          <Image url="@../../Image/logoblack.png" />
       </ImageView>
       <Button layoutX="1230.0" layoutY="22.0" mnemonicParsing="false" onAction="#back_home" text="Home">
@@ -43,7 +43,7 @@
          </stylesheets>
          <styleClass>
             <String fx:value="menu_container" />
-            <String fx:value="dashboard_btn2" />
+            <String fx:value="dashboard_btn4" />
          </styleClass>
       </Button>
       <Button layoutX="1121.0" layoutY="22.0" mnemonicParsing="false" onAction="#judge_profile" text="Profile">
@@ -59,7 +59,7 @@
          </stylesheets>
          <styleClass>
             <String fx:value="menu_container" />
-            <String fx:value="dashboard_btn2" />
+            <String fx:value="dashboard_btn4" />
          </styleClass>
       </Button>
    </AnchorPane>
@@ -68,5 +68,5 @@
          <Image url="@../../Image/LAW.png" />
       </image>
    </ImageView>
-   <WebView fx:id="web" layoutX="-3.0" layoutY="79.0" prefHeight="722.0" prefWidth="1406.0" style="-fx-page-fill: transparent;" />
+   <WebView fx:id="web" layoutY="79.0" prefHeight="722.0" prefWidth="1400.0" style="-fx-page-fill: transparent;" />
 </AnchorPane>

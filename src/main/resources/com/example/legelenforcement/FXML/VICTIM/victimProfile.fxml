@@ -17,7 +17,7 @@
 
 <AnchorPane prefHeight="800.0" prefWidth="1400.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #061638 0% , #0074a8 29%, #236474 50%, #40a4aa 70%, #450606 100%);" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.Controller.VICTIM_profile">
    <AnchorPane prefHeight="373.0" prefWidth="1400.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #070252 0% , #522aad 30%, #55257a 58%, #132c5d 79%, #125559 100%);" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-      <ImageView fitHeight="382.0" fitWidth="444.0" layoutX="507.0" layoutY="1.0" opacity="0.46" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="323.0" fitWidth="431.0" layoutX="518.0" layoutY="3.0" opacity="0.46" pickOnBounds="true" preserveRatio="true">
          <Image url="@../../Image/logoblack.png" />
       </ImageView>
       <Circle fx:id="circle2" layoutX="1345.0" layoutY="46.0" radius="23.0" stroke="BLACK" strokeType="INSIDE">

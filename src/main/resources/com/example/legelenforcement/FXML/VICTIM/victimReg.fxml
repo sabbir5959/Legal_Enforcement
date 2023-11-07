@@ -35,7 +35,7 @@
          </stylesheets>
          <styleClass>
             <String fx:value="menu_container" />
-            <String fx:value="dashboard_btn2" />
+            <String fx:value="dashboard_btn4" />
          </styleClass>
       </Button>
       <ImageView fitHeight="52.0" fitWidth="68.0" layoutX="1341.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
