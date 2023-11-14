@@ -1,4 +1,4 @@
-package com.example.legelenforcement.Controller;
+package com.example.legelenforcement.View;
 
 public class Criminal {
 

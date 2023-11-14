@@ -2,6 +2,7 @@ package com.example.legelenforcement.Controller;
 
 import com.example.legelenforcement.Global;
 import com.example.legelenforcement.HelloApplication;
+import com.example.legelenforcement.View.Criminal;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -173,9 +174,8 @@ public class HelloController implements Initializable {
 
     }
 
-
     public void police_list(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/POLICE/officers.fxml"));
+        Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/POLICE/Police.fxml"));
         Global.switch_scene(root,event);
     }
 

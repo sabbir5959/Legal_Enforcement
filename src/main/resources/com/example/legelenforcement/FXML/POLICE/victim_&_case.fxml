@@ -65,7 +65,7 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <ImageView fitHeight="59.0" fitWidth="61.0" layoutX="259.0" layoutY="433.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="59.0" fitWidth="61.0" layoutX="259.0" layoutY="433.0" onMouseClicked="#dashboard_img" pickOnBounds="true" preserveRatio="true" styleClass="img_">
          <image>
             <Image url="@../../Image/black_logo.png" />
          </image>
@@ -129,7 +129,7 @@
                <Font size="15.0" />
             </font>
          </TextField>
-         <ImageView fitHeight="59.0" fitWidth="61.0" layoutX="255.0" layoutY="433.0" pickOnBounds="true" preserveRatio="true">
+         <ImageView fitHeight="59.0" fitWidth="61.0" layoutX="255.0" layoutY="433.0" onMouseClicked="#dashboard_img" pickOnBounds="true" preserveRatio="true" styleClass="img_">
             <image>
                <Image url="@../../Image/black_logo.png" />
             </image>

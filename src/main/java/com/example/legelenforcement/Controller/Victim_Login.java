@@ -13,6 +13,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
 import java.io.File;
@@ -35,6 +36,11 @@ public class Victim_Login extends VictimUserCreate {
     private CheckBox check_box;
      static log_in log = new log_in();
      static person person = new person();
+
+    public void dashboard_img(MouseEvent event) throws IOException{
+        Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/DASHBOARD/fullSystem.fxml"));
+        Global.switch_scene(root,event);
+    }
 
     public void victim_login(ActionEvent event) throws IOException {
         String tuser = vic_user.getText();
@@ -89,6 +95,10 @@ public class Victim_Login extends VictimUserCreate {
                     fir.set_login(log);
                     VICTIM_profile victimProfile = new VICTIM_profile();
                     victimProfile.set_person(person);
+
+                    case_history_list caseHistoryList = new case_history_list();
+                    caseHistoryList.set_log(log);
+
                     Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/Victim/victimProfile.fxml"));
                     Global.switch_scene(root,event);
 

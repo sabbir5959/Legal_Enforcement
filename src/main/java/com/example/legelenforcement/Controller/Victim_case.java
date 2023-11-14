@@ -47,6 +47,11 @@ public class Victim_case implements Initializable {
         Global.switch_scene(root,event);
     }
 
+    public void dashboard_img(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/DASHBOARD/fullSystem.fxml"));
+        Global.switch_scene(root,event);
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 

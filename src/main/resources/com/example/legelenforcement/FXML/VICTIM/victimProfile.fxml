@@ -16,9 +16,9 @@
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="800.0" prefWidth="1400.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #061638 0% , #0074a8 29%, #236474 50%, #40a4aa 70%, #450606 100%);" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.Controller.VICTIM_profile">
-   <AnchorPane prefHeight="373.0" prefWidth="1400.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #070252 0% , #522aad 30%, #55257a 58%, #132c5d 79%, #125559 100%);" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-      <ImageView fitHeight="323.0" fitWidth="431.0" layoutX="518.0" layoutY="3.0" opacity="0.46" pickOnBounds="true" preserveRatio="true">
-         <Image url="@../../Image/logoblack.png" />
+   <AnchorPane prefHeight="373.0" prefWidth="1400.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #070252 0% , #522aad 30%, #55257a 58%, #132c5d 79%, #125559 100%);" stylesheets="@../../Styles/basic/shoyeb.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <ImageView fitHeight="291.0" fitWidth="376.0" layoutX="514.0" layoutY="11.0" onMouseClicked="#dashboard_img" opacity="0.46" pickOnBounds="true" preserveRatio="true" styleClass="img_">
+         <Image url="@../../Image/black_logo.png" />
       </ImageView>
       <Circle fx:id="circle2" layoutX="1345.0" layoutY="46.0" radius="23.0" stroke="BLACK" strokeType="INSIDE">
          <fill>
@@ -153,7 +153,7 @@
             <Font size="13.0" />
          </font></Label>
    </AnchorPane>
-   <AnchorPane layoutX="777.0" layoutY="310.0" prefHeight="441.0" prefWidth="586.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #eeaeca 0% , #94bbe9 100%);" styleClass="pan" stylesheets="@../../Styles/basic/basic.css" AnchorPane.rightAnchor="40.0">
+   <AnchorPane layoutX="777.0" layoutY="310.0" prefHeight="441.0" prefWidth="586.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #eeaeca 0% , #94bbe9 100%);" styleClass="pan" AnchorPane.rightAnchor="40.0">
       <Circle fx:id="circle" layoutX="293.0" layoutY="46.0" radius="100.0" stroke="BLACK" strokeType="INSIDE">
          <fill>
             <LinearGradient endX="1.0" endY="1.0">
@@ -270,5 +270,9 @@
             <Font name="Bell MT Bold" size="30.0" />
          </font>
       </Label>
+      <stylesheets>
+         <URL value="@../../Styles/basic/basic.css" />
+         <URL value="@../../Styles/basic/shoyeb.css" />
+      </stylesheets>
    </AnchorPane>
 </AnchorPane>

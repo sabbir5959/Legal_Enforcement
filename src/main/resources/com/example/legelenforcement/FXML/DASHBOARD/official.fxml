@@ -11,11 +11,11 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="800.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.Controller.dashboard">
-   <AnchorPane prefHeight="62.0" prefWidth="1400.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #3f5efb 0% , #fc466b 100%);">
-      <ImageView fitHeight="52.0" fitWidth="68.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+   <AnchorPane prefHeight="62.0" prefWidth="1400.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #3f5efb 0% , #fc466b 100%);" stylesheets="@../../Styles/basic/shoyeb.css">
+      <ImageView fitHeight="52.0" fitWidth="68.0" layoutX="2.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" styleClass="img_">
          <Image url="@../../Image/logowhite.png" />
       </ImageView>
-      <ImageView fitHeight="52.0" fitWidth="68.0" layoutX="1339.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="52.0" fitWidth="68.0" layoutX="1334.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" styleClass="img_">
          <Image url="@../../Image/logoblack.png" />
       </ImageView>
       <Button layoutX="1229.0" layoutY="12.0" mnemonicParsing="false" onAction="#back_home" text="Home">
@@ -43,42 +43,41 @@
          </graphic>
       </Button>
    </AnchorPane>
-   <ImageView fitHeight="743.0" fitWidth="1400.0" layoutX="232.0" layoutY="194.0" pickOnBounds="true" AnchorPane.bottomAnchor="-5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-      <Image url="@../../Image/gov.png" />
+   <ImageView fitHeight="742.0" fitWidth="1400.0" layoutX="232.0" layoutY="194.0" pickOnBounds="true" AnchorPane.bottomAnchor="-5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <Image url="@../../Image/1.png" />
    </ImageView>
-   <ImageView fitHeight="344.0" fitWidth="321.0" layoutX="525.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="550.0">
-      <Image url="@../../Image/logoblack.png" />
-   </ImageView>
-   <ImageView fitHeight="239.0" fitWidth="378.0" layoutX="198.0" layoutY="368.0" opacity="0.55" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="239.0" fitWidth="378.0" layoutX="178.0" layoutY="368.0" opacity="0.45" pickOnBounds="true" preserveRatio="true">
       <Image url="@../../Image/background.jpg" />
    </ImageView>
-   <ImageView fitHeight="246.0" fitWidth="378.0" layoutX="833.0" layoutY="376.0" opacity="0.55" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="246.0" fitWidth="378.0" layoutX="833.0" layoutY="368.0" opacity="0.45" pickOnBounds="true" preserveRatio="true">
       <Image url="@../../Image/secu.png" />
    </ImageView>
-   <Button layoutX="320.0" layoutY="482.0" mnemonicParsing="false" onAction="#police_user" prefHeight="52.0" prefWidth="134.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #2942c3 0% , #030104 36%, #91293f 100%);" styleClass="dashboard_btn1" stylesheets="@../../Styles/basic/shoyeb.css" text="Login" textFill="WHITE" AnchorPane.bottomAnchor="266.0" AnchorPane.leftAnchor="320.0">
+   <Button layoutX="304.0" layoutY="482.0" mnemonicParsing="false" onAction="#police_user" prefHeight="52.0" prefWidth="134.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #2942c3 0% , #030104 36%, #91293f 100%);" styleClass="dashboard_btn1" stylesheets="@../../Styles/basic/shoyeb.css" text="Login" textFill="WHITE" AnchorPane.bottomAnchor="266.0" AnchorPane.leftAnchor="304.0">
       <font>
-         <Font name="Arial Bold" size="18.0" />
+         <Font name="Baskerville Old Face" size="25.0" />
       </font>
    </Button>
-   <ImageView fitHeight="222.0" fitWidth="170.0" layoutX="302.0" layoutY="273.0" pickOnBounds="true" preserveRatio="true">
-      <Image url="@../../Image/logowhite.png" />
+   <Label layoutX="289.0" layoutY="422.0" prefHeight="48.0" prefWidth="153.0" text="POLICE" textFill="WHITE">
+      <font>
+         <Font name="Bell MT Bold" size="40.0" />
+      </font>
+   </Label>
+   <Button layoutX="957.0" layoutY="482.0" mnemonicParsing="false" onAction="#judge_user" prefHeight="52.0" prefWidth="134.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #2942c3 0% , #030104 36%, #91293f 100%);" styleClass="dashboard_btn1" stylesheets="@../../Styles/basic/shoyeb.css" text="Login" textFill="WHITE">
+      <font>
+         <Font name="Baskerville Old Face" size="25.0" />
+      </font>
+   </Button>
+   <Label layoutX="955.0" layoutY="421.0" prefHeight="52.0" prefWidth="148.0" text="JUDGE" textFill="WHITE">
+      <font>
+         <Font name="Bell MT Bold" size="40.0" />
+      </font>
+   </Label>
+   <ImageView fitHeight="222.0" fitWidth="284.0" layoutX="889.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../../Image/black_logo.png" />
    </ImageView>
-   <Label layoutX="320.0" layoutY="425.0" prefHeight="43.0" prefWidth="134.0" text="POLICE" textFill="WHITE">
-      <font>
-         <Font name="Bell MT Bold" size="34.0" />
-      </font>
-   </Label>
-   <Button layoutX="955.0" layoutY="482.0" mnemonicParsing="false" onAction="#judge_user" prefHeight="52.0" prefWidth="134.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #2942c3 0% , #030104 36%, #91293f 100%);" styleClass="dashboard_btn1" stylesheets="@../../Styles/basic/shoyeb.css" text="Login" textFill="WHITE">
-      <font>
-         <Font name="Arial Bold" size="18.0" />
-      </font>
-   </Button>
-   <Label layoutX="962.0" layoutY="423.0" prefHeight="43.0" prefWidth="134.0" text="JUDGE" textFill="WHITE">
-      <font>
-         <Font name="Bell MT Bold" size="34.0" />
-      </font>
-   </Label>
-   <ImageView fitHeight="222.0" fitWidth="170.0" layoutX="938.0" layoutY="273.0" pickOnBounds="true" preserveRatio="true">
-      <Image url="@../../Image/logowhite.png" />
+   <ImageView fitHeight="222.0" fitWidth="284.0" layoutX="219.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../Image/black_logo.png" />
+      </image>
    </ImageView>
 </AnchorPane>

@@ -12,8 +12,8 @@
 <?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.Controller.dashboard">
-   <AnchorPane layoutX="118.0" prefHeight="62.0" prefWidth="1400.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #3f5efb 0% , #fc466b 100%);" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-      <Button layoutX="102.0" layoutY="12.0" mnemonicParsing="false" onAction="#about" prefHeight="38.0" prefWidth="103.0" text="About">
+   <AnchorPane layoutX="118.0" prefHeight="62.0" prefWidth="1400.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #000000 0% , #b3a797 41%, #a49c85 65% , #000000 100%);" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Button layoutX="87.0" layoutY="12.0" mnemonicParsing="false" onAction="#about" prefHeight="38.0" prefWidth="103.0" text="About">
          <font>
             <Font name="Bell MT" size="14.0" />
          </font>
@@ -26,10 +26,10 @@
          </stylesheets>
          <styleClass>
             <String fx:value="menu_container" />
-            <String fx:value="dashboard_btn2" />
+            <String fx:value="dashboard_btn4" />
          </styleClass>
       </Button>
-      <Button layoutX="1161.0" layoutY="11.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#official" text="Official Login">
+      <Button layoutX="1176.0" layoutY="11.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#official" text="Official Login">
          <font>
             <Font name="Bell MT" size="14.0" />
          </font>
@@ -45,27 +45,27 @@
             <String fx:value="dashboard_btn4" />
          </styleClass>
       </Button>
-      <Button layoutX="1009.0" layoutY="11.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#victim_user" text="Victim Login">
+      <Button layoutX="1034.0" layoutY="11.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#victim_user" text="Victim Login">
          <graphic>
             <FontAwesomeIconView glyphName="USER" size="15" />
          </graphic>
          <font>
             <Font name="Bell MT" size="14.0" />
          </font>
-         <stylesheets>
-            <URL value="@../../Styles/basic/victimMenu.css" />
-            <URL value="@../../Styles/basic/shoyeb.css" />
-         </stylesheets>
          <styleClass>
             <String fx:value="menu_container" />
             <String fx:value="dashboard_btn4" />
          </styleClass>
+         <stylesheets>
+            <URL value="@../../Styles/basic/victimMenu.css" />
+            <URL value="@../../Styles/basic/shoyeb.css" />
+         </stylesheets>
       </Button>
-      <ImageView fitHeight="52.0" fitWidth="68.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="52.0" fitWidth="68.0" layoutX="4.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
          <Image url="@../../Image/logowhite.png" />
       </ImageView>
-      <ImageView fitHeight="52.0" fitWidth="68.0" layoutX="1339.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
-         <Image url="@../../Image/logoblack.png" />
+      <ImageView fitHeight="52.0" fitWidth="68.0" layoutX="1326.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../../Image/white_logo.png" />
       </ImageView>
    </AnchorPane>
    <ImageView fitHeight="737.0" fitWidth="1400.0" layoutY="63.39999999999998" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
@@ -83,7 +83,7 @@
    </Text>
    <Button layoutX="641.0" layoutY="499.0" mnemonicParsing="false" onAction="#victim_reg" prefHeight="42.0" prefWidth="134.0" text="Sign Up!">
       <font>
-         <Font name="Arial" size="18.0" />
+         <Font name="Baskerville Old Face" size="18.0" />
       </font>
       <stylesheets>
          <URL value="@../../Styles/basic/victimMenu.css" />

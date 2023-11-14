@@ -22,9 +22,9 @@
             <Image url="@../../Image/orders.png" />
          </image>
       </ImageView>
-      <AnchorPane prefHeight="62.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #3f5efb 0% , #fc466b 100%);" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane prefHeight="62.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #3f5efb 0% , #fc466b 100%);" stylesheets="@../../Styles/basic/shoyeb.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <ImageView fitHeight="52.0" fitWidth="68.0" layoutX="6.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="52.0" fitWidth="68.0" layoutX="6.0" layoutY="7.0" onMouseClicked="#dashboard_img" pickOnBounds="true" preserveRatio="true" styleClass="img_">
                <image>
                   <Image url="@../../Image/logowhite.png" />
                </image>
@@ -77,7 +77,7 @@
                   <String fx:value="dashboard_btn4" />
                </styleClass>
             </Button>
-            <ImageView fitHeight="52.0" fitWidth="68.0" layoutX="1339.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="52.0" fitWidth="68.0" layoutX="1338.0" layoutY="5.0" onMouseClicked="#dashboard_img" pickOnBounds="true" preserveRatio="true" styleClass="img_">
                <image>
                   <Image url="@../../Image/logoblack.png" />
                </image>

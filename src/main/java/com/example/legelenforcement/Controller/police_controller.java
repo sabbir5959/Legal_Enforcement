@@ -6,27 +6,20 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.effect.BlendMode;
 import javafx.scene.image.ImageView;
-import javafx.scene.paint.Color;
-import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
-import javafx.stage.Stage;
 
-import java.awt.*;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class police implements Initializable {
+public class police_controller implements Initializable {
 
     public Button CLOSE ;
     @FXML
@@ -67,10 +60,10 @@ public class police implements Initializable {
         Global.switch_scene(root,event);
     }
 
-    public void police_email(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("FXML/POLICE/FORGOT/forgotPass.fxml"));
-        Global.createStage(fxmlLoader);
-    }
+//    public void police_email(ActionEvent event) throws IOException {
+//        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("FXML/POLICE/FORGOT/forgotPass.fxml"));
+//        Global.createStage(fxmlLoader);
+//    }
     public void close(ActionEvent event) throws IOException {
         Global.closeStage(CLOSE);
     }
@@ -86,7 +79,7 @@ public class police implements Initializable {
     }
 
     public void police_list(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/POLICE/officers.fxml"));
+        Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/POLICE/Police.fxml"));
         Global.switch_scene(root,event);
     }
 
@@ -119,8 +112,6 @@ public class police implements Initializable {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/DASHBOARD/official.fxml"));
         Global.switch_scene(root,event);
     }
-
-
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

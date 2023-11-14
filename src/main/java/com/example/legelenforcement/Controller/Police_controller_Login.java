@@ -18,7 +18,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Police_Login extends police {
+public class Police_controller_Login extends police_controller {
     public TextField user;
     @FXML
     private PasswordField passHidden;

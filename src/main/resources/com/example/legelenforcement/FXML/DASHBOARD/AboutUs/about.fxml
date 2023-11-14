@@ -34,12 +34,12 @@
          </image>
       </ImageView>
    </AnchorPane>
-   <Text layoutX="381.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thank You">
+   <Text layoutX="381.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="card" text="Thank You">
       <font>
          <Font name="Bell MT" size="30.0" />
       </font>
    </Text>
-   <Text layoutX="380.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="For Choosing">
+   <Text layoutX="380.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="card" text="For Choosing">
       <font>
          <Font name="Baskerville Old Face" size="52.5" />
       </font>
@@ -133,9 +133,9 @@
       <Circle fill="WHITE" layoutX="56.0" layoutY="35.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fill="WHITE" layoutX="149.0" layoutY="35.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fill="WHITE" layoutX="235.0" layoutY="35.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
-      <FontAwesomeIconView glyphName="FACEBOOK" layoutX="51.0" layoutY="41.0" onMouseClicked="#facebook" size="18" stroke="BLACK" />
-      <FontAwesomeIconView glyphName="INSTAGRAM" layoutX="227.0" layoutY="41.0" onMouseClicked="#instagram" size="18" stroke="BLACK" />
-      <FontAwesomeIconView glyphName="GITHUB" layoutX="140.0" layoutY="43.0" onMouseClicked="#github" size="21" />
+      <FontAwesomeIconView glyphName="FACEBOOK" layoutX="51.0" layoutY="41.0" onMouseClicked="#facebook" size="18" stroke="BLACK" styleClass="img_" />
+      <FontAwesomeIconView glyphName="INSTAGRAM" layoutX="227.0" layoutY="41.0" onMouseClicked="#instagram" size="18" stroke="BLACK" styleClass="img_" />
+      <FontAwesomeIconView glyphName="GITHUB" layoutX="140.0" layoutY="43.0" onMouseClicked="#github" size="21" styleClass="img_" />
    </AnchorPane>
    <Text fx:id="CLOSE" layoutX="471.0" layoutY="42.0" onMouseClicked="#close" strokeType="OUTSIDE" strokeWidth="0.0" text="Close" AnchorPane.leftAnchor="470.0" AnchorPane.topAnchor="30.0">
       <font>

@@ -18,8 +18,8 @@
 <?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.Controller.victimOrder">
-   <AnchorPane prefHeight="62.0" prefWidth="1400.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #3f5efb 0% , #fc466b 100%);" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-      <ImageView fitHeight="52.0" fitWidth="68.0" layoutX="3.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+   <AnchorPane prefHeight="62.0" prefWidth="1400.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #3f5efb 0% , #fc466b 100%);" stylesheets="@../../Styles/basic/shoyeb.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <ImageView fitHeight="52.0" fitWidth="68.0" layoutX="5.0" layoutY="5.0" onMouseClicked="#dashboard_img" pickOnBounds="true" preserveRatio="true" styleClass="img_">
          <Image url="@../../Image/logowhite.png" />
       </ImageView>
       <Button layoutX="85.0" layoutY="12.0" mnemonicParsing="false" onAction="#back_home" text="Home">
@@ -38,7 +38,7 @@
             <String fx:value="dashboard_btn4" />
          </styleClass>
       </Button>
-      <ImageView fitHeight="52.0" fitWidth="68.0" layoutX="1341.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="52.0" fitWidth="68.0" layoutX="1337.0" layoutY="5.0" onMouseClicked="#dashboard_img" pickOnBounds="true" preserveRatio="true" styleClass="img_">
          <Image url="@../../Image/logoblack.png" />
       </ImageView>
    </AnchorPane>

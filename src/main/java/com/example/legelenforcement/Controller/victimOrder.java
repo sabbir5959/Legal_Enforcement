@@ -12,6 +12,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.DatePicker;
 import javafx.scene.image.Image;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.stage.FileChooser;
@@ -24,6 +25,12 @@ public class victimOrder extends Victim_Login{
     public Circle circle, circle2;
     @FXML
     private DatePicker DATE;
+
+    public void dashboard_img(MouseEvent event) throws IOException{
+        Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/DASHBOARD/fullSystem.fxml"));
+        Global.switch_scene(root,event);
+    }
+
     @FXML
     private void insert_photo(ActionEvent event) throws IOException {
         FileChooser ch= new FileChooser();

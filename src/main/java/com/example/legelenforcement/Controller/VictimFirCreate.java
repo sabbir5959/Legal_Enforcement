@@ -1,13 +1,18 @@
 package com.example.legelenforcement.Controller;
 
+import com.example.legelenforcement.Global;
+import com.example.legelenforcement.HelloApplication;
 import com.example.legelenforcement.View.log_in;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.PasswordField;
+import javafx.scene.input.MouseEvent;
 import javafx.util.Duration;
 
 import java.io.File;
@@ -31,6 +36,12 @@ public class VictimFirCreate extends Victim_Login {
 //       i=1;
    }
 //   static int i =1;
+
+    public void dashboard_img(MouseEvent event) throws IOException{
+        Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/DASHBOARD/fullSystem.fxml"));
+        Global.switch_scene(root,event);
+    }
+
     public boolean fir_user() throws IOException {
         String tcomplainNo = complainNo.getText();
         String tlocation = location.getValue();

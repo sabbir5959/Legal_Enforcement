@@ -50,17 +50,8 @@ public class victim_list  implements Initializable {
 
                         USER newUser = get_victim(c1);
 
-//                        for (USER person : observableList) {
-//                            System.out.println( "nooo1: "+ person.getName());
-//                        }
-
-
-                        //if(!newUser.getDate().equals("No FIR"))observableList.add(newUser);
                         observableList.add(newUser);
 
-//                        for (USER person : observableList) {
-//                            System.out.println( "nooo2: "+ person.getName());
-//                        }
                     }
                 }
             }
@@ -163,7 +154,7 @@ public class victim_list  implements Initializable {
         Global.switch_scene(root,event);
     }
     public void police_list(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/POLICE/officers.fxml"));
+        Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/POLICE/Police.fxml"));
         Global.switch_scene(root,event);
     }
     public void police_profile(ActionEvent event) throws IOException {
