@@ -3,6 +3,7 @@ package com.example.legelenforcement.Controller;
 import com.example.legelenforcement.Global;
 import com.example.legelenforcement.HelloApplication;
 import com.example.legelenforcement.View.person;
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -20,6 +21,7 @@ import java.util.ResourceBundle;
 
 public class VICTIM_profile implements Initializable {
 
+    public FontAwesomeIconView cross;
     @FXML
     private Label VFname;
     public Circle circle, circle2;
@@ -46,21 +48,25 @@ public class VICTIM_profile implements Initializable {
     {
         this.per = per;
     }
-    public void back_home(ActionEvent event) throws IOException {
+
+    public void CROSS(MouseEvent event) throws IOException{
+        Global.closeStage(cross);
+    }
+    public void back_home(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/DASHBOARD/fullSystem.fxml"));
         Global.switch_scene(root,event);
     }
-    public void back_victim(ActionEvent event) throws IOException {
+    public void back_victim(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/Victim/victimUser.fxml"));
         Global.switch_scene(root, event);
     }
 
-    public void complain_list(ActionEvent event) throws IOException {
+    public void complain_list(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/VICTIM/complaintList.fxml"));
         Global.switch_scene(root,event);
     }
 
-    public void victim_fir(ActionEvent event) throws IOException {
+    public void victim_fir(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/Victim/victimFIR.fxml"));
         Global.switch_scene(root,event);
     }

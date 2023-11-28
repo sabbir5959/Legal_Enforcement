@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="578.0" prefWidth="861.0" style="-fx-background-color: #000345;" stylesheets="@../../Styles/basic/shoyeb.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.Controller.vic_case_fxml">
+   <children>
+      <AnchorPane layoutX="9.0" layoutY="52.0" prefHeight="495.0" prefWidth="350.0" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="52.0">
+         <stylesheets>
+            <URL value="@../../Styles/basic/list.css" />
+            <URL value="@../../Styles/basic/color.css" />
+         </stylesheets>
+         <styleClass>
+            <String fx:value="rounded-anchor-pane" />
+            <String fx:value="chat-gpt6" />
+         </styleClass>
+         <children>
+            <Circle fx:id="dp" fill="WHITE" layoutX="167.0" layoutY="96.0" radius="82.0" stroke="BLACK" strokeType="INSIDE" />
+            <Line endX="85.39999389648438" endY="3.0517578125E-5" layoutX="192.0" layoutY="191.0" startX="-137.5999755859375" startY="1.52587890625E-5" strokeWidth="2.0" />
+            <Label layoutX="16.0" layoutY="230.0" text="Name" AnchorPane.leftAnchor="16.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="273.0" text="E-mail" AnchorPane.leftAnchor="16.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="314.0" text="Address" AnchorPane.leftAnchor="16.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="356.0" text="Phone" AnchorPane.leftAnchor="16.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="vc_name" focusTraversable="false" layoutX="146.0" layoutY="230.0" prefHeight="22.0" prefWidth="179.0" text="Label">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="vc_email" focusTraversable="false" layoutX="146.0" layoutY="273.0" prefHeight="22.0" prefWidth="193.0" text="Label">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="vc_address" focusTraversable="false" layoutX="146.0" layoutY="314.0" prefHeight="22.0" prefWidth="179.0" text="Label">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="vc_phone" focusTraversable="false" layoutX="146.0" layoutY="356.0" prefHeight="22.0" prefWidth="179.0" text="Label">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="397.0" text="Date of Birth">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="vc_dob" focusTraversable="false" layoutX="146.0" layoutY="398.0" prefHeight="22.0" prefWidth="179.0" text="Label">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="59.0" fitWidth="61.0" layoutX="259.0" layoutY="433.0" pickOnBounds="true" preserveRatio="true" styleClass="img_">
+               <image>
+                  <Image url="@../../Image/black_logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="540.0" layoutY="52.0" prefHeight="495.0" prefWidth="350.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="52.0">
+         <children>
+            <Text layoutX="28.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Case Information">
+               <font>
+                  <Font name="Baskerville Old Face" size="40.0" />
+               </font>
+            </Text>
+            <Line endX="152.466552734375" endY="1.52587890625E-5" layoutX="162.0" layoutY="85.0" startX="-137.5999755859375" startY="1.52587890625E-5" strokeWidth="2.0" />
+            <Label layoutX="18.0" layoutY="143.0" text="Complain No." AnchorPane.leftAnchor="18.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="18.0" layoutY="190.0" text="Location" AnchorPane.leftAnchor="18.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="18.0" layoutY="231.0" text="Crime" AnchorPane.leftAnchor="18.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="18.0" layoutY="273.0" text="Date" AnchorPane.leftAnchor="18.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="18.0" layoutY="316.0" text="Description" AnchorPane.leftAnchor="18.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="vc_complainNo" focusTraversable="false" layoutX="163.0" layoutY="143.0" prefHeight="18.0" prefWidth="157.0" text="Label">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="vc_location" focusTraversable="false" layoutX="163.0" layoutY="190.0" prefHeight="18.0" prefWidth="157.0" text="Label">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="vc_crime" focusTraversable="false" layoutX="163.0" layoutY="231.0" prefHeight="18.0" prefWidth="157.0" text="Label">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="vc_date" focusTraversable="false" layoutX="163.0" layoutY="273.0" prefHeight="18.0" prefWidth="157.0" text="Label" AnchorPane.topAnchor="273.0">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="vc_description" alignment="TOP_LEFT" layoutX="163.0" layoutY="318.0" prefHeight="90.0" prefWidth="138.0" text="Label" wrapText="true">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="59.0" fitWidth="61.0" layoutX="263.0" layoutY="435.0" pickOnBounds="true" preserveRatio="true" styleClass="img_">
+               <image>
+                  <Image url="@../../Image/black_logo.png" />
+               </image>
+            </ImageView>
+         </children>
+         <stylesheets>
+            <URL value="@../../Styles/basic/list.css" />
+            <URL value="@../../Styles/basic/color.css" />
+         </stylesheets>
+         <styleClass>
+            <String fx:value="rounded-anchor-pane" />
+            <String fx:value="chat-gpt8" />
+         </styleClass>
+      </AnchorPane>
+      <Line endX="-100.0" endY="453.0999755859375" layoutX="531.0" layoutY="82.0" startX="-100.0" startY="-17.59999656677246" stroke="WHITE" strokeWidth="4.0" AnchorPane.bottomAnchor="62.900014877319336" AnchorPane.topAnchor="62.40000343322754" />
+      <FontAwesomeIconView fx:id="close" fill="WHITE" glyphName="POWER_OFF" layoutX="864.0" layoutY="36.0" onMouseClicked="#CLOSE" size="25" styleClass="img_" text="" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0" />
+   </children>
+</AnchorPane>

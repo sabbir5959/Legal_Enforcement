@@ -1,17 +1,28 @@
 package com.example.legelenforcement;
 
-public class Model
+abstract public class Model
 {
-    private static Model model;
+    private String tfull, tfullN;
 
-
-
-    public static synchronized Model get_model()
-    {
-        if(model==null) model=new Model();
-        return model;
+    public Model(String tfull, String tfullN) {
+        this.tfull = tfull;
+        this.tfullN = tfullN;
     }
 
+    public String getTfull() {
+        return tfull;
+    }
 
+    public void setTfull(String tfull) {
+        this.tfull = tfull;
+    }
+
+    public String getTfullN() {
+        return tfullN;
+    }
+
+    public void setTfullN(String tfullN) {
+        this.tfullN = tfullN;
+    }
 }
 

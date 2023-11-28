@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
-<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -77,14 +76,6 @@
       <FontAwesomeIconView fill="#eeeeee" glyphName="CIRCLE" layoutX="1075.0" layoutY="313.0" stroke="BLACK" styleClass="right-small-circles" />
       <FontAwesomeIconView fill="#eeeeee" glyphName="CIRCLE" layoutX="1075.0" layoutY="332.0" stroke="BLACK" styleClass="right-small-circles" text="" />
       <FontAwesomeIconView glyphName="CIRCLE" layoutX="1075.0" layoutY="352.0" stroke="BLACK" styleClass="right-small-circles" />
-      <Text fx:id="CLOSE" layoutX="481.0" layoutY="52.0" onMouseClicked="#close" strokeType="OUTSIDE" strokeWidth="0.0" text="Close" AnchorPane.leftAnchor="470.0" AnchorPane.topAnchor="30.0">
-         <font>
-            <Font name="Baskerville Old Face" size="15.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="DEFAULT" />
-         </cursor>
-      </Text>
       <AnchorPane layoutX="86.0" layoutY="398.0" prefHeight="110.0" prefWidth="165.0" styleClass="pan_2" stylesheets="@../../../Styles/basic/basic.css">
          <children>
             <ImageView fitHeight="119.0" fitWidth="166.0" layoutX="1.0" onMouseClicked="#maisha" pickOnBounds="true" styleClass="img_">
@@ -112,5 +103,6 @@
             </ImageView>
          </children>
       </AnchorPane>
+      <FontAwesomeIconView fx:id="CLOSE" glyphName="POWER_OFF" layoutX="1053.0" layoutY="56.0" onMouseClicked="#close" size="25" styleClass="img_" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0" />
    </children>
 </AnchorPane>

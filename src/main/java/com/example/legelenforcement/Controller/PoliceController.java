@@ -3,6 +3,7 @@ package com.example.legelenforcement.Controller;
 import com.example.legelenforcement.Global;
 import com.example.legelenforcement.HelloApplication;
 import com.example.legelenforcement.View.Police;
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -18,6 +19,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.web.WebView;
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -28,6 +30,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 public class PoliceController implements Initializable {
+    @FXML
+    private FontAwesomeIconView cross;
 
     @FXML
     private TableColumn<Police, String> BatchCol;
@@ -61,22 +65,27 @@ public class PoliceController implements Initializable {
     public WebView web= new WebView();
     public ImageView img2 = new ImageView();
 
-    public void complaint_list(ActionEvent event) throws IOException {
+    @FXML
+    void CROSS(MouseEvent event) throws IOException{
+        Global.closeStage(cross);
+    }
+
+    public void complaint_list(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/POLICE/Criminal_List.fxml"));
         Global.switch_scene(root,event);
     }
 
-    public void police_user(ActionEvent event) throws IOException {
+    public void police_user(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/POLICE/policeUser.fxml"));
         Global.switch_scene(root,event);
     }
 
-    public void police_profile(ActionEvent event) throws IOException {
+    public void police_profile(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/POLICE/profile.fxml"));
         Global.switch_scene(root,event);
     }
 
-    public void newPDFpage(ActionEvent event) throws IOException {
+    public void newPDFpage(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/POLICE/criminalLaw.fxml"));
         Global.switch_scene(root,event);
     }
@@ -86,12 +95,12 @@ public class PoliceController implements Initializable {
         web.getEngine().load("http://bdlaws.minlaw.gov.bd/laws-of-bangladesh.html");
     }
 
-    public void official(ActionEvent event) throws IOException {
+    public void official(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/DASHBOARD/official.fxml"));
         Global.switch_scene(root,event);
     }
 
-    public void back_home(ActionEvent event) throws IOException {
+    public void back_home(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/DASHBOARD/fullSystem.fxml"));
         Global.switch_scene(root,event);
     }
@@ -101,7 +110,7 @@ public class PoliceController implements Initializable {
         Global.switch_scene(root,event);
     }
 
-    public void vic_profile(ActionEvent event) throws IOException {
+    public void vic_profile(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/POLICE/Case_list.fxml"));
         Global.switch_scene(root,event);
     }

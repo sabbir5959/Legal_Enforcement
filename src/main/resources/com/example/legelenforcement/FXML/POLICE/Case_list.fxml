@@ -8,16 +8,31 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.Controller.victim_list">
-   <ImageView fitHeight="803.0" fitWidth="1400.0" pickOnBounds="true" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-      <Image url="@../../Image/police.png" />
+<AnchorPane prefHeight="800.0" prefWidth="1400.0" styleClass="chat-gpt7" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.Controller.victim_list">
+   <ImageView fitHeight="614.0" fitWidth="445.0" layoutX="127.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../Image/Cartoon/ds.png" />
+      </image>
    </ImageView>
-   <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="801.0" prefWidth="194.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #2942c3 0% , #030104 36%, #91293f 100%);" stylesheets="@../../Styles/basic/shoyeb.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1224.0" AnchorPane.topAnchor="0.0">
-      <Button layoutX="15.0" layoutY="538.0" mnemonicParsing="false" onAction="#official" text="Official Login" AnchorPane.leftAnchor="15.0">
+   <ListView fx:id="victim_view" layoutX="517.0" layoutY="176.0" prefHeight="545.0" prefWidth="778.0" style="-fx-background-color: white;" styleClass="list-cell" stylesheets="@../../Styles/basic/list.css" />
+   <AnchorPane layoutX="1294.0" layoutY="145.0" prefHeight="654.0" prefWidth="106.0" styleClass="chat-gpt" stylesheets="@../../Styles/basic/color.css" />
+   <AnchorPane layoutX="170.0" layoutY="699.0" prefHeight="101.0" prefWidth="1230.0" styleClass="chat-gpt" stylesheets="@../../Styles/basic/color.css" />
+   <AnchorPane layoutX="169.0" layoutY="-1.0" prefHeight="178.0" prefWidth="1231.0" styleClass="chat-gpt" stylesheets="@../../Styles/basic/color.css">
+      <children>
+         <Text fill="WHITE" layoutX="535.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Case List">
+            <font>
+               <Font name="Baskerville Old Face" size="65.0" />
+            </font>
+         </Text>
+      </children>
+   </AnchorPane>
+   <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="801.0" prefWidth="194.0" styleClass="chat-gpt" stylesheets="@../../Styles/basic/shoyeb.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1224.0" AnchorPane.topAnchor="0.0">
+      <Button layoutX="15.0" layoutY="538.0" mnemonicParsing="false" onMouseClicked="#official" text="Official Login" AnchorPane.leftAnchor="15.0">
          <font>
             <Font name="Bell MT" size="14.0" />
          </font>
@@ -36,7 +51,7 @@
       <ImageView fitHeight="152.0" fitWidth="166.0" pickOnBounds="true" preserveRatio="true" styleClass="img_" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <Image url="@../../Image/white_logo.png" />
       </ImageView>
-      <Button layoutX="15.0" layoutY="405.0" mnemonicParsing="false" onAction="#complaint_list" text="Criminal List" AnchorPane.leftAnchor="15.0">
+      <Button layoutX="15.0" layoutY="405.0" mnemonicParsing="false" onMouseClicked="#complaint_list" text="Criminal List" AnchorPane.leftAnchor="15.0">
          <font>
             <Font name="Bell MT" size="14.0" />
          </font>
@@ -52,7 +67,7 @@
             <String fx:value="dashboard_btn4" />
          </styleClass>
       </Button>
-      <Button layoutX="15.0" layoutY="270.0" mnemonicParsing="false" onAction="#police_list" prefHeight="38.0" prefWidth="123.0" text="Officers" AnchorPane.leftAnchor="15.0">
+      <Button layoutX="15.0" layoutY="270.0" mnemonicParsing="false" onMouseClicked="#police_list" prefHeight="38.0" prefWidth="123.0" text="Officers" AnchorPane.leftAnchor="15.0">
          <font>
             <Font name="Bell MT" size="14.0" />
          </font>
@@ -68,7 +83,7 @@
             <String fx:value="dashboard_btn4" />
          </styleClass>
       </Button>
-      <Button layoutX="15.0" layoutY="212.0" mnemonicParsing="false" onAction="#police_profile" prefHeight="38.0" prefWidth="123.0" text="Profile" AnchorPane.leftAnchor="15.0">
+      <Button layoutX="15.0" layoutY="212.0" mnemonicParsing="false" onMouseClicked="#police_profile" prefHeight="38.0" prefWidth="123.0" text="Profile" AnchorPane.leftAnchor="15.0">
          <font>
             <Font name="Bell MT" size="14.0" />
          </font>
@@ -84,7 +99,7 @@
             <String fx:value="dashboard_btn4" />
          </styleClass>
       </Button>
-      <Button layoutX="15.0" layoutY="668.0" mnemonicParsing="false" onAction="#police_user" prefHeight="38.0" prefWidth="124.0" text="Log Out" AnchorPane.leftAnchor="15.0">
+      <Button layoutX="15.0" layoutY="668.0" mnemonicParsing="false" onMouseClicked="#police_user" prefHeight="38.0" prefWidth="124.0" text="Log Out" AnchorPane.leftAnchor="15.0">
          <font>
             <Font name="Bell MT" size="14.0" />
          </font>
@@ -100,7 +115,7 @@
             <String fx:value="dashboard_btn4" />
          </styleClass>
       </Button>
-      <Button layoutX="15.0" layoutY="596.0" mnemonicParsing="false" onAction="#back_home" prefHeight="38.0" prefWidth="124.0" text="Home" AnchorPane.leftAnchor="15.0">
+      <Button layoutX="15.0" layoutY="596.0" mnemonicParsing="false" onMouseClicked="#back_home" prefHeight="38.0" prefWidth="124.0" text="Home" AnchorPane.leftAnchor="15.0">
          <font>
             <Font name="Bell MT" size="14.0" />
          </font>
@@ -133,7 +148,7 @@
             <FontAwesomeIconView glyphName="USER_SECRET" />
          </graphic>
       </Button>
-      <Button layoutX="15.0" layoutY="463.0" mnemonicParsing="false" onAction="#newPDFpage" prefHeight="38.0" prefWidth="123.0" text="Law">
+      <Button layoutX="15.0" layoutY="463.0" mnemonicParsing="false" onMouseClicked="#newPDFpage" prefHeight="38.0" prefWidth="123.0" text="Law">
          <font>
             <Font name="Bell MT" size="14.0" />
          </font>
@@ -152,10 +167,11 @@
       <Line endX="100.0" layoutX="61.00002670288086" layoutY="328.0" startX="-45.00002670288086" stroke="WHITE" strokeWidth="2.0" AnchorPane.leftAnchor="15.0" />
       <Line endX="100.0" layoutX="61.00002670288086" layoutY="520.0" startX="-45.00002670288086" stroke="WHITE" strokeWidth="2.0" AnchorPane.leftAnchor="15.0" />
    </AnchorPane>
-   <ListView fx:id="victim_view" layoutX="277.0" layoutY="166.0" prefHeight="545.0" prefWidth="1018.0" style="-fx-background-radius: 5; -fx-background-color: black;" />
-   <Text fill="WHITE" layoutX="690.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Case List">
-      <font>
-         <Font name="Baskerville Old Face" size="65.0" />
-      </font>
-   </Text>
+   <FontAwesomeIconView fx:id="cross" fill="WHITE" glyphName="POWER_OFF" layoutX="1393.0" layoutY="65.0" onMouseClicked="#CROSS" size="25" styleClass="img_" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0" />
+   <Circle fill="WHITE" layoutX="1348.0" layoutY="749.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+   <FontAwesomeIconView glyphName="INFO" layoutX="1345.0" layoutY="755.0" onMouseClicked="#about" size="18" stroke="BLACK" styleClass="img_" />
+   <stylesheets>
+      <URL value="@../../Styles/basic/color.css" />
+      <URL value="@../../Styles/basic/shoyeb.css" />
+   </stylesheets>
 </AnchorPane>

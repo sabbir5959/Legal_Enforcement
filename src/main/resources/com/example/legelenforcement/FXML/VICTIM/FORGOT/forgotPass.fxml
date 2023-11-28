@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.Forgot_pass">
+<AnchorPane prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: black;" stylesheets="@../../../Styles/basic/shoyeb.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.Forgot_pass">
    <Label layoutX="84.0" layoutY="179.0" text="Forgot Password ?" textFill="WHITE">
       <font>
          <Font name="Bell MT Bold" size="30.0" />
@@ -23,11 +23,12 @@
    <TextField fx:id="auth_mail" layoutX="110.0" layoutY="393.0" prefHeight="26.0" prefWidth="194.0" promptText="E-mail" style="-fx-border-width: 0px 0px 1px 0px; -fx-background-color: transparent; -fx-border-color: white;" styleClass="text_field" stylesheets="@../../../Styles/basic/victimUser.css" />
    <FontAwesomeIconView fill="WHITE" glyphName="ENVELOPE" layoutX="91.0" layoutY="411.0" size="15" />
    <FontAwesomeIconView fill="WHITE" glyphName="LOCK" layoutX="170.0" layoutY="153.0" size="150" AnchorPane.leftAnchor="151.5" AnchorPane.topAnchor="14.0" />
-   <Label fx:id="message" alignment="CENTER" layoutX="119.0" layoutY="436.0" prefHeight="18.0" prefWidth="165.0" textFill="#8e1212">
+   <Label fx:id="message" alignment="CENTER" layoutX="94.0" layoutY="436.0" prefHeight="18.0" prefWidth="211.0" textFill="#8e1212">
       <font>
          <Font name="System Bold" size="11.0" />
       </font>
    </Label>
    <TextField fx:id="user_N" layoutX="110.0" layoutY="338.0" prefHeight="26.0" prefWidth="194.0" promptText="User name" style="-fx-border-width: 0px 0px 1px 0px; -fx-background-color: transparent; -fx-border-color: white;" styleClass="text_field" stylesheets="@../../../Styles/basic/victimUser.css" />
    <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="91.0" layoutY="356.0" size="18" />
+   <FontAwesomeIconView fx:id="cross" fill="WHITE" glyphName="POWER_OFF" layoutX="364.0" layoutY="35.0" onMouseClicked="#CROSS" size="25" styleClass="img_" />
 </AnchorPane>

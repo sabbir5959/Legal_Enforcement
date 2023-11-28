@@ -4,6 +4,7 @@ import com.example.legelenforcement.Global;
 import com.example.legelenforcement.HelloApplication;
 import com.example.legelenforcement.View.check_email;
 import com.example.legelenforcement.View.check_mobile;
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
@@ -20,6 +21,15 @@ import javafx.util.Duration;
 import java.io.File;
 import java.io.IOException;
 public class victimOrder extends Victim_Login{
+
+//    @FXML
+//    private FontAwesomeIconView cross;
+//    @FXML
+//    void CROSS(MouseEvent event) throws IOException
+//    {
+//        Global.closeStage(cross);
+//    }
+
     static check_email checkEmail = new check_email();
     static check_mobile checkMobile = new check_mobile();
     public Circle circle, circle2;
@@ -31,8 +41,13 @@ public class victimOrder extends Victim_Login{
         Global.switch_scene(root,event);
     }
 
+    public void victim_user(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/Victim/victimUser.fxml"));
+        Global.switch_scene(root,event);
+    }
+
     @FXML
-    private void insert_photo(ActionEvent event) throws IOException {
+    private void insert_photo(MouseEvent event) throws IOException {
         FileChooser ch= new FileChooser();
         File file = ch.showOpenDialog(null);
         String p = file.toURI().toString();
@@ -41,7 +56,7 @@ public class victimOrder extends Victim_Login{
         circle.setFill(new ImagePattern(image));
         IMG(p);
     }
-    public void victim_user (ActionEvent event) throws IOException {
+    public void victim_users (ActionEvent event) throws IOException {
         boolean check = checkEmail.isEmailValid(email.getText());
         boolean check2 = checkMobile.isValid(mobile.getText());
 
@@ -59,7 +74,6 @@ public class victimOrder extends Victim_Login{
                 labelShow.setText("Password and confirm password must be same");//42
                 return;}
             else if(!check){
-
                     labelShow.setText("Provide an authentication mail");
                     Timeline timeline = new Timeline(new KeyFrame(Duration.millis(4000), actionEvent -> labelShow.setText("")));
                     timeline.play();

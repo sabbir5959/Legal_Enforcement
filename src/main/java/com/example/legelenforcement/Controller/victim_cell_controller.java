@@ -66,12 +66,14 @@ public class victim_cell_controller implements Initializable
     public void go_inbox ()  {
 
         if(!user.getDate().equals("No FIR")) {
-            Victim_case vc = new Victim_case();
-            vc.set_user(user);
+//            Victim_case vc = new Victim_case();
+//            vc.set_user(user);
 
 
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("FXML/POLICE/victim_&_case.fxml"));
             try {
+
+
                 Global.createStage(fxmlLoader);
             } catch (IOException e) {
                 throw new RuntimeException(e);

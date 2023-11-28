@@ -2,8 +2,10 @@ package com.example.legelenforcement.Controller;
 
 import com.example.legelenforcement.Global;
 import com.example.legelenforcement.HelloApplication;
+import com.example.legelenforcement.View.FIR;
 import com.example.legelenforcement.View.USER;
 import com.example.legelenforcement.View.log_in;
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -12,6 +14,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.ListView;
+import javafx.scene.input.MouseEvent;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -20,31 +24,31 @@ import java.util.ResourceBundle;
 import java.util.Scanner;
 
 public class case_history_list  implements Initializable {
-    USER user1 = new USER();
+
+    @FXML
+    private FontAwesomeIconView cross;
     static log_in log = new log_in();
     public void set_log(log_in log) {
         this.log = log;
     }
 
     @FXML
-    private ListView<USER> victim_view;
-    private ObservableList<USER> observableList;
+    private ListView<FIR> victim_view;
+    private ObservableList<FIR> observableList;
     public void view_history() throws FileNotFoundException {
 
         observableList = FXCollections.observableArrayList();
-        sett_items();
+        set_FIR(log.getUser());
         victim_view.setItems(observableList);
         victim_view.setCellFactory(victim_view -> new case_history_cell_factory());
     }
 
-    public void sett_items() throws FileNotFoundException {
-
-        USER newUser = get_victim(log.getUser());
-
-        if(!newUser.getDate().equals("No FIR"))observableList.add(newUser);
+    @FXML
+    void CROSS(MouseEvent event) throws IOException{
+        Global.closeStage(cross);
     }
 
-    public USER set_FIR(String c,USER user) throws FileNotFoundException {
+    public void set_FIR(String c) throws FileNotFoundException {
 
         File directory = new File("E:/Java Code/Java Files/Sign Up/Victim Sign Up/" + c);
 
@@ -60,94 +64,53 @@ public class case_history_list  implements Initializable {
                         File infoFile2 = new File("E:/Java Code/Java Files/Sign Up/Victim Sign Up/" + c + "/" + c1 + "/FIR.txt");
 
                         if (infoFile2.exists()) {
+
+                            FIR fir = new FIR();
                             Scanner sc = new Scanner(infoFile2);
 
                             sc.useDelimiter("\n");
 
                             String l1 = sc.next();
-                            user.setComplainNo(l1);
+                            fir.setComplainNo(l1);
                             String l2 = sc.next();
-                            user.setLocation(l2);
+                            fir.setLocation(l2);
                             String l3 = sc.next();
-                            user.setCrime(l3);
+                            fir.setCrime(l3);
                             String l4 = sc.next();
-                            user.setDate(l4);
-                            String l5 = sc.next();
-                            user.setDescription(l5);
+                            fir.setDate(l4);
 
                             sc.close();
+
+                            observableList.add(fir);
                         }
-                        break;
-                    }
-                    else {
-                        user.setComplainNo("No FIR");
-                        user.setLocation("No FIR");
-                        user.setCrime("No FIR");
-                        user.setDate("No FIR");
-                        user.setDescription("No FIR");
+
                     }
                 }
             }
         }
-        return user;
     }
 
-    public USER get_victim(String c) throws FileNotFoundException {
-
-        File infoFile2 = new File("E:/Java Code/Java Files/Sign Up/Victim Sign Up/"+c+"/info.txt");
-
-        USER user = new USER();
-
-        if (infoFile2.exists()) {
-            Scanner sc = new Scanner(infoFile2);
-
-            sc.useDelimiter("\n");
-
-            String l1 = sc.next();
-            String l2 = sc.next();
-            user.setName(l2);
-            String l3 = sc.next();
-            String l4 = sc.next();
-            String l5 = sc.next();
-            user.setPhone(l5);
-            String l6 = sc.next();
-            user.setEmail(l6);
-            String l7 = sc.next();
-            user.setAddress(l7);
-            String l8 = sc.next();
-            user.setDob(l8);
-            String l9 = sc.next();
-            String l10 = sc.next();
-            String l11 = sc.next();
-            String l12 = sc.next();
-            user.setVic_img(l12);
-
-            sc.close();
-        }
-        USER user1 = set_FIR(c,user);
-        return user;
-    }
-    public void official(ActionEvent event) throws IOException {
+    public void official(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/DASHBOARD/official.fxml"));
         Global.switch_scene(root,event);
     }
-    public void victim_fir(ActionEvent event) throws IOException {
+    public void victim_fir(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/Victim/victimFIR.fxml"));
         Global.switch_scene(root,event);
     }
-    public void back_victim(ActionEvent event) throws IOException {
+    public void back_victim(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/Victim/victimUser.fxml"));
         Global.switch_scene(root, event);
     }
-    public void victim_profile(ActionEvent event) throws IOException {
+    public void victim_profile(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/Victim/victimProfile.fxml"));
         Global.switch_scene(root,event);
     }
-    public void police_user(ActionEvent event) throws IOException {
+    public void police_user(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/POLICE/policeUser.fxml"));
         Global.switch_scene(root,event);
     }
-    public void back_home(ActionEvent event) throws IOException {
+    public void back_home(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/DASHBOARD/fullSystem.fxml"));
         Global.switch_scene(root,event);
     }

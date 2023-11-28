@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
-<?import javafx.scene.Cursor?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -137,12 +136,5 @@
       <FontAwesomeIconView glyphName="INSTAGRAM" layoutX="227.0" layoutY="41.0" onMouseClicked="#instagram" size="18" stroke="BLACK" styleClass="img_" />
       <FontAwesomeIconView glyphName="GITHUB" layoutX="140.0" layoutY="43.0" onMouseClicked="#github" size="21" styleClass="img_" />
    </AnchorPane>
-   <Text fx:id="CLOSE" layoutX="471.0" layoutY="42.0" onMouseClicked="#close" strokeType="OUTSIDE" strokeWidth="0.0" text="Close" AnchorPane.leftAnchor="470.0" AnchorPane.topAnchor="30.0">
-      <font>
-         <Font name="Baskerville Old Face" size="15.0" />
-      </font>
-      <cursor>
-         <Cursor fx:constant="DEFAULT" />
-      </cursor>
-   </Text>
+   <FontAwesomeIconView fx:id="CLOSE" glyphName="POWER_OFF" layoutX="1043.0" layoutY="46.0" onMouseClicked="#close" size="25" styleClass="img_" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0" />
 </AnchorPane>

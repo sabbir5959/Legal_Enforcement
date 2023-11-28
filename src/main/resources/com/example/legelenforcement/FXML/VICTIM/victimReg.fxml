@@ -13,127 +13,286 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.Controller.victimOrder">
-   <AnchorPane prefHeight="62.0" prefWidth="1400.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #3f5efb 0% , #fc466b 100%);" stylesheets="@../../Styles/basic/shoyeb.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-      <ImageView fitHeight="52.0" fitWidth="68.0" layoutX="5.0" layoutY="5.0" onMouseClicked="#dashboard_img" pickOnBounds="true" preserveRatio="true" styleClass="img_">
-         <Image url="@../../Image/logowhite.png" />
-      </ImageView>
-      <Button layoutX="85.0" layoutY="12.0" mnemonicParsing="false" onAction="#back_home" text="Home">
-         <font>
-            <Font name="Bell MT" size="14.0" />
-         </font>
-         <graphic>
-            <FontAwesomeIconView glyphName="HOME" size="15" />
-         </graphic>
-         <stylesheets>
-            <URL value="@../../Styles/basic/victimMenu.css" />
-            <URL value="@../../Styles/basic/shoyeb.css" />
-         </stylesheets>
-         <styleClass>
-            <String fx:value="menu_container" />
-            <String fx:value="dashboard_btn4" />
-         </styleClass>
-      </Button>
-      <ImageView fitHeight="52.0" fitWidth="68.0" layoutX="1337.0" layoutY="5.0" onMouseClicked="#dashboard_img" pickOnBounds="true" preserveRatio="true" styleClass="img_">
-         <Image url="@../../Image/logoblack.png" />
-      </ImageView>
-   </AnchorPane>
-   <ImageView fitHeight="740.0" fitWidth="1400.0" layoutY="61.0" pickOnBounds="true">
-      <Image url="@../../Image/reg.png" />
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" styleClass="chat-gpt" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.Controller.victimOrder">
+   <AnchorPane layoutX="832.0" layoutY="147.0" prefHeight="538.0" prefWidth="510.0" styleClass="rounded-anchor-pane" stylesheets="@../../Styles/basic/list.css" />
+   <Circle fx:id="circle" fill="#91e7db" layoutX="1087.0" layoutY="133.0" radius="77.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+   <Circle fill="DODGERBLUE" layoutX="1134.0" layoutY="187.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
+   <FontAwesomeIconView glyphName="PLUS" layoutX="1125.0" layoutY="197.0" onMouseClicked="#insert_photo" size="25" styleClass="img_" />
+   <Text fill="WHITE" fontSmoothingType="LCD" layoutX="859.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Full Name">
+      <font>
+         <Font name="System Bold" size="15.0" />
+      </font>
+   </Text>
+   <Text fill="WHITE" fontSmoothingType="LCD" layoutX="1108.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail">
+      <font>
+         <Font name="System Bold" size="15.0" />
+      </font>
+   </Text>
+   <Text fill="WHITE" fontSmoothingType="LCD" layoutX="1108.0" layoutY="509.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+      <font>
+         <Font name="System Bold" size="15.0" />
+      </font>
+   </Text>
+   <Text fill="WHITE" fontSmoothingType="LCD" layoutX="1108.0" layoutY="577.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm Password">
+      <font>
+         <Font name="System Bold" size="15.0" />
+      </font>
+   </Text>
+   <Text fill="WHITE" fontSmoothingType="LCD" layoutX="859.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile">
+      <font>
+         <Font name="System Bold" size="15.0" />
+      </font>
+   </Text>
+   <Text fill="WHITE" fontSmoothingType="LCD" layoutX="860.0" layoutY="575.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender">
+      <font>
+         <Font name="System Bold" size="15.0" />
+      </font>
+   </Text>
+   <RadioButton fx:id="male" layoutX="858.0" layoutY="592.0" mnemonicParsing="false" text="Male" textFill="WHITE">
+      <toggleGroup>
+         <ToggleGroup fx:id="gender" />
+      </toggleGroup>
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+   </RadioButton>
+   <RadioButton fx:id="female" layoutX="927.0" layoutY="592.0" mnemonicParsing="false" text="Female" textFill="WHITE" toggleGroup="$gender">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+   </RadioButton>
+   <RadioButton fx:id="other" layoutX="1010.0" layoutY="592.0" mnemonicParsing="false" text="Other" textFill="WHITE" toggleGroup="$gender">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+   </RadioButton>
+   <Button layoutX="977.0" layoutY="662.0" mnemonicParsing="false" onAction="#victim_users" prefHeight="39.0" prefWidth="220.0" style="-fx-background-color: #0066CCFF;" styleClass="dashboard_btn4" stylesheets="@../../Styles/basic/shoyeb.css" text="Submit" textFill="WHITE">
+      <font>
+         <Font name="Arial Bold" size="20.0" />
+      </font>
+   </Button>
+   <Text fill="WHITE" fontSmoothingType="LCD" layoutX="859.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
+      <font>
+         <Font name="System Bold" size="15.0" />
+      </font>
+   </Text>
+   <Text fill="WHITE" fontSmoothingType="LCD" layoutX="859.0" layoutY="442.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address">
+      <font>
+         <Font name="System Bold" size="15.0" />
+      </font>
+   </Text>
+   <Text fill="WHITE" fontSmoothingType="LCD" layoutX="1108.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Father's Name">
+      <font>
+         <Font name="System Bold" size="15.0" />
+      </font>
+   </Text>
+   <Text fill="WHITE" fontSmoothingType="LCD" layoutX="1106.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mother's Name">
+      <font>
+         <Font name="System Bold" size="15.0" />
+      </font>
+   </Text>
+   <RadioButton fx:id="married" layoutX="860.0" layoutY="526.0" mnemonicParsing="false" text="Married" textFill="#ffebeb">
+      <toggleGroup>
+         <ToggleGroup fx:id="marry" />
+      </toggleGroup>
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+   </RadioButton>
+   <RadioButton fx:id="unmarried" layoutX="946.0" layoutY="526.0" mnemonicParsing="false" text="Unmarried" textFill="WHITE" toggleGroup="$marry">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+   </RadioButton>
+   <Text fill="WHITE" fontSmoothingType="LCD" layoutX="1108.0" layoutY="441.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date of Birth">
+      <font>
+         <Font name="System Bold" size="15.0" />
+      </font>
+   </Text>
+   <Text fill="WHITE" layoutX="859.0" layoutY="509.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Marital Status">
+      <font>
+         <Font name="System Bold" size="15.0" />
+      </font>
+   </Text>
+   <Label fx:id="labelShow" alignment="CENTER" layoutX="863.0" layoutY="625.0" prefHeight="26.0" prefWidth="455.0" textAlignment="CENTER" textFill="#ff2f20">
+      <font>
+         <Font name="Bell MT Bold" size="15.0" />
+      </font>
+   </Label>
+   <DatePicker fx:id="DATE" layoutX="1109.0" layoutY="455.0" prefHeight="26.0" prefWidth="206.0" />
+   <ImageView fitHeight="521.0" fitWidth="722.0" layoutX="36.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../Image/Cartoon/8583013.png" />
+      </image>
    </ImageView>
-   <AnchorPane layoutX="432.0" layoutY="142.0" opacity="0.8" prefHeight="615.0" prefWidth="536.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="43.0" AnchorPane.leftAnchor="432.0" AnchorPane.rightAnchor="432.0" AnchorPane.topAnchor="142.0">
-      <TextField fx:id="full_name" layoutX="40.0" layoutY="122.0" prefHeight="26.0" prefWidth="206.0" promptText="name" style="-fx-background-color: white; -fx-background-radius: 5;" styleClass="text_fieldB" stylesheets="@../../Styles/basic/victimUser.css" />
-      <Text fontSmoothingType="LCD" layoutX="40.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Full Name">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Text>
-      <TextField fx:id="email" layoutX="289.0" layoutY="254.0" prefHeight="26.0" prefWidth="206.0" promptText="sample@gmail.com" style="-fx-background-color: white; -fx-background-radius: 5;" styleClass="text_fieldB" stylesheets="@../../Styles/basic/victimUser.css" />
-      <Text fontSmoothingType="LCD" layoutX="289.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="E-mail">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Text>
-      <PasswordField fx:id="pass" layoutX="289.0" layoutY="387.0" prefHeight="26.0" prefWidth="206.0" promptText="password" style="-fx-background-color: white; -fx-background-radius: 5;" styleClass="text_fieldB" stylesheets="@../../Styles/basic/victimUser.css" />
-      <Text fontSmoothingType="LCD" layoutX="289.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Password">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Text>
-      <PasswordField fx:id="confirmPass" layoutX="289.0" layoutY="455.0" prefHeight="26.0" prefWidth="206.0" promptText="confirm password" style="-fx-background-color: white; -fx-background-radius: 5;" styleClass="text_fieldB" stylesheets="@../../Styles/basic/victimUser.css" />
-      <Text fontSmoothingType="LCD" layoutX="289.0" layoutY="444.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Confirm Password">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Text>
-      <TextField fx:id="mobile" layoutX="40.0" layoutY="254.0" prefHeight="26.0" prefWidth="206.0" promptText="01*********" style="-fx-background-color: white; -fx-background-radius: 5;" styleClass="text_fieldB" stylesheets="@../../Styles/basic/victimUser.css" />
-      <Text fontSmoothingType="LCD" layoutX="40.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Mobile">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Text>
-      <Text fontSmoothingType="LCD" layoutX="41.0" layoutY="442.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Gender">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Text>
-      <RadioButton fx:id="male" layoutX="39.0" layoutY="459.0" mnemonicParsing="false" text="Male" textFill="#fff9f9">
-         <toggleGroup>
-            <ToggleGroup fx:id="gender" />
-         </toggleGroup></RadioButton>
-      <RadioButton fx:id="female" layoutX="108.0" layoutY="459.0" mnemonicParsing="false" text="Female" textFill="WHITE" toggleGroup="$gender" />
-      <RadioButton fx:id="other" layoutX="191.0" layoutY="459.0" mnemonicParsing="false" text="Other" textFill="WHITE" toggleGroup="$gender" />
-      <Button layoutX="158.0" layoutY="542.0" mnemonicParsing="false" onAction="#victim_user" prefHeight="26.0" prefWidth="220.0" style="-fx-background-color: #0066CCFF;" styleClass="dashboard_btn4" stylesheets="@../../Styles/basic/shoyeb.css" text="Submit" textFill="WHITE" />
-      <TextField fx:id="user_name" layoutX="40.0" layoutY="187.0" prefHeight="26.0" prefWidth="206.0" promptText="username" style="-fx-background-color: white; -fx-background-radius: 5;" styleClass="text_fieldB" stylesheets="@../../Styles/basic/victimUser.css" />
-      <Text fontSmoothingType="LCD" layoutX="40.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Username">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Text>
-      <TextField fx:id="address" layoutX="40.0" layoutY="321.0" prefHeight="26.0" prefWidth="206.0" promptText="address" style="-fx-background-color: white; -fx-background-radius: 5;" styleClass="text_fieldB" stylesheets="@../../Styles/basic/victimUser.css" />
-      <Text fontSmoothingType="LCD" layoutX="40.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Address">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Text>
-      <TextField fx:id="father_name" layoutX="289.0" layoutY="122.0" prefHeight="26.0" prefWidth="206.0" promptText="father's name" style="-fx-background-color: white; -fx-background-radius: 5;" styleClass="text_fieldB" stylesheets="@../../Styles/basic/victimUser.css" />
-      <Text fontSmoothingType="LCD" layoutX="289.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Father's Name">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Text>
-      <TextField fx:id="mother_name" layoutX="289.0" layoutY="188.0" prefHeight="26.0" prefWidth="206.0" promptText="mother's name" style="-fx-background-color: white; -fx-background-radius: 5;" styleClass="text_fieldB" stylesheets="@../../Styles/basic/victimUser.css" />
-      <Text fontSmoothingType="LCD" layoutX="287.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Mother's Name">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Text>
-      <RadioButton fx:id="married" layoutX="41.0" layoutY="393.0" mnemonicParsing="false" text="Married" textFill="#fff9f9">
-         <toggleGroup>
-            <ToggleGroup fx:id="marry" />
-         </toggleGroup></RadioButton>
-      <RadioButton fx:id="unmarried" layoutX="127.0" layoutY="393.0" mnemonicParsing="false" text="Unmarried" textFill="#fff9f9" toggleGroup="$marry" />
-      <Text fontSmoothingType="LCD" layoutX="289.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Date of Birth">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Text>
-      <Text fill="WHITE" layoutX="40.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Marital Status">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Text>
-      <Label fx:id="labelShow" alignment="CENTER" layoutX="141.0" layoutY="497.0" prefHeight="26.0" prefWidth="254.0" textAlignment="CENTER" textFill="#a81e14" />
-      <Circle fx:id="circle" fill="WHITE" layoutX="268.0" radius="77.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.5" />
-      <DatePicker fx:id="DATE" layoutX="290.0" layoutY="322.0" prefHeight="26.0" prefWidth="206.0" promptText="MM/DD/YYYY" style="-fx-background-radius: 5;" />
-      <Button layoutX="334.0" layoutY="34.0" mnemonicParsing="false" onAction="#insert_photo" prefHeight="26.0" prefWidth="78.0" style="-fx-background-radius: 10;" text="Insert Image">
-         <font>
-            <Font name="Arial Rounded MT Bold" size="10.0" />
-         </font>
-      </Button>
-   </AnchorPane>
+   <ImageView fitHeight="52.0" fitWidth="68.0" layoutX="33.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="42.0" AnchorPane.topAnchor="35.0">
+      <image>
+         <Image url="@../../Image/white_logo.png" />
+      </image>
+   </ImageView>
+   <Label layoutX="127.0" layoutY="47.0" text="Legal Enforcement" AnchorPane.topAnchor="47.0">
+      <font>
+         <Font name="Arial Bold" size="22.0" />
+      </font>
+      <textFill>
+         <LinearGradient endY="1.0">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="1.0" />
+                  </color>
+               </Stop>
+               <Stop offset="0.006729475100942127">
+                  <color>
+                     <Color green="1.0" blue="0.8210658431053162" />
+                  </color>
+               </Stop>
+               <Stop offset="0.524390243902439">
+                  <color>
+                     <Color red="1.0" green="1.0" blue="1.0" />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="0.5435837507247925" green="0.5600000023841858" blue="0.3248000144958496" />
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </textFill>
+   </Label>
+   <FontAwesomeIconView fx:id="cross" fill="WHITE" glyphName="POWER_OFF" layoutX="1354.0" layoutY="41.0" onMouseClicked="#CROSS" size="25" styleClass="img_" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0" />
+   <Label alignment="CENTER" layoutX="94.0" layoutY="613.0" prefHeight="84.0" prefWidth="612.0" text="By completing this registration process, you are not just joining a platform; you are becoming a pivotal force in the evolution of Legal Enforcement System" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+      <font>
+         <Font name="Baskerville Old Face" size="20.0" />
+      </font>
+   </Label>
+   <Label layoutX="985.0" layoutY="724.0" text="Already have an account ?" textFill="WHITE">
+      <font>
+         <Font name="Baskerville Old Face" size="14.0" />
+      </font>
+   </Label>
+   <TextField fx:id="full_name" layoutX="859.0" layoutY="245.0" prefHeight="26.0" prefWidth="206.0">
+      <stylesheets>
+         <URL value="@../../Styles/basic/victimUser.css" />
+         <URL value="@../../Styles/basic/list.css" />
+      </stylesheets>
+      <styleClass>
+         <String fx:value="text_field-font" />
+         <String fx:value="border-design" />
+      </styleClass>
+   </TextField>
+   <TextField fx:id="email" layoutX="1108.0" layoutY="377.0" prefHeight="26.0" prefWidth="206.0">
+      <stylesheets>
+         <URL value="@../../Styles/basic/victimUser.css" />
+         <URL value="@../../Styles/basic/list.css" />
+      </stylesheets>
+      <styleClass>
+         <String fx:value="text_field-font" />
+         <String fx:value="border-design" />
+      </styleClass>
+   </TextField>
+   <PasswordField fx:id="pass" layoutX="1108.0" layoutY="510.0" prefHeight="26.0" prefWidth="206.0">
+      <stylesheets>
+         <URL value="@../../Styles/basic/victimUser.css" />
+         <URL value="@../../Styles/basic/list.css" />
+      </stylesheets>
+      <styleClass>
+         <String fx:value="text_field-font" />
+         <String fx:value="border-design" />
+      </styleClass>
+   </PasswordField>
+   <PasswordField fx:id="confirmPass" layoutX="1108.0" layoutY="578.0" prefHeight="26.0" prefWidth="206.0">
+      <stylesheets>
+         <URL value="@../../Styles/basic/victimUser.css" />
+         <URL value="@../../Styles/basic/list.css" />
+      </stylesheets>
+      <styleClass>
+         <String fx:value="text_field-font" />
+         <String fx:value="border-design" />
+      </styleClass>
+   </PasswordField>
+   <TextField fx:id="mobile" layoutX="859.0" layoutY="377.0" prefHeight="26.0" prefWidth="206.0">
+      <stylesheets>
+         <URL value="@../../Styles/basic/victimUser.css" />
+         <URL value="@../../Styles/basic/list.css" />
+      </stylesheets>
+      <styleClass>
+         <String fx:value="text_field-font" />
+         <String fx:value="border-design" />
+      </styleClass>
+   </TextField>
+   <TextField fx:id="user_name" layoutX="859.0" layoutY="310.0" prefHeight="26.0" prefWidth="206.0">
+      <stylesheets>
+         <URL value="@../../Styles/basic/victimUser.css" />
+         <URL value="@../../Styles/basic/list.css" />
+      </stylesheets>
+      <styleClass>
+         <String fx:value="text_field-font" />
+         <String fx:value="border-design" />
+      </styleClass>
+   </TextField>
+   <TextField fx:id="address" layoutX="859.0" layoutY="444.0" prefHeight="26.0" prefWidth="206.0">
+      <stylesheets>
+         <URL value="@../../Styles/basic/victimUser.css" />
+         <URL value="@../../Styles/basic/list.css" />
+      </stylesheets>
+      <styleClass>
+         <String fx:value="text_field-font" />
+         <String fx:value="border-design" />
+      </styleClass>
+   </TextField>
+   <TextField fx:id="father_name" layoutX="1108.0" layoutY="245.0" prefHeight="26.0" prefWidth="206.0">
+      <stylesheets>
+         <URL value="@../../Styles/basic/victimUser.css" />
+         <URL value="@../../Styles/basic/list.css" />
+      </stylesheets>
+      <styleClass>
+         <String fx:value="text_field-font" />
+         <String fx:value="border-design" />
+      </styleClass>
+   </TextField>
+   <TextField fx:id="mother_name" layoutX="1108.0" layoutY="311.0" prefHeight="26.0" prefWidth="206.0">
+      <stylesheets>
+         <URL value="@../../Styles/basic/victimUser.css" />
+         <URL value="@../../Styles/basic/list.css" />
+      </stylesheets>
+      <styleClass>
+         <String fx:value="text_field-font" />
+         <String fx:value="border-design" />
+      </styleClass>
+   </TextField>
+   <Label layoutX="1136.0" layoutY="725.0" onMouseClicked="#victim_user" styleClass="img_" stylesheets="@../../Styles/basic/shoyeb.css" text="Sign in">
+      <font>
+         <Font name="Arial Bold" size="15.0" />
+      </font>
+      <textFill>
+         <LinearGradient endY="1.0">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="0.22962963581085205" green="0.614814817905426" blue="1.0" />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="0.5037037134170532" green="0.8924691081047058" blue="1.0" />
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </textFill>
+   </Label>
+   <stylesheets>
+      <URL value="@../../Styles/basic/color.css" />
+      <URL value="@../../Styles/basic/victimUser.css" />
+      <URL value="@../../Styles/basic/shoyeb.css" />
+   </stylesheets>
 </AnchorPane>

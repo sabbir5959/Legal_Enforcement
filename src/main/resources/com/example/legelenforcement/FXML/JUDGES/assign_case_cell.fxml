@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="danchore" prefHeight="80.0" prefWidth="750.0" style="-fx-background-radius: 5; -fx-background-color: black;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Circle fx:id="dp" fill="#1f93ff00" layoutX="40.0" layoutY="40.0" radius="28.0" stroke="#5ef4fc00" strokeType="INSIDE" strokeWidth="5.0" />
+      <Label fx:id="show" alignment="CENTER_RIGHT" layoutX="560.0" layoutY="16.0" prefHeight="48.0" prefWidth="140.0" textFill="WHITE">
+         <font>
+            <Font name="Baskerville Old Face" size="24.0" />
+         </font>
+      </Label>
+      <FontAwesomeIconView fx:id="r" fill="#00ff1e" glyphName="CHECK" layoutX="711.0" layoutY="48.0" size="30" />
+      <FontAwesomeIconView fx:id="w" fill="RED" glyphName="PLUS" layoutX="713.0" layoutY="51.0" rotate="45.0" size="30" text="" />
+      <Label fx:id="complainNO" alignment="CENTER" layoutX="14.0" layoutY="16.0" prefHeight="48.0" prefWidth="86.0" textFill="WHITE">
+         <font>
+            <Font name="Baskerville Old Face" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="location" alignment="CENTER" layoutX="165.0" layoutY="17.0" prefHeight="48.0" prefWidth="150.0" textFill="WHITE">
+         <font>
+            <Font name="Baskerville Old Face" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="crime" alignment="CENTER" layoutX="373.0" layoutY="16.0" prefHeight="48.0" prefWidth="150.0" textFill="WHITE">
+         <font>
+            <Font name="Baskerville Old Face" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="name" layoutX="90.0" prefHeight="80.0" prefWidth="658.0" textFill="WHITE">
+         <font>
+            <Font name="Baskerville Old Face" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

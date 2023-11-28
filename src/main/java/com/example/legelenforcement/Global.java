@@ -26,6 +26,7 @@ public class Global {
         stage.setResizable(false);
         stage.setTitle("Legal Enforcement System");
         stage.getIcons().add(new Image(HelloApplication.class.getResourceAsStream("Image/logoblack.png")));
+        stage.initStyle(javafx.stage.StageStyle.TRANSPARENT);
         stage.show();
     }
 

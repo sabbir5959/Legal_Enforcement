@@ -1,6 +1,6 @@
 package com.example.legelenforcement.View;
 
-public class USER {
+public class USER{
     public String name, email, address, phone, dob, vic_img, complainNo, location, crime, date, description;
 
     public USER(String name, String email, String address, String phone, String dob, String vic_img, String complainNo, String location, String crime, String date, String description) {

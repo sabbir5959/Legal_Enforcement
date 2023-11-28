@@ -11,125 +11,179 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.Controller.Victim_Login">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" styleClass="chat-gpt1" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.Controller.Victim_Login">
    <children>
-      <ImageView fitHeight="740.0" fitWidth="1400.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <AnchorPane layoutX="785.0" layoutY="118.0" prefHeight="565.0" prefWidth="531.0" styleClass="rounded-anchor-pane" stylesheets="@../../Styles/basic/list.css">
+         <children>
+            <Label fx:id="error_text1" alignment="CENTER" layoutX="131.0" layoutY="323.0" prefHeight="26.0" prefWidth="290.0">
+               <font>
+                  <Font name="Bell MT Bold" size="12.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.5789473652839661" green="0.06432748585939407" blue="0.06432748585939407" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.6000000238418579" green="0.04888888821005821" blue="0.04888888821005821" opacity="0.9100000262260437" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Label alignment="CENTER" layoutX="125.0" layoutY="36.0" prefHeight="52.0" prefWidth="289.0" text="Victim Login" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT Bold" size="43.0" />
+               </font>
+            </Label>
+            <Label layoutX="157.0" layoutY="95.0" prefHeight="39.0" prefWidth="238.0" text="Login today and be a part of the future of Legal Enforcement System." textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="170.0" layoutY="462.0" text="Don't have an account ?" textFill="WHITE">
+               <font>
+                  <Font name="Baskerville Old Face" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="309.0" layoutY="463.0" onMouseClicked="#victim_reg" styleClass="dashboard_ultra" stylesheets="@../../Styles/basic/shoyeb.css" text="Sign Up!" textFill="#54dcff">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="195.0" layoutY="531.0" text="Privacy policy Terms of use" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="11.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <ImageView fitHeight="52.0" fitWidth="68.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#dashboard_img" pickOnBounds="true" preserveRatio="true" styleClass="img_" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
          <image>
-            <Image url="@../../Image/orders.png" />
+            <Image url="@../../Image/logowhite.png" />
          </image>
       </ImageView>
-      <AnchorPane prefHeight="62.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #3f5efb 0% , #fc466b 100%);" stylesheets="@../../Styles/basic/shoyeb.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <ImageView fitHeight="52.0" fitWidth="68.0" layoutX="4.0" layoutY="5.0" onMouseClicked="#dashboard_img" pickOnBounds="true" preserveRatio="true" styleClass="img_">
-               <image>
-                  <Image url="@../../Image/logowhite.png" />
-               </image>
-            </ImageView>
-            <Button layoutX="83.0" layoutY="12.0" mnemonicParsing="false" onAction="#back_home" text="Home">
-               <font>
-                  <Font name="Bell MT" size="14.0" />
-               </font>
-               <graphic>
-                  <FontAwesomeIconView glyphName="HOME" size="15" />
-               </graphic>
-               <stylesheets>
-                  <URL value="@../../Styles/basic/victimMenu.css" />
-                  <URL value="@../../Styles/basic/shoyeb.css" />
-               </stylesheets>
-               <styleClass>
-                  <String fx:value="menu_container" />
-                  <String fx:value="dashboard_btn4" />
-               </styleClass>
-            </Button>
-            <Button layoutX="1147.0" layoutY="12.0" mnemonicParsing="false" onAction="#victim_reg" prefHeight="38.0" prefWidth="166.0" text="Registration">
-               <font>
-                  <Font name="Bell MT" size="14.0" />
-               </font>
-               <graphic>
-                  <FontAwesomeIconView glyphName="CLIPBOARD" size="15" />
-               </graphic>
-               <stylesheets>
-                  <URL value="@../../Styles/basic/victimMenu.css" />
-                  <URL value="@../../Styles/basic/shoyeb.css" />
-               </stylesheets>
-               <styleClass>
-                  <String fx:value="menu_container" />
-                  <String fx:value="dashboard_btn4" />
-               </styleClass>
-            </Button>
-            <ImageView fitHeight="52.0" fitWidth="68.0" layoutX="1337.0" layoutY="4.0" onMouseClicked="#dashboard_img" pickOnBounds="true" preserveRatio="true" styleClass="img_">
-               <image>
-                  <Image url="@../../Image/logoblack.png" />
-               </image>
-            </ImageView>
-         </children>
-      </AnchorPane>
-      <AnchorPane layoutX="350.0" layoutY="203.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.79" prefHeight="393.0" prefWidth="700.0" style="-fx-background-color: #454545;">
-         <children>
-            <AnchorPane layoutX="400.0" layoutY="-1.0" prefHeight="394.0" prefWidth="300.0" style="-fx-background-color: #000345;">
-               <children>
-                  <Label layoutX="42.0" layoutY="57.0" prefHeight="31.0" prefWidth="215.0" text="Victim Login" textFill="WHITE">
-                     <font>
-                        <Font name="Bell MT Bold" size="36.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="28.0" layoutY="116.0" text="Please enter your login information" textFill="WHITE" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Label>
-                  <ImageView fitHeight="395.0" fitWidth="390.0" layoutX="-89.0" layoutY="-1.0" opacity="0.15" pickOnBounds="true">
-                     <image>
-                        <Image url="@../../Image/crimeS.png" />
-                     </image>
-                  </ImageView>
-                  <TextField fx:id="vic_user" layoutX="74.0" layoutY="176.0" prefHeight="28.0" prefWidth="182.0" promptText="Username" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" styleClass="text_field" stylesheets="@../../Styles/basic/victimUser.css" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="46.0" />
-                  <Button layoutX="97.0" layoutY="314.0" mnemonicParsing="false" onAction="#victim_login" prefHeight="26.0" prefWidth="117.0" style="-fx-background-radius: 90; -fx-background-color: #257CD4FF;" styleClass="dashboard_btn4" stylesheets="@../../Styles/basic/shoyeb.css" text="Login" textFill="WHITE" AnchorPane.leftAnchor="97.0" AnchorPane.rightAnchor="103.0" />
-                  <Button layoutX="76.0" layoutY="352.0" mnemonicParsing="false" onAction="#victim_email" prefHeight="26.0" prefWidth="143.0" style="-fx-background-color: transparent;" styleClass="dashboard_btn3" stylesheets="@../../Styles/basic/shoyeb.css" text="Forgot Password" textFill="#51a2ff" AnchorPane.leftAnchor="76.0" AnchorPane.rightAnchor="83.0" />
-                  <TextField fx:id="passwordText" layoutX="74.0" layoutY="222.0" prefHeight="28.0" prefWidth="182.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" stylesheets="@../../Styles/basic/victimUser.css">
-                     <styleClass>
-                        <String fx:value="text_field" />
-                        <String fx:value="text_field2" />
-                     </styleClass></TextField>
-                  <PasswordField fx:id="passwordHidden" layoutX="74.0" layoutY="222.0" prefHeight="28.0" prefWidth="182.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" styleClass="text_field" stylesheets="@../../Styles/basic/victimUser.css" />
-                  <Text fill="WHITE" layoutX="25.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Or">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Text>
-                  <Button layoutX="40.0" layoutY="136.0" mnemonicParsing="false" onAction="#victim_reg" style="-fx-background-color: transparent;" styleClass="dashboard_btn3" stylesheets="@../../Styles/basic/shoyeb.css" text="Click here" textFill="#54dcff" />
-                  <Text fill="WHITE" layoutX="114.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="for registration">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Text>
-                  <CheckBox fx:id="check_box" layoutX="102.0" layoutY="264.0" mnemonicParsing="false" onAction="#changeVisibility" text="Show password" textFill="WHITE">
-                     <font>
-                        <Font name="Arial" size="10.0" />
-                     </font>
-                  </CheckBox>
-                  <FontAwesomeIconView fill="WHITE" glyphName="KEY" layoutX="50.0" layoutY="240.0" size="20" wrappingWidth="16.5234375" />
-                  <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="52.0" layoutY="196.0" size="20" />
-                  <Label fx:id="error_text1" layoutX="64.0" layoutY="287.0" prefHeight="18.0" prefWidth="166.0" textFill="RED">
-                     <font>
-                        <Font size="11.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-            <ImageView fitHeight="400.0" fitWidth="200.0" layoutX="100.0" layoutY="-100.0" pickOnBounds="true" rotate="90.0">
-               <Image url="@../../Image/pxfuel.jpg" />
-            </ImageView>
-            <ImageView fitHeight="400.0" fitWidth="200.0" layoutX="100.0" layoutY="94.0" pickOnBounds="true" rotate="270.0">
-               <Image url="@../../Image/pxfuel.jpg" />
-            </ImageView>
-            <ImageView fitHeight="395.0" fitWidth="400.0" layoutY="-1.0" opacity="0.27" pickOnBounds="true">
-               <Image url="@../../Image/Crime.jpeg" />
-            </ImageView>
-         </children>
-      </AnchorPane>
+      <Label alignment="CENTER" layoutX="994.0" layoutY="19.0" onMouseClicked="#back_home" prefHeight="49.0" prefWidth="98.0" style="-fx-background-color: transparent;" styleClass="img_" text=" Home" textFill="WHITE" AnchorPane.bottomAnchor="731.4" AnchorPane.topAnchor="19.0">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="20" />
+         </graphic>
+         <stylesheets>
+            <URL value="@../../Styles/basic/list.css" />
+            <URL value="@../../Styles/basic/shoyeb.css" />
+         </stylesheets>
+      </Label>
+      <Label alignment="CENTER" layoutX="1134.0" layoutY="19.0" onMouseClicked="#victim_reg" prefHeight="49.0" prefWidth="150.0" style="-fx-background-color: transparent;" styleClass="img_" text=" Registration" textFill="WHITE" AnchorPane.bottomAnchor="731.4" AnchorPane.topAnchor="19.0">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="CLIPBOARD" size="20" />
+         </graphic>
+         <stylesheets>
+            <URL value="@../../Styles/basic/list.css" />
+            <URL value="@../../Styles/basic/shoyeb.css" />
+         </stylesheets>
+      </Label>
+      <Label layoutX="87.0" layoutY="32.0" text="Legal Enforcement" AnchorPane.rightAnchor="1114.6" AnchorPane.topAnchor="32.0">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+         <textFill>
+            <LinearGradient endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.006729475100942127">
+                     <color>
+                        <Color green="1.0" blue="0.8210658431053162" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.524390243902439">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.5435837507247925" green="0.5600000023841858" blue="0.3248000144958496" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <FontAwesomeIconView fx:id="cross" fill="WHITE" glyphName="POWER_OFF" layoutX="1364.0" layoutY="51.0" onMouseClicked="#CROSS" size="25" styleClass="img_" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0" />
+      <ImageView fitHeight="704.0" fitWidth="890.0" layoutX="4.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Image/Cartoon/asa.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="973.0" layoutY="468.0" mnemonicParsing="false" onAction="#victim_login" prefHeight="39.0" prefWidth="172.0" style="-fx-background-radius: 12; -fx-background-color: #0066CCFF;" styleClass="dashboard_btn4" stylesheets="@../../Styles/basic/shoyeb.css" text="Login" textFill="WHITE" AnchorPane.leftAnchor="973.0" AnchorPane.rightAnchor="255.0">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="954.0" layoutY="510.0" mnemonicParsing="false" onAction="#victim_email" prefHeight="26.0" prefWidth="215.0" style="-fx-background-color: transparent;" styleClass="dashboard_btn3" stylesheets="@../../Styles/basic/shoyeb.css" text="Forgot Password" textFill="#113e53" AnchorPane.leftAnchor="954.0" AnchorPane.rightAnchor="231.0">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Button>
+      <CheckBox fx:id="check_box" layoutX="1006.0" layoutY="426.0" mnemonicParsing="false" onAction="#changeVisibility" text="Show password" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </CheckBox>
+      <FontAwesomeIconView fill="WHITE" glyphName="KEY" layoutX="934.0" layoutY="394.0" size="20" wrappingWidth="16.5234375" />
+      <TextField fx:id="vic_user" layoutX="958.0" layoutY="324.0" prefHeight="39.0" prefWidth="215.0" promptText="Username" AnchorPane.leftAnchor="958.0" AnchorPane.rightAnchor="227.0">
+         <stylesheets>
+            <URL value="@../../Styles/basic/victimUser.css" />
+            <URL value="@../../Styles/basic/list.css" />
+         </stylesheets>
+         <styleClass>
+            <String fx:value="text_field-font" />
+            <String fx:value="border-design" />
+         </styleClass>
+      </TextField>
+      <TextField fx:id="passwordText" layoutX="958.0" layoutY="370.0" prefHeight="39.0" prefWidth="215.0">
+         <styleClass>
+            <String fx:value="text_field-font" />
+            <String fx:value="text_field2" />
+            <String fx:value="border-design" />
+         </styleClass>
+         <stylesheets>
+            <URL value="@../../Styles/basic/victimUser.css" />
+            <URL value="@../../Styles/basic/list.css" />
+         </stylesheets>
+      </TextField>
+      <PasswordField fx:id="passwordHidden" layoutX="958.0" layoutY="370.0" prefHeight="39.0" prefWidth="215.0" promptText="Password">
+         <stylesheets>
+            <URL value="@../../Styles/basic/victimUser.css" />
+            <URL value="@../../Styles/basic/list.css" />
+         </stylesheets>
+         <styleClass>
+            <String fx:value="text_field-font" />
+            <String fx:value="border-design" />
+         </styleClass>
+      </PasswordField>
+      <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="936.0" layoutY="348.0" size="20" />
    </children>
+   <stylesheets>
+      <URL value="@../../Styles/basic/shoyeb.css" />
+      <URL value="@../../Styles/basic/color.css" />
+   </stylesheets>
 </AnchorPane>

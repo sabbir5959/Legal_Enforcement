@@ -10,6 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
@@ -57,7 +58,7 @@ public class victim implements Initializable {
         passwordText.setVisible(false);
     }
     @FXML
-    private void insert_photo(ActionEvent event) throws IOException {
+    private void insert_photo(MouseEvent event) throws IOException {
         FileChooser ch = new FileChooser();
         FileChooser.ExtensionFilter exxtfilterJPG = new FileChooser.ExtensionFilter("JPG files (*.jpg)", "*.JPG");
         FileChooser.ExtensionFilter exxtfilterPNG = new FileChooser.ExtensionFilter("PNG files (*.png)", "*.PNG");
@@ -66,22 +67,17 @@ public class victim implements Initializable {
         Image image = new Image(file.toURI().toString());
         img1.setImage(image);
     }
-    public void back_home(ActionEvent event) throws IOException {
+    public void back_home(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/DASHBOARD/fullSystem.fxml"));
         Global.switch_scene(root,event);
     }
-    public void back_victim(ActionEvent event) throws IOException {
+    public void back_victim(MouseEvent event) throws IOException {
 
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/Victim/victimUser.fxml"));
         Global.switch_scene(root,event);
     }
-    public void victim_reg(ActionEvent event) throws IOException {
+    public void victim_reg(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/Victim/victimReg.fxml"));
-        Global.switch_scene(root,event);
-    }
-
-    public void victim_fir(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/Victim/victimFIR.fxml"));
         Global.switch_scene(root,event);
     }
     public void victim_email(ActionEvent event) throws IOException {
@@ -95,7 +91,7 @@ public class victim implements Initializable {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/VICTIM/FORGOT/OTP.fxml"));
         Global.switch_scene(root,event);
     }
-    public void victim_profile(ActionEvent event) throws IOException {
+    public void victim_profile(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/Victim/victimProfile.fxml"));
         Global.switch_scene(root,event);
     }
@@ -103,7 +99,7 @@ public class victim implements Initializable {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/VICTIM/FORGOT/createNewPass.fxml"));
         Global.switch_scene(root,event);
     }
-    public void complain_list(ActionEvent event) throws IOException {
+    public void complain_list(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/VICTIM/complaintList.fxml"));
         Global.switch_scene(root,event);
     }

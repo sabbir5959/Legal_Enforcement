@@ -3,96 +3,201 @@
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import java.lang.String?>
 <?import java.net.URL?>
-<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.Controller.dashboard">
-   <AnchorPane layoutX="118.0" prefHeight="62.0" prefWidth="1400.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #000000 0% , #b3a797 41%, #a49c85 65% , #000000 100%);" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-      <Button layoutX="87.0" layoutY="12.0" mnemonicParsing="false" onAction="#about" prefHeight="38.0" prefWidth="103.0" text="About">
-         <font>
-            <Font name="Bell MT" size="14.0" />
-         </font>
-         <graphic>
-            <FontAwesomeIconView glyphName="ANDROID" size="15" />
-         </graphic>
-         <stylesheets>
-            <URL value="@../../Styles/basic/victimMenu.css" />
-            <URL value="@../../Styles/basic/shoyeb.css" />
-         </stylesheets>
-         <styleClass>
-            <String fx:value="menu_container" />
-            <String fx:value="dashboard_btn4" />
-         </styleClass>
-      </Button>
-      <Button layoutX="1176.0" layoutY="11.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#official" text="Official Login">
-         <font>
-            <Font name="Bell MT" size="14.0" />
-         </font>
-         <graphic>
-            <FontAwesomeIconView glyphName="USER" size="15" />
-         </graphic>
-         <stylesheets>
-            <URL value="@../../Styles/basic/victimMenu.css" />
-            <URL value="@../../Styles/basic/shoyeb.css" />
-         </stylesheets>
-         <styleClass>
-            <String fx:value="menu_container" />
-            <String fx:value="dashboard_btn4" />
-         </styleClass>
-      </Button>
-      <Button layoutX="1034.0" layoutY="11.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#victim_user" text="Victim Login">
-         <graphic>
-            <FontAwesomeIconView glyphName="USER" size="15" />
-         </graphic>
-         <font>
-            <Font name="Bell MT" size="14.0" />
-         </font>
-         <styleClass>
-            <String fx:value="menu_container" />
-            <String fx:value="dashboard_btn4" />
-         </styleClass>
-         <stylesheets>
-            <URL value="@../../Styles/basic/victimMenu.css" />
-            <URL value="@../../Styles/basic/shoyeb.css" />
-         </stylesheets>
-      </Button>
-      <ImageView fitHeight="52.0" fitWidth="68.0" layoutX="4.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
-         <Image url="@../../Image/logowhite.png" />
-      </ImageView>
-      <ImageView fitHeight="52.0" fitWidth="68.0" layoutX="1326.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
-         <Image url="@../../Image/white_logo.png" />
-      </ImageView>
-   </AnchorPane>
-   <ImageView fitHeight="737.0" fitWidth="1400.0" layoutY="63.39999999999998" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-      <Image url="@../../Image/orders.png" />
-   </ImageView>
-   <Text fill="WHITE" layoutX="457.0" layoutY="374.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Have a Complaint?">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" styleClass="anchor-pane" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.Controller.dashboard">
+   <Label layoutX="731.0" layoutY="47.0" onMouseClicked="#about" prefHeight="32.0" prefWidth="111.0" styleClass="dashboard_btn1" stylesheets="@../../Styles/basic/shoyeb.css" text=" About Us" textFill="WHITE" AnchorPane.topAnchor="47.0">
       <font>
-         <Font name="Bodoni MT" size="60.0" />
+         <Font name="Arial Bold" size="15.0" />
       </font>
-   </Text>
-   <Text fill="WHITE" layoutX="591.0" layoutY="449.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register below">
+      <graphic>
+         <FontAwesomeIconView fill="WHITE" glyphName="INFO" size="20" />
+      </graphic>
+   </Label>
+   <Label layoutX="894.0" layoutY="47.0" onMouseClicked="#official" prefHeight="32.0" prefWidth="139.0" styleClass="dashboard_btn1" stylesheets="@../../Styles/basic/shoyeb.css" text=" Official Login" textFill="WHITE" AnchorPane.topAnchor="47.0">
       <font>
-         <Font name="Bodoni MT" size="38.0" />
+         <Font name="Arial Bold" size="15.0" />
       </font>
-   </Text>
-   <Button layoutX="641.0" layoutY="499.0" mnemonicParsing="false" onAction="#victim_reg" prefHeight="42.0" prefWidth="134.0" text="Sign Up!">
+      <graphic>
+         <FontAwesomeIconView fill="WHITE" glyphName="USER" size="20" />
+      </graphic>
+   </Label>
+   <Label layoutX="1089.0" layoutY="47.0" onMouseClicked="#victim_user" prefHeight="32.0" prefWidth="53.0" styleClass="dashboard_btn1" stylesheets="@../../Styles/basic/shoyeb.css" text="Login" textFill="WHITE" AnchorPane.topAnchor="47.0">
       <font>
-         <Font name="Baskerville Old Face" size="18.0" />
+         <Font name="Arial Bold" size="15.0" />
+      </font>
+   </Label>
+   <Label alignment="CENTER" layoutX="1197.0" layoutY="39.0" onMouseClicked="#victim_reg" prefHeight="52.0" prefWidth="110.0" style="-fx-border-width: 2px; -fx-background-radius: 20;" text="Sign Up!" textFill="WHITE">
+      <font>
+         <Font name="Arial Bold" size="18.0" />
       </font>
       <stylesheets>
-         <URL value="@../../Styles/basic/victimMenu.css" />
+         <URL value="@../../Styles/basic/list.css" />
          <URL value="@../../Styles/basic/shoyeb.css" />
       </stylesheets>
       <styleClass>
-         <String fx:value="menu_container" />
+         <String fx:value="rounded-anchor-pane" />
          <String fx:value="dashboard_btn1" />
       </styleClass>
-   </Button>
-   <Line endX="123.79998779296875" layoutX="709.0" layoutY="470.0" startX="-130.5999755859375" stroke="WHITE" strokeWidth="2.0" AnchorPane.leftAnchor="577.4000244140625" AnchorPane.rightAnchor="566.2000122070312" />
+   </Label>
+   <Label layoutX="72.0" layoutY="171.0" text="Legal">
+      <font>
+         <Font name="Baskerville Old Face" size="64.0" />
+      </font>
+      <textFill>
+         <LinearGradient endX="0.01893938581148774" endY="1.0" startX="1.0">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="1.0" />
+                  </color>
+               </Stop>
+               <Stop offset="0.006729475100942127">
+                  <color>
+                     <Color red="0.397189736366272" green="0.5157894492149353" blue="0.2311500906944275" />
+                  </color>
+               </Stop>
+               <Stop offset="0.5">
+                  <color>
+                     <Color red="0.42713451385498047" green="0.8736842274665833" blue="0.5164444446563721" />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="0.5676023364067078" green="0.7263157963752747" blue="0.713089644908905" />
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </textFill>
+   </Label>
+   <Label layoutX="68.0" layoutY="248.0" text="Enforcement">
+      <font>
+         <Font name="Baskerville Old Face" size="70.0" />
+      </font>
+      <textFill>
+         <LinearGradient endX="0.01893938581148774" endY="1.0" startX="1.0">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="1.0" />
+                  </color>
+               </Stop>
+               <Stop offset="0.006729475100942127">
+                  <color>
+                     <Color red="0.397189736366272" green="0.5157894492149353" blue="0.2311500906944275" />
+                  </color>
+               </Stop>
+               <Stop offset="0.5">
+                  <color>
+                     <Color red="0.42713451385498047" green="0.8736842274665833" blue="0.5164444446563721" />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="0.5676023364067078" green="0.7263157963752747" blue="0.713089644908905" />
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </textFill>
+   </Label>
+   <Label layoutX="66.0" layoutY="330.0" text="System">
+      <font>
+         <Font name="Baskerville Old Face" size="70.0" />
+      </font>
+      <textFill>
+         <LinearGradient endX="0.01893938581148774" endY="1.0" startX="1.0">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="1.0" />
+                  </color>
+               </Stop>
+               <Stop offset="0.006729475100942127">
+                  <color>
+                     <Color red="0.397189736366272" green="0.5157894492149353" blue="0.2311500906944275" />
+                  </color>
+               </Stop>
+               <Stop offset="0.5">
+                  <color>
+                     <Color red="0.42713451385498047" green="0.8736842274665833" blue="0.5164444446563721" />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="0.5676023364067078" green="0.7263157963752747" blue="0.713089644908905" />
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </textFill>
+   </Label>
+   <Label layoutX="68.0" layoutY="435.0" lineSpacing="5.0" prefHeight="158.0" prefWidth="492.0" text="Legal Enforcement is not just a tool; it's a commitment to a future where law enforcement and justice systems work seamlessly to uphold the principles of fairness and accountability. This app heralds a new era in crime management and judicial proceedings. Join us in shaping a safer, more just society with Legal Enforcement." textFill="WHITE" wrapText="true">
+      <font>
+         <Font name="Baskerville Old Face" size="17.0" />
+      </font>
+   </Label>
+   <Line endX="1242.199951171875" endY="7.62939453125E-6" layoutX="153.0" layoutY="115.0" startX="-147.79998779296875" startY="7.62939453125E-6" stroke="WHITE" styleClass="background-color" />
+   <ImageView fitHeight="52.0" fitWidth="68.0" layoutX="42.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="42.0" AnchorPane.topAnchor="35.0">
+      <image>
+         <Image url="@../../Image/white_logo.png" />
+      </image>
+   </ImageView>
+   <Label layoutX="127.0" layoutY="54.0" text="Legal Enforcement" AnchorPane.topAnchor="47.0">
+      <font>
+         <Font name="Arial Bold" size="22.0" />
+      </font>
+      <textFill>
+         <LinearGradient endY="1.0">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="1.0" />
+                  </color>
+               </Stop>
+               <Stop offset="0.006729475100942127">
+                  <color>
+                     <Color green="1.0" blue="0.8210658431053162" />
+                  </color>
+               </Stop>
+               <Stop offset="0.524390243902439">
+                  <color>
+                     <Color red="1.0" green="1.0" blue="1.0" />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="0.5435837507247925" green="0.5600000023841858" blue="0.3248000144958496" />
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </textFill>
+   </Label>
+   <ImageView fitHeight="498.0" fitWidth="691.0" layoutX="655.0" layoutY="243.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../Image/Cartoon/7572781.png" />
+      </image>
+   </ImageView>
+   <Circle fill="WHITE" layoutX="141.0" layoutY="680.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+   <FontAwesomeIconView glyphName="FACEBOOK" layoutX="136.0" layoutY="686.0" onMouseClicked="#facebook" size="18" stroke="BLACK" styleClass="img_" />
+   <Circle fill="WHITE" layoutX="309.0" layoutY="680.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+   <FontAwesomeIconView glyphName="GITHUB" layoutX="300.0" layoutY="688.0" onMouseClicked="#github" size="21" styleClass="img_" />
+   <Circle fill="WHITE" layoutX="226.0" layoutY="681.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+   <FontAwesomeIconView glyphName="INSTAGRAM" layoutX="218.0" layoutY="687.0" onMouseClicked="#instagram" size="18" stroke="BLACK" styleClass="img_" />
+   <FontAwesomeIconView fx:id="cross" fill="WHITE" glyphName="POWER_OFF" layoutX="1363.0" layoutY="35.0" onMouseClicked="#CROSS" size="25" styleClass="img_" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0" />
+   <stylesheets>
+      <URL value="@../../Styles/basic/list.css" />
+      <URL value="@../../Styles/basic/shoyeb.css" />
+   </stylesheets>
 </AnchorPane>

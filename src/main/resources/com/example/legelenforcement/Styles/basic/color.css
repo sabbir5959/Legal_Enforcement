@@ -1,0 +1,34 @@
+.chat-gpt {
+    -fx-background-color: linear-gradient(to right, #2b5876, #4e4376);
+}
+.chat-gpt1 {
+    -fx-background-color: linear-gradient(darkslateblue, royalblue, darkcyan, darkslateblue);
+}
+.chat-gpt2 {
+    -fx-background-color: linear-gradient(to right, #1a1c20, #50545a);
+}
+.chat-gpt3 {
+    -fx-background-color: linear-gradient(to right, #85d8ce, #9963a5);
+}
+.chat-gpt4 {
+    -fx-background-color: linear-gradient(to left, #001f3f, #4b0082);
+
+}
+.chat-gpt5 {
+
+}
+.chat-gpt6 {
+    -fx-background-color: linear-gradient(to right, #a8ff78, #78ffd6);
+}
+.chat-gpt7 {
+    -fx-background-color: linear-gradient(to left, #ffd89b, #19547b);
+}
+.chat-gpt8{
+    -fx-background-color: linear-gradient(to right, #17ead9, #6078ea);
+}
+.chat-gpt9{
+    -fx-background-color: linear-gradient(to right, #3494e6, #ec6ead);
+
+}
+
+

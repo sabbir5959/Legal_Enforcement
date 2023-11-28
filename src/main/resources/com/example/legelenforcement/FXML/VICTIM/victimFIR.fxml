@@ -12,167 +12,174 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.Controller.VictimFirCreate">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" styleClass="chat-gpt2" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.Controller.VictimFirCreate">
    <children>
-      <ImageView fitHeight="739.0" fitWidth="1402.0" layoutY="64.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-2.0">
+      <ImageView fitHeight="630.0" fitWidth="848.0" layoutX="11.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../Image/orders.png" />
+            <Image url="@../../Image/Cartoon/d.png" />
          </image>
       </ImageView>
-      <AnchorPane prefHeight="62.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #3f5efb 0% , #fc466b 100%);" stylesheets="@../../Styles/basic/shoyeb.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <ImageView fitHeight="52.0" fitWidth="68.0" layoutX="6.0" layoutY="7.0" onMouseClicked="#dashboard_img" pickOnBounds="true" preserveRatio="true" styleClass="img_">
-               <image>
-                  <Image url="@../../Image/logowhite.png" />
-               </image>
-            </ImageView>
-            <Button layoutX="90.0" layoutY="14.0" mnemonicParsing="false" onAction="#back_home" text="Home">
-               <font>
-                  <Font name="Bell MT" size="14.0" />
-               </font>
-               <graphic>
-                  <FontAwesomeIconView glyphName="HOME" size="15" />
-               </graphic>
-               <stylesheets>
-                  <URL value="@../../Styles/basic/victimMenu.css" />
-                  <URL value="@../../Styles/basic/shoyeb.css" />
-               </stylesheets>
-               <styleClass>
-                  <String fx:value="menu_container" />
-                  <String fx:value="dashboard_btn4" />
-               </styleClass>
-            </Button>
-            <Button layoutX="1193.0" layoutY="12.0" mnemonicParsing="false" onAction="#back_victim" prefHeight="38.0" prefWidth="136.0" text="Log Out">
-               <font>
-                  <Font name="Bell MT" size="14.0" />
-               </font>
-               <graphic>
-                  <FontAwesomeIconView glyphName="EXTERNAL_LINK" size="15" />
-               </graphic>
-               <stylesheets>
-                  <URL value="@../../Styles/basic/victimMenu.css" />
-                  <URL value="@../../Styles/basic/shoyeb.css" />
-               </stylesheets>
-               <styleClass>
-                  <String fx:value="menu_container" />
-                  <String fx:value="dashboard_btn4" />
-               </styleClass>
-            </Button>
-            <Button layoutX="974.0" layoutY="12.0" mnemonicParsing="false" onAction="#complain_list" prefHeight="38.0" prefWidth="204.0" text="Complaint History">
-               <font>
-                  <Font name="Bell MT" size="14.0" />
-               </font>
-               <graphic>
-                  <FontAwesomeIconView glyphName="HISTORY" size="15" />
-               </graphic>
-               <stylesheets>
-                  <URL value="@../../Styles/basic/victimMenu.css" />
-                  <URL value="@../../Styles/basic/shoyeb.css" />
-               </stylesheets>
-               <styleClass>
-                  <String fx:value="menu_container" />
-                  <String fx:value="dashboard_btn4" />
-               </styleClass>
-            </Button>
-            <ImageView fitHeight="52.0" fitWidth="68.0" layoutX="1338.0" layoutY="5.0" onMouseClicked="#dashboard_img" pickOnBounds="true" preserveRatio="true" styleClass="img_">
-               <image>
-                  <Image url="@../../Image/logoblack.png" />
-               </image>
-            </ImageView>
-            <Button layoutX="194.0" layoutY="14.0" mnemonicParsing="false" onAction="#victim_profile" text="Profile">
-               <font>
-                  <Font name="Bell MT" size="14.0" />
-               </font>
-               <stylesheets>
-                  <URL value="@../../Styles/basic/victimMenu.css" />
-                  <URL value="@../../Styles/basic/shoyeb.css" />
-               </stylesheets>
-               <styleClass>
-                  <String fx:value="menu_container" />
-                  <String fx:value="dashboard_btn4" />
-               </styleClass>
-               <graphic>
-                  <FontAwesomeIconView glyphName="USER" />
-               </graphic>
-            </Button>
-         </children>
-      </AnchorPane>
-      <AnchorPane layoutX="469.0" layoutY="109.0" opacity="0.79" prefHeight="649.0" prefWidth="502.0" style="-fx-background-color: #454545;">
-         <Text fill="WHITE" layoutX="39.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please fillup this form for identify the criminal">
-            <font>
-               <Font name="System Bold" size="20.0" />
-            </font>
-         </Text>
-         <Text fill="WHITE" layoutX="158.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME">
-            <font>
-               <Font name="System Bold" size="40.0" />
-            </font>
-         </Text>
-         <Text fill="WHITE" layoutX="50.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location of Crime" AnchorPane.leftAnchor="50.0">
-            <font>
-               <Font name="System Bold" size="18.0" />
-            </font>
-         </Text>
-         <Text fill="WHITE" layoutX="50.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type of Crime" AnchorPane.leftAnchor="50.0">
-            <font>
-               <Font name="System Bold" size="18.0" />
-            </font>
-         </Text>
-         <Text fill="WHITE" layoutX="50.0" layoutY="423.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date of Crime:" AnchorPane.leftAnchor="50.0">
-            <font>
-               <Font name="System Bold" size="18.0" />
-            </font>
-         </Text>
-         <DatePicker fx:id="dateOfCrime" layoutX="186.0" layoutY="400.0" prefHeight="48.0" prefWidth="266.0" promptText="MM/DD/YYYY" stylesheets="@../../Styles/basic/basic.css" AnchorPane.leftAnchor="186.0" AnchorPane.rightAnchor="50.0">
-            <styleClass>
-               <String fx:value="input_field" />
-               <String fx:value="account_selector" />
-            </styleClass>
-         </DatePicker>
-         <Text fill="WHITE" layoutX="50.0" layoutY="472.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="355.3775390625">
-            <font>
-               <Font name="System Bold" size="18.0" />
-            </font>
-         </Text>
-         <TextArea fx:id="description" layoutX="50.0" layoutY="484.0" prefHeight="62.0" prefWidth="402.0" promptText="describe about the incident" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />
-         <Button layoutX="179.0" layoutY="592.0" mnemonicParsing="false" onAction="#submit_fir" prefHeight="36.0" prefWidth="155.0" style="-fx-background-color: #0066CCFF;" styleClass="dashboard_btn4" stylesheets="@../../Styles/basic/shoyeb.css" text="Submit" textFill="WHITE" AnchorPane.leftAnchor="179.0" AnchorPane.rightAnchor="168.0">
-            <font>
-               <Font name="System Bold" size="12.0" />
-            </font>
-         </Button>
-         <TextField fx:id="complainNo" layoutX="51.0" layoutY="171.0" prefHeight="48.0" prefWidth="400.0" promptText="No." stylesheets="@../../Styles/basic/basic.css">
-            <styleClass>
-               <String fx:value="account_selector" />
-               <String fx:value="input_field" />
-            </styleClass>
-         </TextField>
-         <Text fill="WHITE" layoutX="50.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Complain No.">
-            <font>
-               <Font name="System Bold" size="18.0" />
-            </font>
-         </Text>
-         <ComboBox fx:id="location" layoutX="51.0" layoutY="255.0" prefWidth="400.0" stylesheets="@../../Styles/basic/basic.css">
-            <styleClass>
-               <String fx:value="account_selector" />
-               <String fx:value="input_field" />
-            </styleClass>
-         </ComboBox>
-         <ComboBox fx:id="crime" layoutX="51.0" layoutY="338.0" prefWidth="400.0" stylesheets="@../../Styles/basic/basic.css">
-            <styleClass>
-               <String fx:value="account_selector" />
-               <String fx:value="input_field" />
-            </styleClass>
-         </ComboBox>
-         <Label fx:id="wrong_msg" layoutX="173.0" layoutY="561.0" prefHeight="18.0" prefWidth="166.0" textFill="RED" />
-      </AnchorPane>
-      <AnchorPane fx:id="label_anchor" layoutX="1091.0" layoutY="656.0" prefHeight="46.0" prefWidth="174.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #214619 0% , #9eb4a2 41%, #9fb499 64%, #234619 100%); -fx-background-radius: 5;">
+      <AnchorPane layoutX="791.0" layoutY="88.0" prefHeight="625.0" prefWidth="550.0" styleClass="rounded-anchor-pane" stylesheets="@../../Styles/basic/list.css" />
+      <AnchorPane fx:id="label_anchor" layoutX="982.0" layoutY="743.0" prefHeight="46.0" prefWidth="174.0" styleClass="chat-gpt6">
          <Label fx:id="msg_show" layoutX="26.0" layoutY="5.0" prefHeight="35.0" prefWidth="122.0" textFill="#071009">
             <font>
                <Font name="Bell MT Bold" size="13.0" />
             </font></Label>
       </AnchorPane>
+      <Label layoutX="811.0" layoutY="33.0" onMouseClicked="#back_home" styleClass="img_" text=" Home" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="20" />
+         </graphic>
+      </Label>
+      <Label layoutX="919.0" layoutY="33.0" onMouseClicked="#victim_profile" styleClass="img_" text=" Profile" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="USER" size="20" />
+         </graphic>
+      </Label>
+      <Label layoutX="1225.0" layoutY="33.0" onMouseClicked="#back_victim" styleClass="img_" text=" Log Out" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="EXTERNAL_LINK" size="20" />
+         </graphic>
+      </Label>
+      <Label layoutX="1030.0" layoutY="33.0" onMouseClicked="#complain_list" styleClass="img_" text=" Complaint History" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="BOOK" size="20" />
+         </graphic>
+      </Label>
+      <FontAwesomeIconView fx:id="cross" fill="WHITE" glyphName="POWER_OFF" layoutX="1374.0" layoutY="61.0" onMouseClicked="#CROSS" size="25" styleClass="img_" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0" />
+      <ImageView fitHeight="52.0" fitWidth="68.0" layoutX="24.0" layoutY="24.0" onMouseClicked="#dashboard_img" pickOnBounds="true" preserveRatio="true" styleClass="img_" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+         <image>
+            <Image url="@../../Image/logowhite.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="87.0" layoutY="32.0" text="Legal Enforcement" AnchorPane.topAnchor="32.0">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+         <textFill>
+            <LinearGradient endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.006729475100942127">
+                     <color>
+                        <Color green="1.0" blue="0.8210658431053162" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.524390243902439">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.5435837507247925" green="0.5600000023841858" blue="0.3248000144958496" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Text fill="WHITE" layoutX="851.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please fillup this form for identify the criminal">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="970.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="862.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location of Crime">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="862.0" layoutY="425.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type of Crime">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="862.0" layoutY="523.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date of Crime:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="862.0" layoutY="572.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Button layoutX="991.0" layoutY="692.0" mnemonicParsing="false" onAction="#submit_fir" prefHeight="36.0" prefWidth="155.0" style="-fx-background-color: #0066CCFF;" styleClass="dashboard_btn4" stylesheets="@../../Styles/basic/shoyeb.css" text="Submit" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Text fill="WHITE" layoutX="862.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Complain No.">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Label fx:id="wrong_msg" layoutX="985.0" layoutY="661.0" prefHeight="18.0" prefWidth="166.0" textFill="RED" />
+      <Label layoutX="44.0" layoutY="121.0" prefHeight="82.0" prefWidth="312.0" text="Welcome to the forefront of crime reporting with Legal Enforcement" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dateOfCrime" layoutX="998.0" layoutY="500.0" prefHeight="48.0" prefWidth="266.0" promptText="MM/DD/YYYY" stylesheets="@../../Styles/basic/basic.css">
+         <styleClass>
+            <String fx:value="input_field" />
+            <String fx:value="account_selector" />
+         </styleClass>
+      </DatePicker>
+      <TextArea fx:id="description" layoutX="862.0" layoutY="584.0" prefHeight="62.0" prefWidth="402.0" promptText="describe about the incident" />
+      <TextField fx:id="complainNo" layoutX="863.0" layoutY="271.0" prefHeight="48.0" prefWidth="400.0" promptText="No." stylesheets="@../../Styles/basic/basic.css">
+         <styleClass>
+            <String fx:value="account_selector" />
+            <String fx:value="input_field" />
+         </styleClass>
+      </TextField>
+      <ComboBox fx:id="location" layoutX="863.0" layoutY="355.0" prefWidth="400.0" stylesheets="@../../Styles/basic/basic.css">
+         <styleClass>
+            <String fx:value="account_selector" />
+            <String fx:value="input_field" />
+         </styleClass>
+      </ComboBox>
+      <ComboBox fx:id="crime" layoutX="863.0" layoutY="438.0" prefWidth="400.0" stylesheets="@../../Styles/basic/basic.css">
+         <styleClass>
+            <String fx:value="account_selector" />
+            <String fx:value="input_field" />
+         </styleClass>
+      </ComboBox>
+      <Label layoutX="43.0" layoutY="174.0" prefHeight="62.0" prefWidth="334.0" text="where every detail matters, and justice begins with the First Information Report (FIR)." textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
    </children>
+   <stylesheets>
+      <URL value="@../../Styles/basic/shoyeb.css" />
+      <URL value="@../../Styles/basic/color.css" />
+   </stylesheets>
 </AnchorPane>

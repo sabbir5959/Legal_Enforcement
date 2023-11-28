@@ -11,86 +11,153 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.Controller.Police_controller_Login">
-   <ImageView fitHeight="738.0" fitWidth="1400.0" layoutY="62.0" pickOnBounds="true">
-      <Image url="@../../Image/police.png" />
-   </ImageView>
-   <AnchorPane prefHeight="62.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #2942c3 0% , #030104 36%, #91293f 100%);" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-   <ImageView fitHeight="52.0" fitWidth="68.0" layoutX="1.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-      <Image url="@../../Image/logowhite.png" />
-   </ImageView>
-   <ImageView fitHeight="52.0" fitWidth="68.0" layoutX="1339.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
-      <Image url="@../../Image/logoblack.png" />
-   </ImageView>
-   <BorderPane layoutX="350.0" layoutY="234.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="393.0" prefWidth="700.0">
-      <center>
-         <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-            <ImageView fitHeight="400.0" fitWidth="700.0" opacity="0.34" pickOnBounds="true" preserveRatio="true">
-               <Image url="@../../Image/background.jpg" />
-            </ImageView>
-            <ImageView fitHeight="222.0" fitWidth="170.0" layoutX="272.0" layoutY="-37.0" pickOnBounds="true" preserveRatio="true">
-               <Image url="@../../Image/logowhite.png" />
-            </ImageView>
-            <Label layoutX="291.0" layoutY="116.0" prefHeight="43.0" prefWidth="134.0" text="POLICE" textFill="WHITE">
-               <font>
-                  <Font name="Bell MT Bold" size="34.0" />
-               </font>
-            </Label>
-            <Button layoutX="260.0" layoutY="322.0" mnemonicParsing="false" onAction="#police_login" style="-fx-background-radius: 90; -fx-background-color: #8CD78CFF;" styleClass="dashboard_btn4" stylesheets="@../../Styles/basic/shoyeb.css" text="Login" textFill="#030303" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="240.0">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-            </Button>
-            <TextField fx:id="user" layoutX="264.0" layoutY="191.0" promptText="BP ID/User Name" AnchorPane.leftAnchor="264.0" AnchorPane.rightAnchor="236.0" />
-            <TextField fx:id="passText" layoutX="262.0" layoutY="235.0" prefHeight="26.0" prefWidth="200.0" />
-            <PasswordField fx:id="passHidden" layoutX="262.0" layoutY="235.0" promptText="Password" AnchorPane.leftAnchor="262.0" AnchorPane.rightAnchor="238.0" />
-            <CheckBox fx:id="checkBox" layoutX="315.0" layoutY="275.0" mnemonicParsing="false" onAction="#change" prefHeight="18.0" prefWidth="91.0" text="Show password" textFill="WHITE" AnchorPane.leftAnchor="315.0" AnchorPane.rightAnchor="294.0">
-               <font>
-                  <Font name="Arial" size="10.0" />
-               </font></CheckBox>
-            <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="233.0" layoutY="212.0" size="25" />
-            <FontAwesomeIconView fill="WHITE" glyphName="KEY" layoutX="231.0" layoutY="256.0" size="22" />
-            <Label fx:id="error_msg" alignment="CENTER" layoutX="275.0" layoutY="295.0" prefHeight="18.0" prefWidth="166.0" textFill="RED">
-               <font>
-                  <Font size="11.0" />
-               </font>
-            </Label>
-         </AnchorPane>
-      </center>
-   </BorderPane>
-   <Button layoutX="1171.0" layoutY="12.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#officials" text="Official Login">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" styleClass="chat-gpt" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.Controller.Police_controller_Login">
+   <AnchorPane layoutX="907.0" layoutY="199.0" prefHeight="502.0" prefWidth="398.0" styleClass="rounded-anchor-pane"
+               stylesheets="@../../Styles/basic/list.css">
+      <Label layoutX="98.0" layoutY="18.0" text="Welcome" textFill="#f6fbff">
+         <font>
+            <Font name="Baskerville Old Face" size="50.0"/>
+         </font>
+      </Label>
+      <Label layoutX="73.0" layoutY="88.0" prefHeight="39.0" prefWidth="258.0" text="Join Us to serve the nation"
+             textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Bell MT Bold" size="21.0"/>
+         </font>
+      </Label>
+   </AnchorPane>
+   <Label layoutX="1125.0" layoutY="52.0" onMouseClicked="#officials" prefHeight="32.0" prefWidth="139.0" styleClass="dashboard_btn1" stylesheets="@../../Styles/basic/shoyeb.css" text=" Official Login" textFill="WHITE">
       <font>
-         <Font name="Bell MT" size="14.0" />
+         <Font name="Arial Bold" size="15.0" />
       </font>
       <graphic>
-         <FontAwesomeIconView glyphName="USER" size="15" />
+         <FontAwesomeIconView fill="WHITE" glyphName="USER" size="20" />
       </graphic>
-      <stylesheets>
-         <URL value="@../../Styles/basic/victimMenu.css" />
-         <URL value="@../../Styles/basic/shoyeb.css" />
-      </stylesheets>
-      <styleClass>
-         <String fx:value="menu_container" />
-         <String fx:value="dashboard_btn2" />
-      </styleClass>
-   </Button>
-   <Button layoutX="93.0" layoutY="14.0" mnemonicParsing="false" onAction="#back_home" text="Home">
+   </Label>
+   <Label layoutX="978.0" layoutY="58.0" onMouseClicked="#back_home" styleClass="img_" text=" Home" textFill="WHITE">
       <font>
-         <Font name="Bell MT" size="14.0" />
+         <Font name="Arial Bold" size="15.0" />
       </font>
       <graphic>
-         <FontAwesomeIconView glyphName="HOME" size="15" />
+         <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="20" />
       </graphic>
+   </Label>
+   <FontAwesomeIconView fx:id="cross" fill="WHITE" glyphName="POWER_OFF" layoutX="1383.0" layoutY="55.0" onMouseClicked="#CROSS" size="25" styleClass="img_" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0" />
+   <Button layoutX="1048.0" layoutY="573.0" mnemonicParsing="false" onAction="#police_login" prefHeight="26.0" prefWidth="139.0" style="-fx-background-radius: 10; -fx-background-color: #8CD78CFF;" styleClass="dashboard_btn4" stylesheets="@../../Styles/basic/shoyeb.css" text="Login" textFill="#030303" AnchorPane.leftAnchor="1048.0" AnchorPane.rightAnchor="213.0">
+      <font>
+         <Font name="Arial Bold" size="15.0" />
+      </font>
+   </Button>
+   <TextField fx:id="user" layoutX="1022.0" layoutY="408.0" prefHeight="29.0" prefWidth="209.0" promptText="BP ID/User Name" AnchorPane.leftAnchor="1022.0" AnchorPane.rightAnchor="169.0">
+      <font>
+         <Font name="Arial Bold" size="15.0" />
+      </font>
       <stylesheets>
-         <URL value="@../../Styles/basic/victimMenu.css" />
-         <URL value="@../../Styles/basic/shoyeb.css" />
+         <URL value="@../../Styles/basic/list.css" />
+         <URL value="@../../Styles/basic/victimUser.css" />
       </stylesheets>
       <styleClass>
-         <String fx:value="menu_container" />
-         <String fx:value="dashboard_btn2" />
+         <String fx:value="border-design" />
+         <String fx:value="text_field" />
       </styleClass>
-   </Button>
+   </TextField>
+   <TextField fx:id="passText" layoutX="1022.0" layoutY="472.0" prefHeight="29.0" prefWidth="209.0">
+      <font>
+         <Font name="Arial Bold" size="15.0" />
+      </font>
+      <stylesheets>
+         <URL value="@../../Styles/basic/list.css" />
+         <URL value="@../../Styles/basic/victimUser.css" />
+      </stylesheets>
+      <styleClass>
+         <String fx:value="border-design" />
+         <String fx:value="text_field" />
+      </styleClass>
+   </TextField>
+   <PasswordField fx:id="passHidden" layoutX="1022.0" layoutY="471.0" prefHeight="30.0" prefWidth="209.0" promptText="Password" AnchorPane.leftAnchor="1022.0" AnchorPane.rightAnchor="169.0">
+      <font>
+         <Font name="Arial Bold" size="15.0" />
+      </font>
+      <stylesheets>
+         <URL value="@../../Styles/basic/list.css" />
+         <URL value="@../../Styles/basic/victimUser.css" />
+      </stylesheets>
+      <styleClass>
+         <String fx:value="border-design" />
+         <String fx:value="text_field" />
+      </styleClass>
+   </PasswordField>
+   <CheckBox fx:id="checkBox" layoutX="1062.0" layoutY="522.0" mnemonicParsing="false" onAction="#change" prefHeight="18.0" prefWidth="111.0" text="Show password" textFill="WHITE" AnchorPane.leftAnchor="1062.0" AnchorPane.rightAnchor="227.0">
+      <font>
+         <Font name="Arial" size="12.0" />
+      </font>
+   </CheckBox>
+   <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="993.0" layoutY="429.0" size="25" />
+   <FontAwesomeIconView fill="WHITE" glyphName="KEY" layoutX="991.0" layoutY="493.0" size="22" />
+   <Label fx:id="error_msg" alignment="CENTER" layoutX="1019.0" layoutY="545.0" prefHeight="18.0" prefWidth="209.0" textFill="RED" />
+   <ImageView fitHeight="581.0" fitWidth="568.0" layoutX="228.0" layoutY="110.0" pickOnBounds="true"
+              preserveRatio="true">
+      <Image url="@../../Image/Cartoon/8027216.png"/>
+   </ImageView>
+   <ImageView fitHeight="52.0" fitWidth="68.0" layoutX="52.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true"
+              AnchorPane.leftAnchor="42.0" AnchorPane.topAnchor="35.0">
+      <Image url="@../../Image/white_logo.png"/>
+   </ImageView>
+   <Label layoutX="127.0" layoutY="47.0" text="Legal Enforcement" AnchorPane.topAnchor="47.0">
+      <font>
+         <Font name="Arial Bold" size="22.0" />
+      </font>
+      <textFill>
+         <LinearGradient endY="1.0">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="1.0" />
+                  </color>
+               </Stop>
+               <Stop offset="0.006729475100942127">
+                  <color>
+                     <Color green="1.0" blue="0.8210658431053162" />
+                  </color>
+               </Stop>
+               <Stop offset="0.524390243902439">
+                  <color>
+                     <Color red="1.0" green="1.0" blue="1.0" />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="0.5435837507247925" green="0.5600000023841858" blue="0.3248000144958496" />
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </textFill>
+   </Label>
+   <Label layoutX="279.0" layoutY="669.0" prefHeight="66.0" prefWidth="471.0" text="The Legal Enforcement Police Login is not just a login form; it's an entry point to the future of law enforcement" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+      <font>
+         <Font name="Arial Bold" size="18.0" />
+      </font>
+   </Label>
+   <Label layoutX="1035.0" layoutY="666.0" text="Privacy policy Terms of use" textFill="WHITE">
+      <font>
+         <Font name="Arial Bold" size="11.0" />
+      </font>
+   </Label>
+   <Circle fill="WHITE" layoutX="52.0" layoutY="750.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+   <FontAwesomeIconView glyphName="FACEBOOK" layoutX="47.0" layoutY="756.0" onMouseClicked="#facebook" size="18" stroke="BLACK" styleClass="img_" />
+   <Circle fill="WHITE" layoutX="220.0" layoutY="750.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+   <FontAwesomeIconView glyphName="GITHUB" layoutX="211.0" layoutY="758.0" onMouseClicked="#github" size="21" styleClass="img_" />
+   <Circle fill="WHITE" layoutX="137.0" layoutY="751.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+   <FontAwesomeIconView glyphName="INSTAGRAM" layoutX="129.0" layoutY="757.0" onMouseClicked="#instagram" size="18" stroke="BLACK" styleClass="img_" />
+   <stylesheets>
+      <URL value="@../../Styles/basic/color.css" />
+      <URL value="@../../Styles/basic/shoyeb.css" />
+   </stylesheets>
 </AnchorPane>

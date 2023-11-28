@@ -2,14 +2,15 @@ package com.example.legelenforcement.Controller;
 
 import com.example.legelenforcement.Global;
 import com.example.legelenforcement.HelloApplication;
-import com.example.legelenforcement.View.fileReadWrite;
 import com.example.legelenforcement.View.log_in;
 import com.example.legelenforcement.View.person;
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
@@ -20,8 +21,9 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 public class Victim_Login extends VictimUserCreate {
-     public Label VFname , Vname , Vfather , Vmother , Vemail, Vaddress ;
+    public Label VFname , Vname , Vfather , Vmother , Vemail, Vaddress ;
     public TextField vic_user, full_name, email, mobile, user_name, address, father_name, mother_name, dateOfbirth, complainNo;
+    public FontAwesomeIconView cross;
     @FXML
     private Label error_text1;
     public Button CLOSE ;
@@ -103,7 +105,7 @@ public class Victim_Login extends VictimUserCreate {
                     Global.switch_scene(root,event);
 
                 } else {
-                    error_text1.setText("        Password doesn't match");
+                    error_text1.setText("Password doesn't match");
                     Timeline timeline = new Timeline(new KeyFrame(Duration.millis(3000), ae -> error_text1.setText("")));
                     timeline.play();
                 }
@@ -114,9 +116,19 @@ public class Victim_Login extends VictimUserCreate {
                 timeline.play();
             }
         }
-
+    }
+    public void back_home(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/DASHBOARD/fullSystem.fxml"));
+        Global.switch_scene(root,event);
+    }
+    public void victim_reg(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/Victim/victimReg.fxml"));
+        Global.switch_scene(root,event);
     }
 
+    public void CROSS(MouseEvent event) throws IOException{
+        Global.closeStage(cross);
+    }
 }
 
 

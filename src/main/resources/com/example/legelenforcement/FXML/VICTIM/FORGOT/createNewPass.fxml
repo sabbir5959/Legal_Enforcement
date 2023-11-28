@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.Forgot_pass">
+<AnchorPane prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: black;" stylesheets="@../../../Styles/basic/shoyeb.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.Forgot_pass">
    <children>
       <Text fill="WHITE" layoutX="99.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Password">
          <font>
@@ -25,19 +25,21 @@
             <Font name="Arial Bold" size="14.0" />
          </font>
       </Text>
-      <Button fx:id="CLOSE" layoutX="157.0" layoutY="477.0" mnemonicParsing="false" onAction="#close" prefHeight="26.0" prefWidth="85.0" style="-fx-background-radius: 90; -fx-background-color: #257CD4FF;" styleClass="dashboard_btn3" stylesheets="@../../../Styles/basic/shoyeb.css" text="Confirm" textFill="WHITE" />
+      <Button fx:id="CLOSE" layoutX="158.0" layoutY="477.0" mnemonicParsing="false" onAction="#close" prefHeight="26.0" prefWidth="85.0" style="-fx-background-radius: 90; -fx-background-color: #257CD4FF;" styleClass="dashboard_btn3" stylesheets="@../../../Styles/basic/shoyeb.css" text="Confirm" textFill="WHITE" />
       <Text fill="WHITE" layoutX="84.0" layoutY="198.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change Password">
          <font>
             <Font name="Bell MT Bold" size="30.0" />
          </font>
       </Text>
       <FontAwesomeIconView fill="WHITE" glyphName="LOCK" layoutX="160.0" layoutY="143.0" size="150" AnchorPane.leftAnchor="151.5" AnchorPane.topAnchor="14.0" />
-      <Label fx:id="new_pass_message" layoutX="119.0" layoutY="449.0" prefHeight="18.0" prefWidth="153.0" textFill="#ac1e1e">
+      <Label fx:id="new_pass_message" alignment="CENTER" layoutX="99.0" layoutY="449.0" prefHeight="18.0" prefWidth="206.0" textFill="#ac1e1e">
          <font>
             <Font name="System Bold" size="11.0" />
          </font>
       </Label>
       <PasswordField fx:id="new_pass" layoutX="99.0" layoutY="337.0" prefHeight="26.0" prefWidth="206.0" promptText="new password" />
       <PasswordField fx:id="confirm_pass" layoutX="100.0" layoutY="409.0" prefHeight="26.0" prefWidth="206.0" promptText="confirm password" />
+      <FontAwesomeIconView fx:id="cross" fill="WHITE" glyphName="POWER_OFF" layoutX="364.0" layoutY="35.0" onMouseClicked="#CROSS" size="25" styleClass="img_" />
+      <FontAwesomeIconView fx:id="back_OTP" fill="WHITE" glyphName="ARROW_LEFT" layoutX="13.0" layoutY="32.0" onMouseClicked="#BACK_OTP" size="25" styleClass="img_" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
    </children>
 </AnchorPane>

@@ -1,0 +1,35 @@
+.list-cell:odd{
+    -fx-background-color: white;
+}
+.list-cell:even{
+    -fx-background-color: white;
+}
+
+.anchor-pane{
+    /*-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #ff5e3a 100% , #7c564f 50%, #565251 25%, #3a3a3a 0%);*/
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #3e1f1f 0% , #1e2c41 50%, #381010 100%);
+    /*-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #3a3a3a 0% , #565251 25%, #7c564f 50%, #ff5e3a 100%);*/
+}
+.rounded-anchor-pane {
+    -fx-background-size: 1200 900;
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+    -fx-border-width:5;
+    -fx-border-color: #16E2F5;
+}
+.background-color{
+    -fx-background-color: linear-gradient(to bottom, #141428, #141440);
+}
+
+.border-design{
+    -fx-background-color: transparent;
+    -fx-border-color: #16E2F5;
+    -fx-border-width: 0 0 3 0;
+}
+.rounded-anchor-pane1 {
+    -fx-background-size: 1200 900;
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+    -fx-border-width:5;
+    -fx-border-color: linear-gradient(from 0% 0% to 100% 100%, #000000 0%, #2d9bc9 0%, #111f20 28%, #88cdff 41%, #218fb4 52%, #4d7ea1 66%, #000000 100%)
+}

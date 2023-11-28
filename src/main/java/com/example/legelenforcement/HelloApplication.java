@@ -15,13 +15,15 @@ public class HelloApplication extends Application {
         stage.setResizable(false);
         stage.setTitle("Legal Enforcement System");
         stage.getIcons().add(new Image(getClass().getResourceAsStream("Image/logoblack.png")));
+        stage.initStyle(javafx.stage.StageStyle.TRANSPARENT);
         stage.setScene(scene);
         stage.show();
 
     }
 }
 
-
+//FXML/JUDGES/complaintList.fxml
+//FXML/DASHBOARD/fullSystem.fxml
 //        Screen screen = Screen.getPrimary();
 //        Rectangle2D bounds = screen.getVisualBounds();
 //        stage.setX(bounds.getMinX());

@@ -2,12 +2,15 @@ package com.example.legelenforcement;
 
 import com.example.legelenforcement.Controller.victim;
 import com.example.legelenforcement.View.check_email;
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 import javafx.util.Duration;
 import java.io.*;
 import java.util.ArrayList;
@@ -17,10 +20,30 @@ public class Forgot_pass extends victim
     public TextField provide_mail, auth_mail, auth_code, user_N;
     public PasswordField new_pass, confirm_pass;
     public Button log_in;
+    @FXML
+    private FontAwesomeIconView cross;
+    @FXML
+    private FontAwesomeIconView back_forgot;
+    @FXML
+    private FontAwesomeIconView back_OTP;
     public Label message, new_pass_message, auth_mail_message, code_message;
     public static int code;
     static String fp ;
     static check_email checkEmail = new check_email();
+    @FXML
+    void CROSS(MouseEvent event) throws IOException{
+        Global.closeStage(cross);
+    }
+    @FXML
+    void BACK_FORGOT(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/VICTIM/FORGOT/forgotPass.fxml"));
+        Global.switch_scene(root,event);
+    }
+    @FXML
+    void BACK_OTP(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/VICTIM/FORGOT/OTP.fxml"));
+        Global.switch_scene(root,event);
+    }
 
     public boolean check_email(String u,String e) throws FileNotFoundException {
         File infoFile2 = new File("E:/Java Code/Java Files/Sign Up/Victim Sign Up/" + u + "/info.txt");

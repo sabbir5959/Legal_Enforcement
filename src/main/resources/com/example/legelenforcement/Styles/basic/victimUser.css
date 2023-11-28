@@ -1,7 +1,17 @@
 .text_field{
     -fx-text-fill: #FFFFFF;
 }
+.text_field-font{
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 15;
+}
 
 .text_fieldB{
     -fx-text-fill: #000000;
 }
+.combo-box-design{
+    -fx-background-color: linear-gradient(to right, #17ead9, #6078ea);
+    /*-fx-border-color: #ccc;*/
+    -fx-padding: 5px;
+}
+

@@ -1,6 +1,8 @@
 package com.example.legelenforcement.View;
 
-public class person {
+import com.example.legelenforcement.Model;
+
+public class person extends Model {
     String tname ;
     String tuser_name ;
     String tfather ;
@@ -14,10 +16,11 @@ public class person {
     String tgender;
     String tmarry;
     String timage;
-    String tfull, tfullN;
 
 
-    public person(String tname, String tuser_name, String tfather, String tmother,String tmobile, String temail, String taddress, String tbirthDate, String tpass,String tgender, String tmarry, String timage, String tfull, String tfullN) {
+
+    public person(String tname, String tuser_name, String tfather, String tmother,String tmobile, String temail, String taddress, String tbirthDate, String tpass,String tgender, String tmarry, String timage) {
+        super(tname, tuser_name);
         this.tname = tname;
         this.tuser_name = tuser_name;
         this.tfather = tfather;
@@ -30,8 +33,6 @@ public class person {
         this.tgender = tgender;
         this.tmarry = tmarry;
         this.timage = timage;
-        this.tfull = tfull;
-        this.tfullN = tfullN;
     }
 
     public String getTgender() {
@@ -60,6 +61,7 @@ public class person {
 
     public person()
     {
+        super("" , "");
         this.tname = "";
         this.tuser_name = "";
         this.tfather = "";
@@ -72,8 +74,6 @@ public class person {
         this.timage = "";
         this.tgender="";
         this.tmarry="";
-        this.tfull = "";
-        this.tfullN = "";
     }
 
     public String getTconfirmPass() {
@@ -82,22 +82,6 @@ public class person {
 
     public void setTconfirmPass(String tconfirmPass) {
         this.tconfirmPass = tconfirmPass;
-    }
-
-    public String getTfull() {
-        return tfull;
-    }
-
-    public void setTfull(String tfull) {
-        this.tfull = tfull;
-    }
-
-    public String getTfullN() {
-        return tfullN;
-    }
-
-    public void setTfullN(String tfullN) {
-        this.tfullN = tfullN;
     }
 
     public String getTname() {return tname;}

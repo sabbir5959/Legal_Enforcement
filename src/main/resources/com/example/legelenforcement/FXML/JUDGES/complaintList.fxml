@@ -1,74 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
-<?import java.lang.String?>
 <?import java.net.URL?>
-<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.Controller.victim_list">
-   <ImageView fitHeight="738.0" fitWidth="1400.0" layoutY="62.000000000000114" pickOnBounds="true" AnchorPane.bottomAnchor="-1.1368683772161603E-13" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.20000000000004547">
-      <Image url="@../../Image/orders.png" />
+<AnchorPane prefHeight="800.0" prefWidth="1400.0" styleClass="chat-gpt4" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legelenforcement.Controller.judges_assign_case_list">
+   <Label layoutX="1081.0" layoutY="43.0" onMouseClicked="#back_home" prefHeight="23.0" prefWidth="69.0" styleClass="img_" text=" Home" textFill="WHITE">
+      <font>
+         <Font name="Arial Bold" size="15.0" />
+      </font>
+      <graphic>
+         <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="20" />
+      </graphic>
+   </Label>
+   <FontAwesomeIconView fill="WHITE" glyphName="ARROW_LEFT" layoutX="212.0" layoutY="66.0" onMouseClicked="#judge_profile" size="25" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0" />
+   <Label layoutX="1213.0" layoutY="43.0" onMouseClicked="#judge_user" prefHeight="23.0" prefWidth="86.0" styleClass="img_" text=" Log Out" textFill="WHITE">
+      <font>
+         <Font name="Arial Bold" size="15.0" />
+      </font>
+      <graphic>
+         <FontAwesomeIconView fill="WHITE" glyphName="EXTERNAL_LINK" size="20" />
+      </graphic>
+   </Label>
+   <FontAwesomeIconView fx:id="cross" fill="WHITE" glyphName="POWER_OFF" layoutX="1373.0" layoutY="65.0" onMouseClicked="#CROSS" size="25" styleClass="img_" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0" />
+   <ImageView fitHeight="533.0" fitWidth="504.0" layoutX="13.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../Image/Cartoon/aa.png" />
+      </image>
    </ImageView>
-   <AnchorPane prefHeight="62.0" prefWidth="1400.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #3f5efb 0% , #fc466b 100%);" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-      <ImageView fitHeight="52.0" fitWidth="68.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
-         <Image url="@../../Image/logowhite.png" />
-      </ImageView>
-      <ImageView fitHeight="52.0" fitWidth="68.0" layoutX="1341.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
-         <Image url="@../../Image/logoblack.png" />
-      </ImageView>
-      <Button layoutX="170.0" layoutY="12.0" mnemonicParsing="false" onAction="#back_home" text="Home">
-         <font>
-            <Font name="Bell MT" size="14.0" />
-         </font>
-         <graphic>
-            <FontAwesomeIconView glyphName="HOME" size="15" />
-         </graphic>
-         <stylesheets>
-            <URL value="@../../Styles/basic/victimMenu.css" />
-            <URL value="@../../Styles/basic/shoyeb.css" />
-         </stylesheets>
-         <styleClass>
-            <String fx:value="menu_container" />
-            <String fx:value="dashboard_btn4" />
-         </styleClass>
-      </Button>
-      <Button layoutX="1209.0" layoutY="12.0" mnemonicParsing="false" onAction="#judge_user" prefHeight="38.0" prefWidth="118.0" text="Log Out">
-         <font>
-            <Font name="Bell MT" size="14.0" />
-         </font>
-         <graphic>
-            <FontAwesomeIconView glyphName="EXTERNAL_LINK" size="15" />
-         </graphic>
-         <stylesheets>
-            <URL value="@../../Styles/basic/victimMenu.css" />
-            <URL value="@../../Styles/basic/shoyeb.css" />
-         </stylesheets>
-         <styleClass>
-            <String fx:value="menu_container" />
-            <String fx:value="dashboard_btn4" />
-         </styleClass>
-      </Button>
-      <Button layoutX="75.0" layoutY="12.0" mnemonicParsing="false" onAction="#judge_profile" text="Back">
-         <font>
-            <Font name="Bell MT" size="14.0" />
-         </font>
-         <stylesheets>
-            <URL value="@../../Styles/basic/victimMenu.css" />
-            <URL value="@../../Styles/basic/shoyeb.css" />
-         </stylesheets>
-         <styleClass>
-            <String fx:value="menu_container" />
-            <String fx:value="dashboard_btn4" />
-         </styleClass>
-         <graphic>
-            <FontAwesomeIconView glyphName="UNDO" />
-         </graphic>
-      </Button>
-   </AnchorPane>
-   <ListView fx:id="victim_view" layoutX="195.0" layoutY="166.0" prefHeight="545.0" prefWidth="1018.0" style="-fx-background-radius: 5; -fx-background-color: black;" />
+   <AnchorPane layoutX="16.0" layoutY="649.0" prefHeight="98.0" prefWidth="1322.0" styleClass="chat-gpt4" stylesheets="@../../Styles/basic/color.css" />
+   <ListView fx:id="assign_case_list" layoutX="525.0" layoutY="166.0" prefHeight="546.0" prefWidth="778.0" style="-fx-background-color: white;" styleClass="list-cell" stylesheets="@../../Styles/basic/list.css" />
+   <AnchorPane layoutX="8.0" layoutY="697.0" prefHeight="83.0" prefWidth="1374.0" styleClass="chat-gpt4" stylesheets="@../../Styles/basic/color.css" />
+   <Label layoutX="783.0" layoutY="98.0" text="Complain List" textFill="WHITE">
+      <font>
+         <Font name="Arial Bold" size="40.0" />
+      </font>
+   </Label>
+   <stylesheets>
+      <URL value="@../../Styles/basic/color.css" />
+      <URL value="@../../Styles/basic/shoyeb.css" />
+   </stylesheets>
 </AnchorPane>

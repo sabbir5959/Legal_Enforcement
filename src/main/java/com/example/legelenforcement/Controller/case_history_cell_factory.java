@@ -1,15 +1,16 @@
 package com.example.legelenforcement.Controller;
 
 import com.example.legelenforcement.HelloApplication;
+import com.example.legelenforcement.View.FIR;
 import com.example.legelenforcement.View.USER;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.ListCell;
 
 import java.io.IOException;
 
-public class case_history_cell_factory extends ListCell<USER> {
+public class case_history_cell_factory extends ListCell<FIR> {
 
-    protected void updateItem(USER c, boolean empty) {
+    protected void updateItem(FIR c, boolean empty) {
         super.updateItem(c, empty);
 
         if(empty || c == null) {

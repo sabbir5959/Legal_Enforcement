@@ -2,6 +2,7 @@ package com.example.legelenforcement.Controller;
 
 import com.example.legelenforcement.Global;
 import com.example.legelenforcement.HelloApplication;
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,6 +15,7 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 
@@ -26,12 +28,18 @@ import java.util.ResourceBundle;
 public class judges implements Initializable {
 
     public Button CLOSE;
+    public FontAwesomeIconView cross;
     @FXML
     private PasswordField pass_hidden;
     @FXML
     private CheckBox Check;
     @FXML
     private TextField pass_text;
+
+    @FXML
+    void CROSS(MouseEvent event) throws IOException{
+        Global.closeStage(cross);
+    }
 
     @FXML
     void Visibility(ActionEvent event){
@@ -45,51 +53,55 @@ public class judges implements Initializable {
         pass_hidden.setVisible(true);
         pass_text.setVisible(false);
     }
-    public void comp(ActionEvent event) throws IOException {
+    public void comp(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/JUDGES/complaintList.fxml"));
         Global.switch_scene(root,event);
     }
 
-    public void judge_email(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("FXML/JUDGES/FORGOT/forgotPass.fxml"));
-        Global.createStage(fxmlLoader);
-    }
+//    public void judge_email(ActionEvent event) throws IOException {
+//        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("FXML/JUDGES/FORGOT/forgotPass.fxml"));
+//        Global.createStage(fxmlLoader);
+//    }
     public void close(ActionEvent event) throws IOException {
         Global.closeStage(CLOSE);
     }
 
-    public void judge_otp_verify(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/JUDGES/FORGOT/OTP.fxml"));
-        Global.switch_scene(root,event);
-    }
-
-    public void judge_create_pass(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/JUDGES/FORGOT/createNewPass.fxml"));
-        Global.switch_scene(root,event);
-    }
-    public void judge_user(ActionEvent event) throws IOException {
+//    public void judge_otp_verify(ActionEvent event) throws IOException {
+//        Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/JUDGES/FORGOT/OTP.fxml"));
+//        Global.switch_scene(root,event);
+//    }
+//
+//    public void judge_create_pass(ActionEvent event) throws IOException {
+//        Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/JUDGES/FORGOT/createNewPass.fxml"));
+//        Global.switch_scene(root,event);
+//    }
+    public void judge_user(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/JUDGES/judgesUser.fxml"));
         Global.switch_scene(root,event);
     }
 
-    public void judge_profile(ActionEvent event) throws IOException {
+    public void judge_profile(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/JUDGES/judgeProfile.fxml"));
         Global.switch_scene(root,event);
     }
 
-    public void newPDF(ActionEvent event) throws IOException {
+    public void newPDF(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/JUDGES/criminalLaw.fxml"));
         Global.switch_scene(root,event);
     }
 
-    public void back_home(ActionEvent event) throws IOException {
+    public void back_home(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/DASHBOARD/fullSystem.fxml"));
         Global.switch_scene(root,event);
     }
 
-    public void officials(ActionEvent event) throws IOException {
+    public void officials(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/DASHBOARD/official.fxml"));
         Global.switch_scene(root,event);
+    }
+    public void about(MouseEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("FXML/DASHBOARD/AboutUs/about.fxml"));
+        Global.createStage(fxmlLoader);
     }
 
     @FXML
