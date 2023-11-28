@@ -11,6 +11,10 @@ public class Mail_background extends Task<Void>
 {
     private final String receiver;
 
+//    public Mail_background()
+//    {
+//
+//    }
     public Mail_background(String receiver)
     {
         this.receiver = receiver;

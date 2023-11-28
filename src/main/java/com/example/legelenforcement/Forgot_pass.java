@@ -59,14 +59,16 @@ public class Forgot_pass extends victim
         p = sc.next();
         p = sc.next();
 
-        if(p.equals(e))
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+//        if(p.equals(e))
+//        {
+//            return true;
+//        }
+//        else
+//        {
+//            return false;
+//        }
+        check_email checkEmail = new check_email();
+        return check_email.isEmailValid(p,e);
     }
 
     public void victim_otp_verify(ActionEvent event) throws IOException {

@@ -63,7 +63,7 @@ public class victim_cell_controller implements Initializable
         name.setOnMouseClicked(MouseEvent -> go_inbox());
     }
 
-    public void go_inbox ()  {
+    public void go_inbox () {
 
         if(!user.getDate().equals("No FIR")) {
 //            Victim_case vc = new Victim_case();
@@ -72,6 +72,8 @@ public class victim_cell_controller implements Initializable
 
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("FXML/POLICE/victim_&_case.fxml"));
             try {
+                Victim_case vc = new Victim_case();
+                vc.set_user(user);
 
 
                 Global.createStage(fxmlLoader);

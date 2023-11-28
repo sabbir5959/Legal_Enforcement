@@ -31,7 +31,6 @@ public class judge_login extends judges{
     @FXML
     private Label error;
     log_in log = new log_in();
-
     @FXML
     void CROSS(MouseEvent event) throws IOException{
         Global.closeStage(cross);
@@ -57,11 +56,15 @@ public class judge_login extends judges{
 
                 judges_assign_case_list judge = new judges_assign_case_list();
                 judge.set_log(log);
+
+                judges j = new judges();
+                j.set_log(log);
+
                 if (p.equals(log.getPassword())) {
                     Parent root = FXMLLoader.load(HelloApplication.class.getResource("FXML/JUDGES/judgeProfile.fxml"));
                     Global.switch_scene(root, event);
                 } else {
-                    error.setText("    Password doesn't match    ");
+                    error.setText("Password doesn't match");
                     Timeline timeline = new Timeline(new KeyFrame(Duration.millis(1000), ae -> error.setText("")));
                     timeline.play();
                 }

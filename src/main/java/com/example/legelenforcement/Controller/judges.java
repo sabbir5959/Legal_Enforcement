@@ -2,6 +2,8 @@ package com.example.legelenforcement.Controller;
 
 import com.example.legelenforcement.Global;
 import com.example.legelenforcement.HelloApplication;
+import com.example.legelenforcement.View.USER;
+import com.example.legelenforcement.View.log_in;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -16,10 +18,12 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Text;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
+import javafx.scene.control.Label;
 
-import java.awt.*;
+
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
@@ -27,6 +31,14 @@ import java.util.ResourceBundle;
 
 public class judges implements Initializable {
 
+    @FXML
+    private Label j1 = new Label();
+    @FXML
+    private Label j2 = new Label();
+    @FXML
+    private Text j3 = new Text();
+    @FXML
+    private Text j4 = new Text();
     public Button CLOSE;
     public FontAwesomeIconView cross;
     @FXML
@@ -35,6 +47,12 @@ public class judges implements Initializable {
     private CheckBox Check;
     @FXML
     private TextField pass_text;
+    static log_in log = new log_in();
+    public void set_log(log_in log)
+    {
+        this.log = log;
+    }
+
 
     @FXML
     void CROSS(MouseEvent event) throws IOException{
@@ -117,6 +135,11 @@ public class judges implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        j1.setText(log.getUser());
+        j2.setText(log.getUser());
+        j3.setText(log.getUser());
+        j4.setText(log.getUser());
+
         web.setVisible(false);
         img11.setVisible(true);
     }

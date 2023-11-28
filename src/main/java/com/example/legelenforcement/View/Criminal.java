@@ -1,6 +1,6 @@
 package com.example.legelenforcement.View;
 
-public class Criminal {
+public class Criminal implements Criminal_interface{
 
     private String idcriminal_list;
     private String Criminal_name;

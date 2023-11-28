@@ -20,4 +20,17 @@ public class check_email {
 
         return matcher.matches();
     }
+
+    public static boolean isEmailValid(String email1, String email2) {
+
+        if(email1.equals(email2))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
+    }
 }
